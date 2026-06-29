@@ -117,14 +117,8 @@
 </footer>
 
 
+<script src="js/contato.js"></script>
 
-    <script src="js/script.js"></script>
-
-</body>
-
-</html>
-
-<!-- JS ÚNICO -->
 <script>
 const form = document.getElementById("formContato");
 const statusMsg = document.getElementById("statusMsg");
@@ -141,16 +135,16 @@ form.addEventListener("submit", async (e) => {
         });
 
         if (res.ok) {
-            statusMsg.innerText = "Mensagem enviada com sucesso!";
+            statusMsg.textContent = "Mensagem enviada com sucesso!";
             statusMsg.style.color = "lime";
             form.reset();
         } else {
-            statusMsg.innerText = "Erro ao enviar mensagem.";
+            statusMsg.textContent = "Erro ao enviar mensagem.";
             statusMsg.style.color = "red";
         }
 
     } catch (err) {
-        statusMsg.innerText = "Erro de conexão.";
+        statusMsg.textContent = "Erro de conexão.";
         statusMsg.style.color = "red";
     }
 });
