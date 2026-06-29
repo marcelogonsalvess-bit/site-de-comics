@@ -202,51 +202,34 @@ HERO
 }
 
 .verde{
-
     color:#26d66d;
-
     font-weight:bold;
-
 }
 
 .volume{
-
     background:#d9002f;
-
     padding:4px 10px;
-
     border-radius:4px;
 
 }
 
 .hero h1{
-
     font-size:48px;
-
     margin-bottom:15px;
-
 }
 
 .hero h3{
-
     margin-bottom:15px;
-
     color:#e5e5e5;
-
 }
 
 .hero p{
-
     color:#cfcfcf;
-
     line-height:1.7;
-
     margin-bottom:35px;
-
 }
 
 .hero-buttons{
-
     display:flex;
     gap:15px;
 
@@ -267,21 +250,17 @@ HERO
 }
 .download{
     background:#c70039;
-
 }
 
 .favorito{
     background:#3F3F3F;
-
 }
 
 .btn:hover{
     transform:translateY(-4px);
-
 }
 
 @keyframes zoomHero{
-
     from{
         transform:scale(1);
     }
@@ -292,32 +271,62 @@ HERO
 }
 
 .download-principal{
-
     background:#ff004c;
     color:#fff;
-
     padding:16px 38px;
-
     border-radius:8px;
-
     text-decoration:none;
-
     font-size:18px;
-
     font-weight:bold;
-
     transition:.3s;
-
 }
 
 .download-principal:hover{
-
     background:#ff2b69;
-
     transform:translateY(-4px);
-
     box-shadow:0 8px 20px rgba(255,0,76,.35);
+}
 
+/* NOVOS BOTÕES DA HOME  */
+.hero-buttons{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn-post{
+    background: #ff004c;
+    color: #fff;
+    padding: 16px 38px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-post:hover{
+    background: #ff2b69;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255,0,76,.35);
+}
+
+.btn-volume{
+    background: #ffffff;
+    color: #111;
+    padding: 16px 38px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-volume:hover{
+    background: #e9e9e9;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
 }
 
 /*======================
