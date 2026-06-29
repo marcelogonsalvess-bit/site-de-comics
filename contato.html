@@ -14,146 +14,127 @@
 
 <body>
 
-    <!--================ HEADER ================-->
+<!--================ HEADER ================-->
 
-    <header class="header">
+<header class="header">
 
-        <div class="logo-site">
-            <a href="index.html">Fundação Comics</a>
+    <div class="logo-site">
+        <a href="index.html">Fundação Comics</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="pgs-collection/colecao.html">Coleções</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#" id="openContato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="busca">
+        <input type="text" placeholder="Pesquisar revistas...">
+    </div>
+
+</header>
+
+<!--================ MODAL CONTATO ================-->
+
+<div class="modal-overlay" id="modalContato">
+
+    <div class="modal">
+
+        <span class="close" id="closeContato">&times;</span>
+
+        <h2>Fale conosco</h2>
+
+        <form id="formContato">
+
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <p id="statusMsg"></p>
+
+    </div>
+
+</div>
+
+<!--================ FOOTER ================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3><a href="index.html">Fundação Comics</a></h3>
+            <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
         </div>
 
-        <nav>
-
-            <ul>
-
-                <li><a href="index.html">Início</a></li>
-
-                <li><a href="#">Categorias</a></li>
-
-                <li><a href="pgs-collection/colecao.html">Coleções</a></li>
-
-                <li><a href="#">Item</a></li>
-
-                <li><a href="#" id="openContato" class="active">Contato</a></li>
-
-            </ul>
-
-        </nav>
-
-        <div class="busca">
-
-            <input type="text" placeholder="Pesquisar revistas...">
-
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="index.html">Início</a>
+            <a href="#">Destaques</a>
+            <a href="#">Mais Lidas</a>
+            <a href="#">Últimas Adições</a>
         </div>
 
-    </header>
+        <div class="footer-links">
+            <h4>Conteúdo</h4>
+            <a href="#">Revistas</a>
+            <a href="#">Quadrinhos</a>
+            <a href="#">Mangás</a>
+            <a href="#">Clássicos</a>
+        </div>
 
+        <div class="footer-links">
+            <h4>Contato</h4>
+            <a href="#">Instagram</a>
+            <a href="#">GitHub</a>
+            <a href="#">Email</a>
+        </div>
 
-
-    <!--================ HERO ================-->
-
-
-<section class="contato">
-
-    <h1>Fale conosco</h1>
-
-    <form id="formContato">
-
-        <input type="text" name="name" placeholder="Seu nome" required>
-
-        <input type="email" name="email" placeholder="Seu email" required>
-
-        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-
-        <button type="submit">Enviar mensagem</button>
-
-    </form>
-
-    <p id="msgStatus"></p>
-
-</section>
-
-<script>
-const form = document.getElementById("formContato");
-const statusMsg = document.getElementById("msgStatus");
-
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-    try {
-        const response = await fetch("https://formsubmit.co/ajax/marcelo@marcelogonsalves.com.br", {
-            method: "POST",
-            body: data
-        });
-
-        if (response.ok) {
-            statusMsg.innerText = "Mensagem enviada com sucesso!";
-            form.reset();
-        } else {
-            statusMsg.innerText = "Erro ao enviar mensagem.";
-        }
-
-    } catch (err) {
-        statusMsg.innerText = "Erro de conexão.";
-    }
-});
-</script>
-
-
-    <!--================ HERO ================-->
-
-
-
-     <!--================ FOOTER ================-->
-
-                <footer class="footer">
-
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3><a href="index.html">Fundação Comics</a></h3>
-      <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
     </div>
 
-    <div class="footer-links">
-      <h4>Navegação</h4>
-      <a href="index.html">Início</a>
-      <a href="#">Destaques</a>
-      <a href="#">Mais Lidas</a>
-      <a href="#">Últimas Adições</a>
+    <div class="footer-bottom">
+        <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
     </div>
-
-    <div class="footer-links">
-      <h4>Conteúdo</h4>
-      <a href="#">Revistas</a>
-      <a href="#">Quadrinhos</a>
-      <a href="#">Mangás</a>
-      <a href="#">Clássicos</a>
-    </div>
-
-    <div class="footer-links">
-      <h4>Contato</h4>
-      <a href="#">Instagram</a>
-      <a href="#">GitHub</a>
-      <a href="#">Email</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
-  </div>
 
 </footer>
 
-
+<!--================ SCRIPT ÚNICO ================-->
 
 <script>
+const modal = document.getElementById("modalContato");
+const openBtn = document.getElementById("openContato");
+const closeBtn = document.getElementById("closeContato");
+
 const form = document.getElementById("formContato");
 const statusMsg = document.getElementById("statusMsg");
 
+// abrir modal
+openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("ativo");
+});
+
+// fechar modal
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("ativo");
+});
+
+// fechar clicando fora
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("ativo");
+    }
+});
+
+// envio do formulário
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -178,55 +159,5 @@ form.addEventListener("submit", async (e) => {
 });
 </script>
 
-
-    <div class="modal-overlay" id="modalContato">
-
-    <div class="modal">
-
-        <span class="close" id="closeContato">&times;</span>
-
-        <h2>Fale conosco</h2>
-
-        <form id="formContato">
-
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu email" required>
-            <textarea placeholder="Sua mensagem" required></textarea>
-
-            <button type="submit">Enviar</button>
-
-        </form>
-
-        <p id="statusMsg"></p>
-
-    </div>
-
-</div>
-
-
-
-<script>
-const modal = document.getElementById("modalContato");
-const openBtn = document.getElementById("openContato");
-const closeBtn = document.getElementById("closeContato");
-
-openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.add("ativo");
-});
-
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("ativo");
-});
-
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("ativo");
-    }
-});
-</script>
-
-
 </body>
-
 </html>

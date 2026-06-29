@@ -804,7 +804,7 @@ SLIDER
 
 
 /*==============================
-=   CAMPO DE CONTATO
+=   CAMPO DE CONTATO (página)
 ==============================*/
 
 .contato{
@@ -839,29 +839,26 @@ SLIDER
 
 #msgStatus{
     margin-top:10px;
-} /*==============================
-=   CAMPO DE CONTATO
-==============================*/
-
+}
 
 /*==============================
 =   MODAL CONTATO (NETFLIX STYLE)
 ==============================*/
 
 .modal-overlay{
-    padding:20px; /* evita colar nas bordas em telas pequenas */
 
-    /*position:fixed;
+    position:fixed;
     inset:0;
 
     background:rgba(0,0,0,.7);
-    display:none;
 
+    display:none;
     align-items:center;
     justify-content:center;
 
+    z-index:9999;
 
-    z-index:9999;*/
+    padding:20px; /* evita encostar nas bordas no mobile */
 }
 
 .modal-overlay.ativo{
@@ -870,7 +867,7 @@ SLIDER
 
 .modal{
     background:#111;
-    padding:35px 25px; /* mais espaço no topo */
+    padding:35px 25px;
     border-radius:12px;
 
     width:90%;
@@ -881,7 +878,7 @@ SLIDER
 
     box-shadow:0 20px 60px rgba(0,0,0,.8);
 
-    transform:translateY(10px); /* leve descida visual */
+    transform:translateY(10px);
 }
 
 .modal input,
@@ -918,6 +915,4 @@ SLIDER
 
     cursor:pointer;
     font-size:20px;
-}/*==============================
-=   MODAL CONTATO (NETFLIX STYLE)
-==============================*/
+}
