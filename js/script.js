@@ -86,9 +86,7 @@ function atualizarHero() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-
-  if (!toggle || !menu) return;
+  const menu = document.querySelector(".header nav");
 
   toggle.addEventListener("click", () => {
     menu.classList.toggle("active");
