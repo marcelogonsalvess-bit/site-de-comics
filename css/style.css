@@ -917,3 +917,21 @@ SLIDER
     gap: 10px;
   }
 }
+.busca {
+  display: flex;
+  align-items: center;
+}
+
+.busca input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .busca {
+    display: none; /* esconde no mobile (opcional) */
+  }
+}
