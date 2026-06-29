@@ -188,9 +188,10 @@ body {
 .post-info-bar {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center; /* Alinha os itens verticalmente dentro de cada linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 
-    gap: 8px;
+    gap: 8px;  /* Adiciona um espaçamento entre os itens */
     padding: 12px 16px;
 
     background: rgba(255,255,255,0.04);
