@@ -279,11 +279,10 @@ document.querySelector(".carousel-btn.right").addEventListener("click", () => {
 <section id="comentarios">
 
   <div class="comentarios-wrapper">
-
 <iframe src="./comentarios.html"
-        style="width:100%; border:none; height:700px;">
+        style="width:100%; border:none; min-height:700px; overflow:hidden;"
+        scrolling="no">
 </iframe>
-
   </div>
 
 </section>
@@ -331,21 +330,6 @@ document.querySelector(".carousel-btn.right").addEventListener("click", () => {
     <script src="../js/post.js"></script>
     <script src="../js/script.js"></script>
 
-
-<script>
-  const iframe = document.getElementById("comentarios-frame");
-
-  iframe.onload = () => {
-    setTimeout(() => {
-      try {
-        const altura = iframe.contentWindow.document.body.scrollHeight;
-        iframe.style.height = altura + "px";
-      } catch (e) {
-        iframe.style.height = "700px"; // fallback seguro
-      }
-    }, 300);
-  };
-</script>
 
 
 </body>
