@@ -421,7 +421,7 @@ body {
 
 .comentarios-wrapper {
     width: 100%;
-    max-width: 1000px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
