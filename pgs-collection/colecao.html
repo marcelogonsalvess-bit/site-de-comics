@@ -202,13 +202,9 @@
 
 <!--================ BOTÃO VOLTAR AO TOPO ================-->
 
-<div class="voltar-topo">
-
-    <a href="#topo">↑ Voltar ao topo</a>
-
-</div>
-
-
+<a href="#topo" class="btn-topo" aria-label="Voltar ao topo" onclick="voltarTopo(event)">
+    ↑
+</a>
 
     <!--================ CONTEÚDO FIM ================-->
 
@@ -303,7 +299,30 @@ async function carregarColecoes() {
 carregarColecoes();
 </script>
 
+<script>
+const btnTopo = document.querySelector('.btn-topo');
 
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 300) {
+        btnTopo.classList.add('ativo');
+    } else {
+        btnTopo.classList.remove('ativo');
+    }
+
+});
+</script>
+
+<script>
+function voltarTopo(event){
+    event.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
 
 </body>
 
