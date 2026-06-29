@@ -8,133 +8,127 @@
 
     <title>Fundação Comics</title>
 
+    <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<!--================ HEADER ================-->
+    <!--================ HEADER ================-->
 
-<header class="header">
+    <header class="header">
 
-    <div class="logo-site">
-        <a href="index.html">Fundação Comics</a>
-    </div>
+        <div class="logo-site">
+            <a href="index.html">Fundação Comics</a>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="pgs-collection/colecao.html">Coleções</a></li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#" id="openContato">Contato</a></li>
-        </ul>
-    </nav>
+        <nav>
 
-    <div class="busca">
-        <input type="text" placeholder="Pesquisar revistas...">
-    </div>
+            <ul>
 
-</header>
+                <li><a href="index.html">Início</a></li>
 
-<!--================ MODAL CONTATO ================-->
+                <li><a href="#">Categorias</a></li>
 
-<div class="modal-overlay" id="modalContato">
+                <li><a href="../pgs-collection/colecao.html">Coleções</a></li>
 
-    <div class="modal">
+                <li><a href="#">Item</a></li>
 
-        <span class="close" id="closeContato">&times;</span>
+                <li><a href="contato.html" class="active">Contato</a></li>
 
-        <h2>Fale conosco</h2>
+            </ul>
 
-        <form id="formContato">
+        </nav>
 
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+        <div class="busca">
 
-            <button type="submit">Enviar</button>
+            <input type="text" placeholder="Pesquisar revistas...">
 
-        </form>
+        </div>
 
-        <p id="statusMsg"></p>
+    </header>
 
-    </div>
 
-</div>
+
+    <!--================ HERO ================-->
+
+<!-- CONTATO -->
+<section class="contato-container">
+
+    <h1>Fale conosco</h1>
+    <p>Envie sua mensagem e responderemos em breve.</p>
+
+    <form id="formContato">
+
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+
+    </form>
+
+    <p id="statusMsg"></p>
+
+</section>
 
 <!--================ FOOTER ================-->
 
-<footer class="footer">
+                <footer class="footer">
 
-    <div class="footer-container">
+  <div class="footer-container">
 
-        <div class="footer-brand">
-            <h3><a href="index.html">Fundação Comics</a></h3>
-            <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
-        </div>
-
-        <div class="footer-links">
-            <h4>Navegação</h4>
-            <a href="index.html">Início</a>
-            <a href="#">Destaques</a>
-            <a href="#">Mais Lidas</a>
-            <a href="#">Últimas Adições</a>
-        </div>
-
-        <div class="footer-links">
-            <h4>Conteúdo</h4>
-            <a href="#">Revistas</a>
-            <a href="#">Quadrinhos</a>
-            <a href="#">Mangás</a>
-            <a href="#">Clássicos</a>
-        </div>
-
-        <div class="footer-links">
-            <h4>Contato</h4>
-            <a href="#">Instagram</a>
-            <a href="#">GitHub</a>
-            <a href="#">Email</a>
-        </div>
-
+    <div class="footer-brand">
+      <h3><a href="index.html">Fundação Comics</a></h3>
+      <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="#">Destaques</a>
+      <a href="#">Mais Lidas</a>
+      <a href="#">Últimas Adições</a>
     </div>
+
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <a href="#">Revistas</a>
+      <a href="#">Quadrinhos</a>
+      <a href="#">Mangás</a>
+      <a href="#">Clássicos</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <a href="#">Instagram</a>
+      <a href="#">GitHub</a>
+      <a href="#">Email</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
+  </div>
 
 </footer>
 
-<!--================ SCRIPT ÚNICO ================-->
 
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+<!-- JS ÚNICO -->
 <script>
-const modal = document.getElementById("modalContato");
-const openBtn = document.getElementById("openContato");
-const closeBtn = document.getElementById("closeContato");
-
 const form = document.getElementById("formContato");
 const statusMsg = document.getElementById("statusMsg");
 
-// abrir modal
-openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.add("ativo");
-});
-
-// fechar modal
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("ativo");
-});
-
-// fechar clicando fora
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("ativo");
-    }
-});
-
-// envio do formulário
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -148,13 +142,16 @@ form.addEventListener("submit", async (e) => {
 
         if (res.ok) {
             statusMsg.innerText = "Mensagem enviada com sucesso!";
+            statusMsg.style.color = "lime";
             form.reset();
         } else {
-            statusMsg.innerText = "Erro ao enviar.";
+            statusMsg.innerText = "Erro ao enviar mensagem.";
+            statusMsg.style.color = "red";
         }
 
     } catch (err) {
         statusMsg.innerText = "Erro de conexão.";
+        statusMsg.style.color = "red";
     }
 });
 </script>

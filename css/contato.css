@@ -1,0 +1,60 @@
+/*==============================
+=   CONTATO LIMPO E MODERNO
+==============================*/
+
+.contato-container{
+    max-width:500px;
+    margin:80px auto;
+    padding:20px;
+
+    text-align:center;
+    color:#fff;
+}
+
+.contato-container h1{
+    margin-bottom:10px;
+}
+
+.contato-container p{
+    margin-bottom:25px;
+    opacity:.8;
+}
+
+.contato-container form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.contato-container input,
+.contato-container textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+.contato-container textarea{
+    min-height:120px;
+    resize:none;
+}
+
+.contato-container button{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+
+    background:#b60000;
+    color:#fff;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contato-container button:hover{
+    background:#ff1a1a;
+}
+
+#statusMsg{
+    margin-top:15px;
+}
