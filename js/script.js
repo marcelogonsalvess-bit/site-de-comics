@@ -24,3 +24,8 @@ document.querySelector(".prev").onclick = () => {
 
 }
 
+
+
+
+
+

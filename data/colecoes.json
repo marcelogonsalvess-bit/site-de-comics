@@ -1,0 +1,30 @@
+[
+  {
+    "titulo": "Turma da Mônica",
+    "edicoes": 120,
+    "editora": "Abril",
+    "slug": "turma-da-monica",
+    "imagem": "https://image.tmdb.org/t/p/original/gDiHb8Zzetaq1E7gkYDVnyKZ9mA.jpg"
+  },
+  {
+    "titulo": "Batman",
+    "edicoes": 86,
+    "editora": "DC",
+    "slug": "batman",
+    "imagem": "https://image.tmdb.org/t/p/original/gDiHb8Zzetaq1E7gkYDVnyKZ9mA.jpg"
+  },
+  {
+    "titulo": "Superman",
+    "edicoes": 44,
+    "editora": "DC",
+    "slug": "superman",
+    "imagem": "../imagens/capas/superman.jpg"
+  },
+  {
+    "titulo": "Disney",
+    "edicoes": 210,
+    "editora": "Abril",
+    "slug": "disney",
+    "imagem": "../imagens/capas/disney.jpg"
+  }
+]

@@ -1,0 +1,310 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundação Comics</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/colecoes.css">
+
+</head>
+
+<body id="topo">
+
+    <!--================ HEADER ================-->
+
+    <header class="header">
+
+        <div class="logo-site">
+            <a href="index.html">Fundação Comics</a>
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Início</a></li>
+
+                <li><a href="#">Categorias</a></li>
+
+                <li><a href="#">Coleções</a></li>
+
+                <li><a href="#">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="busca">
+
+            <input type="text" placeholder="Pesquisar revistas...">
+
+        </div>
+
+    </header>
+
+
+
+    <!--================ CONTEÚDO INÍCIO ================-->
+
+
+<!--================ BANNER ================-->
+
+<section class="colecoes-banner">
+
+    <div class="banner-fundo"
+         style="background-image:url('../imagens/banners/banner-colecoes.jpg');">
+    </div>
+
+    <div class="banner-overlay"></div>
+
+    <div class="banner-conteudo">
+
+        <span class="banner-categoria">
+            Fundação Comics
+        </span>
+
+        <h1>Coleções</h1>
+
+        <p>
+
+            Explore coleções completas de quadrinhos, revistas, almanaques,
+            gibis e edições especiais cuidadosamente organizadas para facilitar
+            sua navegação.
+
+        </p>
+
+        <div class="banner-estatisticas">
+
+            <div>
+
+                <strong>420</strong>
+
+                <span>Coleções</span>
+
+            </div>
+
+            <div>
+
+                <strong>8.950</strong>
+
+                <span>Revistas</span>
+
+            </div>
+
+            <div>
+
+                <strong>1935–2026</strong>
+
+                <span>Período</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ BUSCA E FILTROS ================-->
+
+<section class="colecoes-controles">
+
+    <div class="colecoes-busca">
+
+        <input type="text" placeholder="🔍 Procurar coleção...">
+
+    </div>
+
+    <div class="colecoes-filtros">
+
+        <select>
+
+            <option>Categoria</option>
+            <option>Super-heróis</option>
+            <option>Mangás</option>
+            <option>Disney</option>
+            <option>Terror</option>
+            <option>Faroeste</option>
+            <option>Humor</option>
+
+        </select>
+
+        <select>
+
+            <option>Editora</option>
+            <option>Abril</option>
+            <option>Panini</option>
+            <option>Marvel</option>
+            <option>DC</option>
+
+        </select>
+
+        <select>
+
+            <option>Década</option>
+            <option>1930</option>
+            <option>1950</option>
+            <option>1970</option>
+            <option>1990</option>
+            <option>2000+</option>
+
+        </select>
+
+        <select>
+
+            <option>Ordenar</option>
+            <option>Mais recentes</option>
+            <option>Mais antigas</option>
+            <option>Mais coleções</option>
+            <option>Menos coleções</option>
+
+        </select>
+
+    </div>
+
+</section>
+
+<!--================ GRID DE COLEÇÕES ================-->
+
+<!-- GRID DINÂMICO -->
+<section class="colecoes-grid-area">
+
+    <h2>Explorar coleções</h2>
+
+    <div class="colecoes-grid" id="colecoesGrid"></div>
+
+</section>
+
+<!--================ PAGINAÇÃO ================-->
+
+<section class="colecoes-paginacao">
+
+    <a href="#" class="pagina-btn">← Anterior</a>
+
+    <div class="paginas">
+
+        <a href="#" class="ativo">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+
+    </div>
+
+    <a href="#" class="pagina-btn">Próxima →</a>
+
+</section>
+
+<!--================ BOTÃO VOLTAR AO TOPO ================-->
+
+<div class="voltar-topo">
+
+    <a href="#topo">↑ Voltar ao topo</a>
+
+</div>
+
+
+
+    <!--================ CONTEÚDO FIM ================-->
+
+
+
+    <footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3><a href="index.html">Fundação Comics</a></h3>
+      <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="#">Destaques</a>
+      <a href="#">Mais Lidas</a>
+      <a href="#">Últimas Adições</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <a href="#">Revistas</a>
+      <a href="#">Quadrinhos</a>
+      <a href="#">Mangás</a>
+      <a href="#">Clássicos</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <a href="#">Instagram</a>
+      <a href="#">GitHub</a>
+      <a href="#">Email</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
+  </div>
+
+</footer>
+
+
+
+    <script src="../js/script.js"></script>
+
+<script>
+async function carregarColecoes() {
+
+    try {
+
+        console.log("JS rodando");
+
+        const resposta = await fetch('../data/colecoes.json');
+
+        console.log("Status fetch:", resposta.status);
+
+        const colecoes = await resposta.json();
+
+        console.log("JSON carregado:", colecoes);
+
+        const grid = document.getElementById('colecoesGrid');
+
+        grid.innerHTML = colecoes.map(c => `
+            <article class="colecao-card">
+                <a href="../colecoes/${c.slug}.html">
+
+                    <div class="colecao-card-img">
+                        <img src="${c.imagem}" alt="${c.titulo}">
+                    </div>
+
+                    <div class="colecao-card-info">
+                        <h3>${c.titulo}</h3>
+                        <p>${c.edicoes} edições • ${c.editora}</p>
+                    </div>
+
+                </a>
+            </article>
+        `).join('');
+
+    } catch (erro) {
+
+        console.error("ERRO ao carregar coleções:", erro);
+
+    }
+
+}
+
+carregarColecoes();
+</script>
+
+
+
+</body>
+
+</html>
