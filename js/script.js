@@ -88,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const menu = document.querySelector(".header nav");
 
+  if (!toggle || !menu) return;
+
   toggle.addEventListener("click", () => {
     menu.classList.toggle("active");
   });
