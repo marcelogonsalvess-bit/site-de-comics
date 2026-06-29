@@ -1,0 +1,10 @@
+.comentarios-wrapper {
+  width: 90%;
+  margin: 0 auto;   /* ISSO CENTRALIZA */
+}
+
+.comentarios-wrapper iframe {
+  width: 100%;
+  border: none;
+  min-height: 500px;
+}
