@@ -363,13 +363,9 @@ SEÇÕES
 }
 
 .grid-revistas{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
     gap:28px;
-
 }
 
 
@@ -585,29 +581,19 @@ SLIDER
 ======================*/
 
 .slider-container{
-
     position:relative;
-
 }
 
 .slider{
-
     display:flex;
-
     gap:20px;
-
     overflow-x:auto;
-
     scroll-behavior:smooth;
-
     scrollbar-width:none;
-
 }
 
 .slider::-webkit-scrollbar{
-
     display:none;
-
 }
 
 .mini-card{
@@ -632,55 +618,34 @@ SLIDER
 }
 
 .mini-card:hover{
-
     transform:translateY(-6px);
-
 }
 
 .slider-btn{
-
     position:absolute;
-
     top:40%;
-
     transform:translateY(-50%);
-
     width:45px;
-
     height:45px;
-
     border:none;
-
     border-radius:50%;
-
     background:rgba(0,0,0,.65);
-
     color:white;
-
     cursor:pointer;
-
     z-index:5;
-
     transition:.3s;
 
 }
-
 .slider-btn:hover{
-
     background:#ff004c;
-
 }
 
 .prev{
-
     left:-20px;
-
 }
 
 .next{
-
     right:-20px;
-
 }
 
 .footer {
