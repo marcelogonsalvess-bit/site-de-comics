@@ -11,6 +11,58 @@ body{
 =            BANNER
 ==========================================*/
 
+/*==============================
+=   BANNER COM POSTER
+==============================*/
+
+.banner-conteudo{
+    position:relative;
+    z-index:2;
+
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+/* POSTER */
+.banner-poster img{
+    width:220px;
+    height:auto;
+    border-radius:15px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.6);
+
+    transition:.3s;
+}
+
+.banner-poster img:hover{
+    transform:scale(1.05);
+}
+
+/* TEXTO */
+.banner-texto{
+    max-width:700px;
+}
+
+/* responsivo */
+@media(max-width:768px){
+
+    .banner-conteudo{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .banner-poster img{
+        width:180px;
+    }
+}
+
+
+
 .colecoes-banner{
     position:relative;
     min-height:520px;
