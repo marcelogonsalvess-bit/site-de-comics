@@ -842,27 +842,3 @@ SLIDER
     display: flex;
   }
 }
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .header nav {
-    display: none;
-    flex-direction: column;
-  }
-
-  .header nav.active {
-    display: flex;
-  }
-}
