@@ -1,0 +1,86 @@
+.pagina-editora{
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.descricao{
+    opacity: .7;
+    margin-bottom: 30px;
+}
+
+.grid-revistas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-revista{
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: .3s;
+}
+
+.card-revista img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.card-revista:hover{
+    transform: translateY(-5px);
+}
+.pagina-editora{
+    padding-top:120px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+}
+
+.descricao{
+    opacity:.7;
+    margin-bottom:35px;
+}
+
+.grid-colecoes{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.card-colecao{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    background:#1f1f1f;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card-colecao img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    display:block;
+}
+
+.card-colecao h2{
+    margin:18px 15px 8px;
+}
+
+.card-colecao p{
+    margin:0 15px 20px;
+    opacity:.75;
+}
+
+.card-colecao:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
