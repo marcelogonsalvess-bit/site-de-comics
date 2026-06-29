@@ -248,49 +248,34 @@ HERO
 .hero-buttons{
 
     display:flex;
-
     gap:15px;
 
 }
 
 .btn{
-
     padding:14px 28px;
-
     border-radius:8px;
-
     text-decoration:none;
-
     color:white;
-
     font-weight:bold;
-
     transition:.3s;
-
 }
-
 .principal{
-
     background:#ffffff;
-
     color:#111;
 
 }
-
 .download{
-
-    background:#3f3f3f;
-
-}
-
-.favorito{
-
     background:#c70039;
 
 }
 
-.btn:hover{
+.favorito{
+    background:#3F3F3F;
 
+}
+
+.btn:hover{
     transform:translateY(-4px);
 
 }
@@ -298,17 +283,12 @@ HERO
 @keyframes zoomHero{
 
     from{
-
         transform:scale(1);
-
     }
 
     to{
-
         transform:scale(1.06);
-
     }
-
 }
 
 .download-principal{
