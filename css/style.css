@@ -763,3 +763,41 @@ SLIDER
     font-size: 0.85rem;
     color: #777;
 }
+
+/*==============================
+=   MENU ATIVO (underline)
+==============================*/
+
+.header nav ul li a{
+    position:relative;
+    text-decoration:none;
+    color:#fff;
+    padding:5px 0;
+}
+
+/* linha animada */
+.header nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+
+    width:0%;
+    height:2px;
+
+    background:#b60000;
+
+    transition:.3s ease;
+}
+
+/* hover também mostra linha */
+.header nav ul li a:hover::after{
+    width:100%;
+}
+
+/* página ativa fixa */
+.header nav ul li a.active::after{
+    width:100%;
+} /*==============================
+=   MENU ATIVO (underline)
+==============================*/
