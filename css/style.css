@@ -866,3 +866,54 @@ SLIDER
     display: flex;
   }
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* IMPORTANTE pra não sumir no fundo preto */
+}
+
+/* MENU DESKTOP */
+.header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  .header nav.active {
+    display: block;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
