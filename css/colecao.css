@@ -1,0 +1,588 @@
+/*==========================================
+=            BANNER DA COLEÇÃO
+==========================================*/
+
+/*==========================================
+=          BANNER COM IMAGEM DE FUNDO
+==========================================*/
+
+.colecao-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:80px;
+
+    min-height:520px;
+
+}
+
+.banner-fundo{
+
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    filter:blur(1px);
+    transform:scale(1.08);
+
+}
+
+.banner-fundo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(to right,#0d0d0d 15%,rgba(13,13,13,.65) 45%,rgba(13,13,13,.9) 100%),
+        linear-gradient(to top,#0d0d0d 5%,transparent 40%);
+
+}
+
+.colecao-conteudo{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+    display:flex;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.colecao-banner{
+
+    max-width:1200px;
+    margin:120px auto 60px;
+    padding:0 20px;
+
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.colecao-capa{
+
+    flex:0 0 300px;
+
+}
+
+.colecao-capa img{
+
+    width:100%;
+    display:block;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+    transition:.35s;
+
+}
+
+.colecao-capa img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.colecao-info{
+
+    flex:1;
+
+}
+
+.colecao-tipo{
+
+    display:inline-block;
+
+    background:#b60000;
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:.9rem;
+
+    margin-bottom:20px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+.colecao-info h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.colecao-descricao{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin-bottom:35px;
+
+}
+
+.colecao-detalhes{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.colecao-detalhes div{
+
+    background:#1a1a1a;
+
+    padding:18px 25px;
+
+    border-radius:12px;
+
+    min-width:150px;
+
+    transition:.3s;
+
+}
+
+.colecao-detalhes div:hover{
+
+    transform:translateY(-5px);
+
+    background:#252525;
+
+}
+
+.colecao-detalhes strong{
+
+    display:block;
+
+    font-size:1.2rem;
+
+    margin-bottom:8px;
+
+}
+
+.colecao-detalhes span{
+
+    color:#9d9d9d;
+
+}
+
+
+/*==========================================
+=                FILTROS
+==========================================*/
+
+.colecao-filtros{
+
+    max-width:1200px;
+
+    margin:0 auto 50px;
+
+    padding:0 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.filtro-busca{
+
+    flex:1;
+
+}
+
+.filtro-busca input{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.filtro-busca input:focus{
+
+    outline:none;
+
+    box-shadow:0 0 10px rgba(182,0,0,.4);
+
+}
+
+.filtros{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.filtros select{
+
+    padding:14px 18px;
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    min-width:170px;
+
+}
+
+.filtros select:focus{
+
+    outline:none;
+
+}
+
+
+/*==========================================
+=          RESPONSIVO
+==========================================*/
+
+@media(max-width:900px){
+
+.colecao-banner{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.colecao-capa{
+
+    max-width:280px;
+
+}
+
+.colecao-descricao{
+
+    margin:auto auto 35px;
+
+}
+
+.colecao-detalhes{
+
+    justify-content:center;
+
+}
+
+.colecao-filtros{
+
+    flex-direction:column;
+
+}
+
+.filtros{
+
+    width:100%;
+
+    flex-direction:column;
+
+}
+
+.filtros select{
+
+    width:100%;
+
+}
+
+}
+
+/*==========================================
+=            GRADE DE EDIÇÕES
+==========================================*/
+
+.colecao-edicoes{
+    max-width:1200px;
+    margin:0 auto 70px;
+    padding:0 20px;
+}
+
+.colecao-edicoes h2{
+    font-size:2rem;
+    margin-bottom:35px;
+    border-left:5px solid #b60000;
+    padding-left:15px;
+}
+
+.edicoes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:30px;
+}
+
+.edicao-card{
+    background:#181818;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.edicao-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.5);
+}
+
+.edicao-card a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+}
+
+.edicao-card img{
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    display:block;
+    transition:.35s;
+}
+
+.edicao-card:hover img{
+    transform:scale(1.05);
+}
+
+.edicao-info{
+    padding:18px;
+}
+
+.edicao-info h3{
+    font-size:1rem;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.edicao-info p{
+    color:#bdbdbd;
+    font-size:.9rem;
+}
+
+
+/*==========================================
+=              EFEITO HOVER
+==========================================*/
+
+.edicao-card:hover .edicao-info h3{
+
+    color:#ff4d4d;
+
+}
+
+.edicao-card:hover{
+
+    border:1px solid rgba(182,0,0,.35);
+
+}
+
+/*==========================================
+=              PAGINAÇÃO
+==========================================*/
+
+.paginacao{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    padding:0 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.paginas{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.paginas a,
+.pagina-btn{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:#1d1d1d;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.paginas a:hover,
+.pagina-btn:hover{
+
+    background:#b60000;
+
+}
+
+.paginas a.ativo{
+
+    background:#b60000;
+
+}
+
+
+/*==========================================
+=        BOTÃO VOLTAR ÀS COLEÇÕES
+==========================================*/
+
+.voltar-colecoes{
+
+    text-align:center;
+
+    margin:60px 0;
+
+}
+
+.btn-voltar{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:#1d1d1d;
+
+    padding:16px 30px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.btn-voltar:hover{
+
+    background:#b60000;
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================
+=               FOOTER
+==========================================*/
+
+footer{
+
+    margin-top:80px;
+
+}
+
+
+/*==========================================
+=            RESPONSIVO
+==========================================*/
+
+@media(max-width:768px){
+
+    .edicoes-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+    }
+
+    .paginacao{
+
+        flex-direction:column;
+
+    }
+
+    .paginas{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .edicoes-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .edicao-info{
+
+        text-align:center;
+
+    }
+
+}
