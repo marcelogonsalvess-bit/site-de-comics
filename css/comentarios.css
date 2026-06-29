@@ -8,3 +8,22 @@
   border: none;
   min-height: 350px;
 }
+
+/*CARD MODERNO (base visual)
+ Fundo geral da área de comentários */
+#comentarios {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD moderno do Giscus */
+.giscus {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0,0,0,0.06);
+}
