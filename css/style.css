@@ -849,7 +849,9 @@ SLIDER
 ==============================*/
 
 .modal-overlay{
-    position:fixed;
+    padding:20px; /* evita colar nas bordas em telas pequenas */
+
+    /*position:fixed;
     inset:0;
 
     background:rgba(0,0,0,.7);
@@ -857,9 +859,9 @@ SLIDER
 
     align-items:center;
     justify-content:center;
-    padding:20px; /* evita colar nas bordas em telas pequenas */
 
-    z-index:9999;
+
+    z-index:9999;*/
 }
 
 .modal-overlay.ativo{
