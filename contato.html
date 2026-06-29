@@ -119,36 +119,7 @@
 
 <script src="js/contato.js"></script>
 
-<script>
-const form = document.getElementById("formContato");
-const statusMsg = document.getElementById("statusMsg");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-    try {
-        const res = await fetch("https://formsubmit.co/ajax/marcelo@marcelogonsalves.com.br", {
-            method: "POST",
-            body: data
-        });
-
-        if (res.ok) {
-            statusMsg.textContent = "Mensagem enviada com sucesso!";
-            statusMsg.style.color = "lime";
-            form.reset();
-        } else {
-            statusMsg.textContent = "Erro ao enviar mensagem.";
-            statusMsg.style.color = "red";
-        }
-
-    } catch (err) {
-        statusMsg.textContent = "Erro de conexão.";
-        statusMsg.style.color = "red";
-    }
-});
-</script>
 
 </body>
 </html>

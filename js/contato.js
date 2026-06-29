@@ -1,52 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-const modal = document.getElementById("modalContato");
-const openBtn = document.getElementById("openContato");
-const closeBtn = document.getElementById("closeContato");
+    const form = document.getElementById("formContato");
+    const statusMsg = document.getElementById("statusMsg");
 
-const form = document.getElementById("formContato");
-const statusMsg = document.getElementById("statusMsg");
+    if (!form) return;
 
-// abre / fecha com toggle
-openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.toggle("ativo");
-});
+    form.addEventListener("submit", async (e) => {
 
-// fecha botão X
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("ativo");
-});
+        e.preventDefault();
 
-// fecha clicando fora
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("ativo");
-    }
-});
+        const data = new FormData(form);
 
-// envio
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+        try {
 
-    const data = new FormData(form);
+            const res = await fetch("https://formsubmit.co/ajax/marcelo@marcelogonsalves.com.br", {
+                method: "POST",
+                body: data
+            });
 
-    try {
-        const res = await fetch("https://formsubmit.co/ajax/marcelo@marcelogonsalves.com.br", {
-            method: "POST",
-            body: data
-        });
+            if (res.ok) {
 
-        if (res.ok) {
-            statusMsg.innerText = "Mensagem enviada com sucesso!";
-            form.reset();
+                statusMsg.textContent = "Mensagem enviada com sucesso!";
+                statusMsg.style.color = "lime";
+                form.reset();
 
-            // fecha modal após enviar
-            modal.classList.remove("ativo");
-        } else {
-            statusMsg.innerText = "Erro ao enviar.";
+            } else {
+
+                statusMsg.textContent = "Erro ao enviar.";
+                statusMsg.style.color = "red";
+
+            }
+
+        } catch {
+
+            statusMsg.textContent = "Erro de conexão.";
+            statusMsg.style.color = "red";
+
         }
 
-    } catch (err) {
-        statusMsg.innerText = "Erro de conexão.";
-    }
+    });
+
 });
