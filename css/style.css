@@ -931,3 +931,75 @@ SLIDER
   align-items: center;
   gap: 10px;
 }
+/* HEADER base */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo-site {
+  flex: 0;
+}
+
+/* BUSCA */
+.busca {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.busca input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* MENU */
+#menu ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+/* BOTÃO MENU (desktop escondido) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .busca {
+    display: none; /* evita esmagamento no mobile */
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #menu.active {
+    display: block;
+  }
+
+  #menu ul {
+    flex-direction: column;
+  }
+}
