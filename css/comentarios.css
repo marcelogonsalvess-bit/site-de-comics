@@ -10,14 +10,14 @@
 }
 
 /*CARD MODERNO (base visual)
- Fundo geral da área de comentários */
+ Fundo geral da área de comentários 
 #comentarios {
   padding: 20px 0 0 0;
   display: flex;
   justify-content: center;
 }
 
-/* CARD moderno do Giscus */
+ CARD moderno do Giscus 
 .giscus {
   width: 100%;
   max-width: 900px;
@@ -26,4 +26,4 @@
   padding: 20px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0,0,0,0.06);
-}
+} */
