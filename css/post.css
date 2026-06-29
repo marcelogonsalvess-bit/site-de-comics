@@ -408,3 +408,21 @@ body {
 }
 
 /* CONTEÚDO EXTRA FIM */
+
+
+
+
+
+/* ================= COMENTÁRIOS ================= */
+
+#comentarios {
+    padding: 40px 0;
+}
+
+.comentarios-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
