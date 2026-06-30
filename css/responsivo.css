@@ -68,13 +68,11 @@
     outline:none;
     box-sizing:border-box;
 }
-
 .busca-mobile input::placeholder{
     color:#bdbdbd;
 }
 
 }
-
 
 
 .busca-mobile{
