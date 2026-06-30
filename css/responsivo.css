@@ -34,47 +34,38 @@
     }
 
     /* Menu aberto */
-    .header nav.menu-aberto{
-        display: block;
-        position: absolute;
-        top: 75px;          /* altura do seu header */
-        left: 0;
-        width: 100%;
-        background: rgba(0,0,0,.95);
-        backdrop-filter: blur(10px);
-        padding: 20px 0;
-}
-
-/* Links em coluna */
-    .header nav.menu-aberto ul{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-}
-.busca-mobile{
+.header nav.menu-aberto{
     display:block;
-    padding:20px;
-}
-
-.busca-mobile input{
+    position:absolute;
+    top:75px;
+    left:0;
     width:100%;
-    height:42px;
-    border-radius:25px;
-    border:2px solid rgba(255,255,255,.3);
+    background:#111;
+    border-top:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    z-index:999;
+}
+
+.header nav.menu-aberto ul{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    padding:10px 0;
+}
+
+.header nav.menu-aberto li{
+    width:100%;
+}
+
+.header nav.menu-aberto a{
+    display:block;
+    padding:16px 24px;
+    text-align:left;
+}
+
+.header nav.menu-aberto a:hover{
     background:rgba(255,255,255,.08);
-    color:#fff;
-    padding:0 18px;
-    outline:none;
-    box-sizing:border-box;
-}
-.busca-mobile input::placeholder{
-    color:#bdbdbd;
 }
 
 }
 
-
-.busca-mobile{
-    display:none;
-}
