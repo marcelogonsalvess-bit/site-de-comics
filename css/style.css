@@ -72,29 +72,18 @@ HEADER
 }
 
 .busca input{
-
     width:260px;
-
     height:40px;
-
     border-radius:25px;
-
     border:2px solid rgba(255,255,255,.3);
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     padding:0 18px;
-
     outline:none;
-
 }
 
 .busca input::placeholder{
-
     color:#bdbdbd;
-
 }
 
 

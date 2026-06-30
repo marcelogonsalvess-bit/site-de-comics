@@ -5,4 +5,12 @@
 
 @media (max-width: 768px){
 
+.header{
+    padding: 0 15px;
+}
+
+.busca input{
+    width: 160px;
+}
+
 }
