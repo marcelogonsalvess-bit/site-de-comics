@@ -33,4 +33,24 @@
         display:none;
     }
 
+    /* Menu aberto */
+    .header nav.menu-aberto{
+        display: block;
+        position: absolute;
+        top: 75px;          /* altura do seu header */
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,.95);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+}
+
+/* Links em coluna */
+    .header nav.menu-aberto ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+}
+
 }
