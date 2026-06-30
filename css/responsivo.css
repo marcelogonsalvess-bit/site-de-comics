@@ -5,32 +5,44 @@
 
 @media (max-width: 768px){
 
+.menu-toggle{
+    display:none;
+}
+
+.menu-toggle{
+    display:block;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:32px;
+    cursor:pointer;
+}
+
 .header{
     padding: 0 15px;
+}
+
+.header nav{
+    display:none;
 }
 
 .busca input{
     width: 160px;
 }
 
+.header nav{
+    display: none;
+}
+
+.busca{
+    display: none;
+}
+
+.header{
+    justify-content: space-between;
+}
+
 }
 /* =========================
    MENU MOBILE - ETAPA 1
 ========================= */
-
-.menu-toggle{
-    display:none;
-}
-
-@media (max-width:768px){
-
-    .menu-toggle{
-        display:block;
-        background:none;
-        border:none;
-        color:#fff;
-        font-size:32px;
-        cursor:pointer;
-    }
-
-}
