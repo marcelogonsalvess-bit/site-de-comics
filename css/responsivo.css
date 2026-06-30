@@ -3,46 +3,34 @@
    Fundação Comics
 ========================================== */
 
-@media (max-width: 768px){
-
+/* Esconde o botão no desktop */
 .menu-toggle{
-    display:none;
-}
-
-.menu-toggle{
-    display:block;
-    background:none;
-    border:none;
-    color:#fff;
-    font-size:32px;
-    cursor:pointer;
-}
-
-.header{
-    padding: 0 15px;
-}
-
-.header nav{
-    display:none;
-}
-
-.busca input{
-    width: 160px;
-}
-
-.header nav{
     display: none;
 }
 
-.busca{
-    display: none;
-}
+@media (max-width:768px){
 
-.header{
-    justify-content: space-between;
-}
+    /* Mostra o botão no celular */
+    .menu-toggle{
+        display:block;
+        background:none;
+        border:none;
+        color:#fff;
+        font-size:32px;
+        cursor:pointer;
+    }
+
+    .header{
+        padding:0 15px;
+        justify-content:space-between;
+    }
+
+    .header nav{
+        display:none;
+    }
+
+    .busca{
+        display:none;
+    }
 
 }
-/* =========================
-   MENU MOBILE - ETAPA 1
-========================= */
