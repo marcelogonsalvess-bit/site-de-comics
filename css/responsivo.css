@@ -51,16 +51,18 @@
     flex-direction:column;
     gap:0;
     padding:10px 0;
+    align-items:center;
 }
 
 .header nav.menu-aberto li{
     width:100%;
+    text-align:center;
 }
 
 .header nav.menu-aberto a{
     display:block;
     padding:16px 24px;
-    text-align:left;
+    text-align:center;
 }
 
 .header nav.menu-aberto a:hover{
