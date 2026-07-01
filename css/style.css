@@ -88,6 +88,9 @@ HEADER
     color:#ff004c;
 
 }
+.busca{
+    position: relative;
+}
 
 .busca input{
     width:260px;
