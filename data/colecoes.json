@@ -26,12 +26,5 @@
     "editora": "DC",
     "slug": "superman",
     "imagem": "../imagens/capas/superman.jpg"
-  },
-  {
-    "titulo": "Disney",
-    "edicoes": 210,
-    "editora": "Abril",
-    "slug": "disney",
-    "imagem": "../imagens/capas/disney.jpg"
   }
 ]
