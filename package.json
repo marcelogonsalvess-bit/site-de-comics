@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "pagefind --site ."
+  },
   "devDependencies": {
     "pagefind": "^1.5.2"
   }
