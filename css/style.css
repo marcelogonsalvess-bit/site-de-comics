@@ -47,6 +47,24 @@ HEADER
     letter-spacing:-1px;
 
 }
+.logo-site a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-site img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.logo-site span {
+    font-size: 1.4rem;      /* ajuste conforme seu menu */
+    font-weight: 700;
+    color: #fff;
+}
 
 
 .header ul{
