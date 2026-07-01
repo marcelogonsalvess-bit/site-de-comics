@@ -31,4 +31,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             </a>
         `).join("");
     });
+
+// Fecha os resultados ao clicar fora da busca
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".busca")) {
+                results.innerHTML = "";
+             }
+        });
+
 });
