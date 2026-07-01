@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         results.innerHTML = items.map(item => `
             <a href="${item.url}" class="search-result">
-                <strong>${item.meta.title}</strong><br>
-                <small>${item.excerpt}</small>
+                <strong>${item.meta.title}</strong>
             </a>
         `).join("");
     });
