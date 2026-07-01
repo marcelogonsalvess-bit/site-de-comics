@@ -756,3 +756,43 @@ SLIDER
 ==============================*/
 
 
+/* ===== Resultados da busca ===== */
+
+#search-results{
+    position:absolute;
+    top:48px;
+    left:0;
+    width:100%;
+    background:#1b1b1b;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:12px;
+    overflow:hidden;
+    display:none;
+    z-index:9999;
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+}
+
+#search-results:empty{
+    display:none;
+}
+
+.search-result{
+    display:block;
+    padding:12px 16px;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.2s;
+}
+
+.search-result:last-child{
+    border-bottom:none;
+}
+
+.search-result:hover{
+    background:#2b2b2b;
+}
+
+#search-results:not(:empty){
+    display:block;
+}
