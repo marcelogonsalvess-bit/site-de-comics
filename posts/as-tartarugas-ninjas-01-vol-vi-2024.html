@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body id="topo">
 
     <!--================ HEADER ================-->
 
@@ -319,6 +319,12 @@ document.querySelector(".carousel-btn.right").addEventListener("click", () => {
 
 <!-- SEÇÃO DE COMENTÁRIOS FIM -->
 
+<!--================ BOTÃO VOLTAR AO TOPO ================-->
+
+                <a href="#topo" class="btn-topo" aria-label="Voltar ao topo" onclick="voltarTopo(event)">
+                    ↑
+                </a>
+
 <!-- FOOTER COMEÇO -->
 
                 <footer class="footer">
@@ -366,7 +372,30 @@ document.querySelector(".carousel-btn.right").addEventListener("click", () => {
     <script src="../js/script.js"></script>
     <script src="../js/menu-mobile.js"></script>
 
+<script>
+const btnTopo = document.querySelector('.btn-topo');
 
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 300) {
+        btnTopo.classList.add('ativo');
+    } else {
+        btnTopo.classList.remove('ativo');
+    }
+
+});
+</script>
+
+<script>
+function voltarTopo(event){
+    event.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
 
 </body>
 </html>

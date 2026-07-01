@@ -1,0 +1,76 @@
+/*==========================================
+=            VOLTAR AO TOPO
+==========================================*/
+
+.voltar-topo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.voltar-topo a{
+    color:#aaa;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.voltar-topo a:hover{
+    color:#fff;
+}
+
+/*==============================
+=   BOTÃO VOLTAR AO TOPO
+==============================*/
+
+.btn-topo{
+
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#b60000;
+    color:#fff;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:bold;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.btn-topo:hover{
+
+    background:#ff1a1a;
+    transform:translateY(-5px) scale(1.1);
+    box-shadow:0 15px 35px rgba(0,0,0,.7);
+}
+
+/* efeito de aparecer suavemente */
+.btn-topo{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition: all .3s ease;
+}
+
+/* classe ativa via JS */
+.btn-topo.ativo{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+}
+html{
+    scroll-behavior:smooth;
+}

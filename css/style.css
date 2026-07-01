@@ -627,6 +627,13 @@ SLIDER
     max-width: 300px;
 }
 
+.footer-logo img {
+    margin-top: -50px;
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
 .footer-brand h3 {
     color: #fff;
     margin-bottom: 10px;
@@ -725,4 +732,5 @@ SLIDER
 } /*==============================
 =   MENU ATIVO (underline)
 ==============================*/
+
 

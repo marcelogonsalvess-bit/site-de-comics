@@ -8,12 +8,17 @@
 
     <title>Fundação Comics</title>
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/535ced_5d765c33d2bb49f1add113f81ab6bba5~mv2.png">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/btn-back-topo.css">
     <link rel="stylesheet" href="css/responsivo.css">
 
 </head>
 
-<body>
+<body id="topo">
+
     <!--================ HEADER ================-->
 
 <header class="header">
@@ -544,6 +549,12 @@
 
                 </section>
 
+<!--================ BOTÃO VOLTAR AO TOPO ================-->
+
+                <a href="#topo" class="btn-topo" aria-label="Voltar ao topo" onclick="voltarTopo(event)">
+                    ↑
+                </a>
+
 
  <!--================ FOOTER ================-->
 
@@ -552,7 +563,9 @@
                   <div class="footer-container">
 
                     <div class="footer-brand">
-                      <h3><a href="index.html">Fundação Comics</a></h3>
+                      <a href="index.html" class="footer-logo">
+                          <img src="https://static.wixstatic.com/media/535ced_9c08c204a61a4b30ba824595c3c8eab3~mv2.png" alt="Fundação Comics">
+                      </a>
                       <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
                     </div>
 
@@ -591,6 +604,33 @@
 
     <script src="js/script.js"></script>
     <script src="js/menu-mobile.js"></script>
+
+
+
+<script>
+const btnTopo = document.querySelector('.btn-topo');
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 300) {
+        btnTopo.classList.add('ativo');
+    } else {
+        btnTopo.classList.remove('ativo');
+    }
+
+});
+</script>
+
+<script>
+function voltarTopo(event){
+    event.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
 
 </body>
 
