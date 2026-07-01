@@ -624,14 +624,17 @@ SLIDER
 }
 
 .footer-brand {
+    margin-top: -40px;
     max-width: 300px;
 }
 
 .footer-logo img {
-    margin-top: -50px;
-    max-width: 250px;
+    width: 140px;
     height: auto;
-    display: block;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .footer-brand h3 {
@@ -642,17 +645,12 @@ SLIDER
 
 
 .footer-brand h3 a{
-
     color:#fff;
-
     text-decoration:none;
-
     transition:.3s;
-
 }
 
 .footer-brand h3 a:hover{
-
     color:#b60000;
 
 }
@@ -662,11 +660,14 @@ SLIDER
     font-size: 0.9rem;
     line-height: 1.5;
     color: #aaa;
+    margin-top: 8px;
 }
 
 .footer-links h4 {
+    margin-top: -25px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
 }
 
 .footer-links {
@@ -679,7 +680,7 @@ SLIDER
     color: #aaa;
     text-decoration: none !important;
     font-size: 0.9rem;
-    transition: 0.2s;
+    transition: color .2s ease;
 }
 
 .footer-links a:hover {
