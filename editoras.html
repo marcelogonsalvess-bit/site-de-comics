@@ -47,10 +47,12 @@
 
     </nav>
 
-    <!-- Busca do desktop -->
-    <div class="busca">
-        <input type="text" placeholder="Pesquisar revistas...">
-    </div>
+    <!--================ CAMPO DE BUSCA ================-->
+        <div class="busca">
+            <input id="search-input" type="text" placeholder="Pesquisar revistas...">
+
+            <div id="search-results"></div>
+        </div>
 
 </header>
 
@@ -169,6 +171,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/menu-mobile.js"></script>
+    <script type="module" src="/js/search.js"></script>
 
     <script>
 const btnTopo = document.querySelector('.btn-topo');
