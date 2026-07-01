@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!input || !results) return;
 
     const pagefind = await import("/pagefind/pagefind.js");
+    let currentResults = [];
 
     input.addEventListener("input", async () => {
         const query = input.value.trim();
@@ -13,6 +14,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             results.innerHTML = "";
             return;
         }
+    input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && currentResults.length > 0) {
+        window.location.href = currentResults[0].url;
+    }
+});
 
         const search = await pagefind.search(query);
 
@@ -24,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const items = await Promise.all(
             search.results.slice(0, 8).map(result => result.data())
         );
+        currentResults = items;
 
         results.innerHTML = items.map(item => `
             <a href="${item.url}" class="search-result">
