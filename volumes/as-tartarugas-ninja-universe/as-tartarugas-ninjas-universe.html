@@ -53,10 +53,11 @@
 
         </nav>
 
+    <!--================ CAMPO DE BUSCA ================-->
         <div class="busca">
+            <input id="search-input" type="text" placeholder="Pesquisar revistas...">
 
-            <input type="text" placeholder="Pesquisar revistas...">
-
+            <div id="search-results"></div>
         </div>
 
     </header>
@@ -445,31 +446,32 @@
 
     <script src="../../js/script.js"></script>
     <script src="../../js/menu-mobile.js"></script>
+    <script type="module" src="/js/search.js"></script>
 
-    <script>
-const btnTopo = document.querySelector('.btn-topo');
+            <script>
+                const btnTopo = document.querySelector('.btn-topo');
 
-window.addEventListener('scroll', () => {
+                window.addEventListener('scroll', () => {
 
-    if (window.scrollY > 300) {
-        btnTopo.classList.add('ativo');
-    } else {
-        btnTopo.classList.remove('ativo');
-    }
+                    if (window.scrollY > 300) {
+                        btnTopo.classList.add('ativo');
+                    } else {
+                        btnTopo.classList.remove('ativo');
+                    }
 
-});
-</script>
+                });
+            </script>
 
-<script>
-function voltarTopo(event){
-    event.preventDefault();
+            <script>
+                function voltarTopo(event){
+                    event.preventDefault();
 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-</script>
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
 
 </body>
 
