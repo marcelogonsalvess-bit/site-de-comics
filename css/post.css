@@ -359,7 +359,7 @@ body {
     min-width: 160px;
     flex: 0 0 auto;
     transition: 0.3s;
-    align-items: center;
+    justify-content: center;
 }
 
 .carousel-card img {
