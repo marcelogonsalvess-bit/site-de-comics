@@ -169,19 +169,27 @@ HERO
     gap:18px;
     margin-bottom:18px;
     font-size:15px;
-
+    align-items: center; /* Alinha o centro de todos os elementos na vertical */
 }
 
 .verde{
     color:#26d66d;
     font-weight:bold;
 }
-
-.classificacao-indicativa{
-    background:#fdc115;
-    padding:4px 10px;
-    border-radius:4px;
-
+.classificacao-indicativa {
+    background: #fdc115;
+    color: #000; /* Opcional: Garante que o número fique preto no fundo amarelo */
+    font-weight: bold;
+    
+    /* A mágica acontece aqui: */
+    display: inline-block;
+    vertical-align: middle; /* Alinha o selo horizontalmente com os outros spans */
+    text-align: center;
+    
+    /* Tamanho fixo para garantir que fique um quadrado perfeito */
+    min-width: 24px; 
+    padding: 3px 4px;
+    border-radius: 4px;
 }
 
 .hero h1{
