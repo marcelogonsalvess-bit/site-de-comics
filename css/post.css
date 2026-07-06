@@ -428,3 +428,30 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+.action-buttons {
+    display:flex;
+    gap:16px;
+    flex-wrap:nowrap;
+    align-items:stretch
+}
+.series-btn,.download-btn {
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:16px 22px;
+    border-radius:14px;
+
+    text-decoration:none;
+    box-shadow:0 15px 35px rgba(0,0,0,.5);
+    transition:.25s;width:fit-content
+}
+.series-btn{background:linear-gradient(135deg,#c70039,#8b0028);color:#fff}
+
+.series-btn:hover,.download-btn:hover {
+    transform:scale(1.05)}
+.series-btn .text{display:flex;flex-direction:column}
+.series-btn .title{font-weight:bold}
+.series-btn .subtitle{font-size:.75rem;opacity:.8}
+.series-btn .icon{font-size:1.6rem}
