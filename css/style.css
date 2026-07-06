@@ -294,12 +294,44 @@ HERO
 .btn-volume{
     background: #ffffff;
     color: #111;
-    padding: 16px 38px;
-    border-radius: 8px;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
     transition: .3s;
+
+    /* --- MUDANÇAS PARA TORNAR CÍRCULO E ICONE --- */
+    border-radius: 50%; /* Transforma o fundo em um círculo */
+    display: inline-flex; /* Para centralizar o ícone */
+    align-items: center; /* Centralização vertical */
+    justify-content: center; /* Centralização horizontal */
+    
+    /* Tamanho do círculo (ajuste conforme necessário) */
+    width: 60px; 
+    height: 60px;
+    
+    /* Removemos o padding para que o ícone preencha o espaço corretamente */
+    padding: 0;
+    
+    border: 2px solid #111; /* Opcional: Adiciona uma borda escura como no ícone de referência */
+}
+
+/* Estilo para o ícone de imagem dentro do botão */
+.btn-volume .icon-info {
+    width: 100%; /* A imagem preenche o círculo */
+    height: 100%;
+    object-fit: contain; /* Garante que o ícone não distorça */
+    border-radius: 50%; /* Mantém a imagem dentro da forma circular */
+}
+
+/* O HOVER CONTINUA EXATAMENTE O MESMO */
+.btn-volume:hover {
+    background: #e9e9e9; /* Cor de hover original */
+    transform: translateY(-4px); /* Efeito original */
+    box-shadow: 0 8px 20px rgba(0,0,0,.18); /* Sombra original */
+}
+
+    /*padding: 16px 38px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;*/
 }
 
 .btn-volume:hover{
