@@ -84,3 +84,31 @@ function atualizarHero() {
 
 
 
+
+
+// CÓDIGO QUE CONTROLA TODOS OS CARROSSÉIS DA INDEX, ORIGINAL MANTIDO //
+
+// Em vez de pegar um por um, pegamos TODAS as seções de carrossel da página
+const carrosséis = document.querySelectorAll('.slider-container');
+
+carrosséis.forEach(container => {
+    // Buscamos os elementos APENAS dentro deste container específico
+    const slider = container.querySelector('.slider');
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    
+    // Se não existirem os botões ou o slider nesta seção, ignora
+    if (!slider || !prevBtn || !nextBtn) return;
+
+    // Lógica de clique para Avançar
+    nextBtn.addEventListener('click', () => {
+        // Exemplo de rolagem simples (ajuste os pixels de acordo com o seu código original)
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    // Lógica de clique para Voltar
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+});
+// CÓDIGO QUE CONTROLA TODOS OS CARROSSÉIS DA INDEX, ORIGINAL MANTIDO //
