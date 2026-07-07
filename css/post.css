@@ -455,3 +455,9 @@ body {
 .series-btn .title{font-weight:bold}
 .series-btn .subtitle{font-size:.75rem;opacity:.8}
 .series-btn .icon{font-size:1.6rem}
+
+
+
+.pagefind-search-only{
+    display:none;
+}
