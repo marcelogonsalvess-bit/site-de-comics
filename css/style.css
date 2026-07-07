@@ -832,7 +832,7 @@ SLIDER
 
 
 
-
+/* ESCONDENDO O NOME 002 DAS BUSCAS, SÓ O NOME AS TARTARUGAS... APARECEM */
 .pagefind-search-only{
     display:none;
 }

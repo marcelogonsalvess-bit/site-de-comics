@@ -211,14 +211,19 @@
 
     .hero-buttons{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
         gap: 12px;
         margin-top: 20px;
     }
 
-    .hero-buttons .btn{
-        width: 100%;
-        text-align: center;
-    }
+.hero-buttons .btn{
+    flex: 1;
+    text-align: center;
+}
+
+.hero-buttons .btn-volume{
+    flex-shrink: 0;
+}
 
 }
