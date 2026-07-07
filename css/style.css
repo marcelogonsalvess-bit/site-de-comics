@@ -829,3 +829,10 @@ SLIDER
 #search-results:not(:empty){
     display:block;
 }
+
+
+
+
+.pagefind-search-only{
+    display:none;
+}
