@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Fundação Comics</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="contato-page">
+
+    <div id="header"></div>
+
+    <main class="contato-container">
+
+        <section class="contato-header">
+            <h1>✉️ Contato</h1>
+
+            <p>
+                Tem alguma dúvida, encontrou um problema ou procura uma revista específica?
+                Envie uma mensagem usando o formulário abaixo. Faremos o possível para responder
+                assim que possível.
+            </p>
+        </section>
+
+        <section class="contato-info">
+
+            <div class="info-card">
+                <h3>📚 Solicite uma HQ</h3>
+                <p>Não encontrou uma revista? Informe o nome dela no formulário.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🐞 Reporte um problema</h3>
+                <p>Encontrou algum erro ou link quebrado? Avise.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>💬 Sugestões</h3>
+                <p>Sua opinião ajuda a melhorar o Fundação Comics.</p>
+            </div>
+
+        </section>
+
+        <section class="contato-formulario">
+
+            <form id="formContato">
+
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                >
+
+                <label for="assunto">Assunto</label>
+                <input
+                    type="text"
+                    id="assunto"
+                    placeholder="Ex.: Solicitação de HQ, Link quebrado, Sugestão..."
+                >
+
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                    id="mensagem"
+                    rows="7"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Enviar Mensagem
+                </button>
+
+                <div id="mensagemSucesso"></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <div id="auth"></div>
+    <div id="footer"></div>
+
+    <script defer src="../js/components.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/auth-ui.js"></script>
+    <script defer src="../js/contato.js"></script>
+    <script defer src="../js/busca.js"></script>
+    <script defer src="../js/mobile-menu.js"></script>
+
+</body>
+</html>

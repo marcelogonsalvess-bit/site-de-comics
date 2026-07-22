@@ -1,0 +1,721 @@
+/* ===========================
+   MOBILE HEADER
+=========================== */
+
+.mobile-menu-button{
+
+    display:none;
+
+}
+
+
+/* ===========================
+   CELULAR
+=========================== */
+
+@media(max-width:768px){
+
+
+    .header .container{
+
+        height:70px;
+
+        padding:0 8px;
+
+        gap:4px;
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+
+
+    .logo{
+
+        flex-shrink:1;
+
+    }
+
+
+    .logo img{
+
+        height:32px;
+
+        width:auto;
+
+        max-width:120px;
+
+        object-fit:contain;
+
+    }
+
+
+
+    /* esconder menu principal */
+
+    .menu{
+
+        display:none;
+
+    }
+
+
+
+    /* botão sanduíche */
+
+    .mobile-menu-button{
+
+        display:block;
+
+        width:40px;
+
+        height:40px;
+
+        border-radius:50%;
+
+        background:#1a1a1a;
+
+        border:1px solid var(--borda);
+
+        color:#fff;
+
+        font-size:20px;
+
+        flex-shrink:0;
+
+    }
+
+
+
+    /* lado direito */
+
+    .header-right{
+
+        margin-left:auto;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:4px;
+
+        flex-shrink:0;
+
+    }
+
+
+
+    /* busca somente com lupa */
+
+    .search-box input{
+
+        display:none;
+
+    }
+
+    .search-box{
+
+        display:none;
+
+    }
+
+
+
+    .search-box{
+
+        border-radius:50%;
+
+        flex-shrink:0;
+
+    }
+
+
+
+    .search-box button{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+
+    /* esconder nome do perfil */
+
+    .profile-button span{
+
+        display:none;
+
+    }
+
+
+
+    .profile-button{
+
+        padding:5px;
+
+    }
+
+
+
+    .profile-button img{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+
+
+    /* visitante */
+
+    .btn-login{
+
+        display:none;
+
+    }
+
+
+
+    .btn-register{
+
+        display:none;
+
+    }
+
+    #listaHQsEditora{
+
+    justify-content:center;
+
+    margin-left:0;
+
+    }
+
+/* ==========================
+   LOGIN MOBILE
+========================== */
+
+.mobile-auth{
+
+    display:flex;
+
+    flex-direction:row;
+
+    gap:8px;
+
+    padding:15px;
+
+}
+
+
+
+.mobile-auth button{
+
+    flex:1;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    border:1px solid var(--borda);
+
+    background:#1a1a1a;
+
+    color:#fff;
+
+    font-size:13px;
+
+}
+
+/* manter padrão do botão cadastrar */
+
+#mobileRegister{
+
+    background:#8b5cf6;
+
+    border-color:#8b5cf6;
+
+}
+
+/* ==========================
+   FOOTER MOBILE
+========================== */
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+    padding:40px 0;
+
+}
+
+
+.footer-column{
+
+    text-align:center;
+
+}
+
+/* ==========================
+   ÚLTIMAS ADIÇÕES MOBILE
+========================== */
+
+#listaUltimasAdicoes{
+
+    display:flex;
+
+    gap:8px;
+    
+    margin-left:-10px;
+
+}
+
+
+#listaUltimasAdicoes .comic-card{
+
+    flex:0 0 85%;
+
+}
+
+.content-section{
+
+    padding:20px 0;
+
+}
+
+/* ==========================
+   LOGIN MOBILE NO MENU
+========================== */
+
+.guest-menu{
+
+    display:none;
+
+}
+
+
+}
+/* ===========================
+   MENU MOBILE ABERTO
+=========================== */
+
+.mobile-menu{
+
+    display:none;
+
+    position:fixed;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:#111;
+
+    padding:20px;
+
+    z-index:9998;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.mobile-menu a{
+
+    width:80%;
+
+    padding:12px;
+
+    color:white;
+
+    font-size:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.mobile-menu a.active{
+
+    color:#fff;
+
+    background:var(--cor-principal);
+
+    font-weight:bold;
+
+    border-radius:8px;
+
+}
+.mobile-menu a:visited{
+
+    color:#fff;
+
+}
+
+.mobile-menu.active{
+
+    display:flex;
+
+}
+
+
+.mobile-menu a{
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+/* busca dentro do menu */
+
+.mobile-search{
+
+    display:flex;
+
+    width:100%;
+
+}
+
+
+.mobile-search input{
+
+    flex:1;
+
+    padding:12px;
+
+    border-radius:8px 0 0 8px;
+
+    background:#222;
+
+    color:white;
+
+}
+
+
+.mobile-search button{
+
+    width:45px;
+
+    background:#1a1a1a;
+
+    color:white;
+
+}
+
+/* ==========================
+   TOP 10 MOBILE
+========================== */
+
+#listaMaisAcessados{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+#listaMaisAcessados .comic-card{
+
+    flex:0 0 180px;
+
+}
+
+/* ============================
+   PÁGINA HQ - MOBILE
+============================ */
+
+@media (max-width: 900px){
+
+
+    .hq-page{
+
+        padding-top: 80px;
+
+    }
+
+
+    .hq-content{
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap:1px !important;
+
+    }
+
+
+    .hq-left,
+    .hq-right{
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .hq-right{
+
+        order: -1;
+
+    }
+
+
+    .hq-cover{
+
+        margin-top: 20px;
+
+    }
+
+
+    .hq-cover img{
+
+        width: 320px;
+
+        max-width: 90%;
+
+    }
+
+
+    .hq-meta,
+    .hq-extra{
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    .hq-buttons{
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        width: 100%;
+
+    }
+
+
+    .hq-buttons button{
+
+        width: 90%;
+
+        max-width: 320px;
+
+    }
+
+
+    .hq-sinopse{
+
+        text-align: center;
+
+    }
+
+
+    .hq-card{
+
+        text-align: center;
+
+    }
+
+    /* AJUSTES HQ MOBILE */
+
+
+.hq-cover{
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+
+.hq-logo{
+
+    max-width: 300px !important;
+
+    margin-bottom:30px !important;
+
+    height: auto;
+
+}
+
+
+.hq-card{
+
+    width: 90%;
+
+    max-width: 400px;
+
+}
+.hq-details-grid{
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    align-items:center;
+
+    gap:15px;
+
+    width:100%;
+
+}
+.hq-card{
+
+    width:90%;
+
+    max-width:400px;
+
+}
+
+}
+
+/* ============================
+   PÁGINA COLEÇÃO - MOBILE
+============================ */
+
+@media (max-width:900px){
+
+    .colecao-banner{
+
+        height:auto;
+
+        min-height:500px;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        padding:30px 20px;
+
+        gap:25px;
+
+    }
+
+
+    .colecao-capa{
+
+        width:150px;
+
+        height:220px;
+
+    }
+
+
+    .colecao-info{
+
+        text-align:center;
+
+        max-width:90%;
+
+    }
+
+
+    .colecao-info h1{
+
+        font-size:36px;
+
+    }
+
+
+    .colecao-meta{
+
+        align-items:center;
+
+    }
+
+
+    #listaHQsColecao{
+
+        justify-content:center;
+
+        margin-left:0;
+
+    }
+
+    .colecao-info .colecao-editora,
+    .colecao-info p{
+
+    text-align:center;
+
+    width:100%;
+
+}
+.colecao-meta{
+
+    align-items:center;
+
+    text-align:center;
+
+}
+.colecao-editora{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   TOP 10 MOBILE
+========================== */
+
+#listaMaisAcessados{
+
+    display:flex;
+
+    gap:6px;
+    
+    margin-left:-10px;
+
+}
+
+
+#listaMaisAcessados .comic-card{
+
+    width:130px !important;
+
+    min-width:130px !important;
+
+    flex:0 0 130px !important;
+
+}
+
+
+}

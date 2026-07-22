@@ -1,407 +1,360 @@
-/*==========================================
-=            BASE GERAL
-==========================================*/
+/* ==========================
+   COLEÇÕES
+========================== */
 
-body{
-    background:#0d0d0d;
-    color:#fff;
+/* TÍTULO */
+
+.colecoes-page h1,
+.colecoes-page h2,
+.colecoes-container h1,
+.colecoes-container h2 {
+
+    text-align:center !important;
+
+    width:100%;
+
+    margin-bottom:20px;
+
 }
 
-/*==========================================
-=            BANNER
-==========================================*/
 
-/*==============================
-=   BANNER COM POSTER
-==============================*/
+.colecoes-page{
 
-.banner-conteudo{
-    position:relative;
-    z-index:2;
+    padding-top:100px;
 
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
+}
+
+
+.colecoes-container{
 
     display:flex;
-    align-items:center;
-    gap:40px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    width: 98%;
+
+    max-width: 1400px;
+
+    margin: 10px auto;
+
 }
 
-/* POSTER */
-.banner-poster img{
-    width:220px;
-    height:auto;
-    border-radius:15px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.6);
+.colecao-card .comic-info{
 
-    transition:.3s;
+    text-align:center;
+
 }
 
-.banner-poster img:hover{
-    transform:scale(1.05);
+
+.colecao-card h3{
+
+    margin-top:1px;
+
 }
 
-/* TEXTO */
-.banner-texto{
-    max-width:700px;
-}
+/* GRID DAS CAPAS */
 
-/* responsivo */
+.colecoes-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 30px;
+
+}
+/* ==========================
+   COLEÇÕES MOBILE
+========================== */
+
 @media(max-width:768px){
 
-    .banner-conteudo{
-        flex-direction:column;
+
+    .colecoes-container{
+
+        justify-content:center;
+
+    }
+
+
+    .colecao-card{
+
+        width:48%;
+
         text-align:center;
+
     }
 
-    .banner-poster img{
-        width:180px;
+    /* ==========================
+   COLEÇÕES MOBILE
+========================== */
+
+@media(max-width:768px){
+
+
+    .colecoes-page{
+
+        padding-top:100px;
+
     }
+
+
+    .colecoes-page .page-title{
+
+        text-align:center;
+
+        margin-bottom:35px;
+
+    }
+
+
+    .colecoes-container{
+
+        justify-content:center;
+
+        width:100%;
+
+    }
+
+
+    .colecao-card{
+
+        width:90%;
+
+    }
+
+
+    .colecao-card img{
+
+        width:100%;
+
+        height:auto;
+
+        aspect-ratio:2 / 3;
+
+        object-fit:cover;
+
+    }
+
+
 }
 
 
-
-.colecoes-banner{
-    position:relative;
-    min-height:520px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    margin-top:80px;
 }
 
-.banner-fundo{
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    transform:scale(1.08);
-    filter:blur(5px);
+@media(max-width:768px){
+
+    .colecoes-page h1{
+
+        text-align:center;
+
+        margin-bottom:35px;
+
+    }
+
 }
 
-.banner-overlay{
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(to right, #0d0d0d 20%, rgba(13,13,13,.7) 50%, rgba(13,13,13,.95) 100%),
-        linear-gradient(to top, #0d0d0d 10%, transparent 60%);
-}
+/* ============================
+   CARDS DE COLEÇÕES
+============================ */
 
-.banner-conteudo{
-    position:relative;
-    z-index:2;
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.banner-categoria{
-    display:inline-block;
-    background:#b60000;
-    padding:8px 16px;
-    border-radius:30px;
-    font-size:.85rem;
-    margin-bottom:15px;
-    font-weight:bold;
-}
-
-.banner-conteudo h1{
-    font-size:3rem;
-    margin-bottom:15px;
-}
-
-.banner-conteudo p{
-    max-width:700px;
-    color:#cfcfcf;
-    line-height:1.6;
-    margin-bottom:30px;
-}
-
-.banner-estatisticas{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.banner-estatisticas div{
-    background:#1a1a1a;
-    padding:15px 20px;
-    border-radius:12px;
-    min-width:140px;
-    transition:.3s;
-}
-
-.banner-estatisticas div:hover{
-    transform:translateY(-5px);
-    background:#222;
-}
-
-.banner-estatisticas strong{
-    display:block;
-    font-size:1.2rem;
-}
-
-.banner-estatisticas span{
-    color:#aaa;
-    font-size:.9rem;
-}
-
-/*==========================================
-=            CONTROLES (BUSCA)
-==========================================*/
-
-.colecoes-controles{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.colecoes-busca input{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#1a1a1a;
-    color:#fff;
-    margin-bottom:20px;
-    font-size:15px;
-}
-
-.colecoes-busca input:focus{
-    outline:none;
-    box-shadow:0 0 10px rgba(182,0,0,.4);
-}
-
-.colecoes-filtros{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.colecoes-filtros select{
-    flex:1;
-    min-width:160px;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#1a1a1a;
-    color:#fff;
-    cursor:pointer;
-}
-
-.colecoes-filtros select:focus{
-    outline:none;
-}
-
-/*==========================================
-=            GRID DE COLEÇÕES
-==========================================*/
-
-.colecoes-grid-area{
-    max-width:1200px;
-    margin:60px auto;
-    padding:0 20px;
-}
-
-.colecoes-grid-area h2{
-    font-size:2rem;
-    margin-bottom:30px;
-    border-left:5px solid #b60000;
-    padding-left:12px;
-}
-
-.colecoes-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-    gap:25px;
-}
 
 .colecao-card{
-    background:#141414;
-    border-radius:16px;
-    overflow:hidden;
-    transition:.35s;
-    box-shadow:0 10px 25px rgba(0,0,0,.4);
-}
 
-.colecao-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 40px rgba(0,0,0,.6);
-}
+    width:260px;
 
-.colecao-card a{
+    height:390px;
+
     text-decoration:none;
-    color:#fff;
-    display:block;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
 }
 
-.colecao-card-img{
-    overflow:hidden;
-}
 
-.colecao-card-img img{
+.colecao-card-capa{
+
+    position:relative;
+
     width:100%;
-    aspect-ratio:2/3;
+
+    aspect-ratio:2 / 3;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+
+.colecao-card-capa img{
+
+    width:100%;
+
+    height:100%;
+
     object-fit:cover;
-    transition:.4s;
+
+    display:block;
+
+     transition:transform .4s ease;
+
 }
 
-.colecao-card:hover img{
-    transform:scale(1.08);
+.colecao-card-capa:hover img{
+
+    transform:scale(1.05);
+
 }
 
-.colecao-card-info{
+
+.colecao-hq-capa{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:2 / 3;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+
+.colecao-hq-capa img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .4s ease;
+
+    transition:transform .4s ease;
+
+}
+.colecao-hq-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
     padding:15px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0,0,0,0)
+    );
+
+}
+.colecao-hq-overlay h3{
+
+    margin:0;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:white;
+
+    text-align:left;
+
+    text-shadow:none;
+
 }
 
-.colecao-card-info h3{
-    font-size:1rem;
-    margin-bottom:6px;
+
+.colecao-hq-capa:hover img{
+
+    transform:scale(1.05);
+
 }
 
-.colecao-card-info p{
-    color:#aaa;
-    font-size:.9rem;
-}
+/* ============================
+   SELO DE STATUS
+============================ */
 
-/*==========================================
-=            PAGINAÇÃO
-==========================================*/
 
-.colecoes-paginacao{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    margin:60px auto;
-    flex-wrap:wrap;
-}
+.colecao-status{
 
-.colecoes-paginacao .paginas{
-    display:flex;
-    gap:8px;
-}
+    position:absolute;
 
-.colecoes-paginacao a{
-    text-decoration:none;
-    background:#1a1a1a;
-    color:#fff;
-    padding:10px 15px;
-    border-radius:8px;
-    transition:.3s;
-}
+    top:15px;
 
-.colecoes-paginacao a:hover{
-    background:#b60000;
-}
+    left:-35px;
 
-.colecoes-paginacao .ativo{
-    background:#b60000;
-}
+    width:140px;
 
-/*==========================================
-=            VOLTAR AO TOPO
-==========================================*/
+    padding:6px 0;
 
-.voltar-topo{
     text-align:center;
-    margin-bottom:40px;
+
+    font-size:10px;
+
+    font-weight:100;
+
+    text-transform:uppercase;
+
+    background:#22c55e;
+
+    color:white;
+
+    transform:rotate(-45deg);
+
+    box-shadow:0 3px 10px rgba(0,0,0,.4);
+
 }
 
-.voltar-topo a{
-    color:#aaa;
-    text-decoration:none;
-    transition:.3s;
+/* ============================
+   CORES DOS STATUS
+============================ */
+
+
+.status-andamento{
+
+    background:#2563eb;
+
 }
 
-.voltar-topo a:hover{
-    color:#fff;
+
+.status-completa{
+
+    background:#22c55e;
+
 }
 
-/*==============================
-=   BOTÃO VOLTAR AO TOPO
-==============================*/
 
-.btn-topo{
+.status-pausada{
 
-    position:fixed;
-    right:25px;
-    bottom:25px;
+    background:#eab308;
 
-    width:50px;
-    height:50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#b60000;
-    color:#fff;
-
-    border-radius:50%;
-    text-decoration:none;
-
-    font-size:20px;
-    font-weight:bold;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.5);
-
-    transition:.3s;
-
-    z-index:999;
 }
 
-.btn-topo:hover{
 
-    background:#ff1a1a;
-    transform:translateY(-5px) scale(1.1);
-    box-shadow:0 15px 35px rgba(0,0,0,.7);
-}
+.status-cancelada,
+.status-abandonada{
 
-/* efeito de aparecer suavemente */
-.btn-topo{
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-    transition: all .3s ease;
-}
-
-/* classe ativa via JS */
-.btn-topo.ativo{
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-}
-html{
-    scroll-behavior:smooth;
-}
-
-/*==========================================
-=            FOOTER AJUSTE
-==========================================*/
-
-.footer{
-    margin-top:80px;
-}
-
-/*==========================================
-=            RESPONSIVO
-==========================================*/
-
-@media(max-width:768px){
-
-    .banner-conteudo h1{
-        font-size:2.2rem;
-    }
-
-    .banner-estatisticas{
-        flex-direction:column;
-    }
-
-    .colecoes-filtros{
-        flex-direction:column;
-    }
+    background:#dc2626;
 
 }

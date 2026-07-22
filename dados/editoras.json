@@ -1,0 +1,46 @@
+[
+    
+    {
+        "id": "dark-horse",
+        "nome": "Dark Horse",
+        "logo": "https://static.wixstatic.com/media/535ced_15069dcd9fb4472fbd4d6ef692898435~mv2.png",
+        "anoFundacao": "1986",
+        "pais": "Estados Unidos",
+        "descricao": "",
+        "pagina": "editoras/dark-horse.html",
+        "hqs": 0
+    },
+
+    {
+        "id": "dc",
+        "nome": "DC Comics",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/DC_Comics_logo.png",
+        "anoFundacao": "1934",
+        "pais": "Estados Unidos",
+        "descricao": "",
+        "pagina": "editoras/dc.html",
+        "hqs": 0
+    },
+
+    {
+        "id": "marvel",
+        "nome": "Marvel Comics",
+        "logo": "https://static.wixstatic.com/media/535ced_7fc11a79fb074f7781112aaefef75573~mv2.png",
+        "anoFundacao": "1939",
+        "pais": "Estados Unidos",
+        "descricao": "",
+        "pagina": "editoras/marvel.html",
+        "hqs": 0
+    },
+
+    {
+        "id": "idw",
+        "nome": "IDW Publishing",
+        "logo": "https://i.ibb.co/8gdtkX9F/editora-idw-publishing.png",
+        "anoFundacao": "1989",
+        "pais": "Estados Unidos",
+        "descricao": "",
+        "pagina": "editoras/idw.html",
+        "hqs": 0
+    }
+]

@@ -8,811 +8,169 @@
 
     <title>Fundação Comics</title>
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/535ced_5d765c33d2bb49f1add113f81ab6bba5~mv2.png">
-
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/btn-back-topo.css">
-    <link rel="stylesheet" href="css/responsivo.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Fundação Comics - Biblioteca digital de quadrinhos.">
+    <meta name="theme-color" content="#111111">
 </head>
 
-<body id="topo">
+<body>
 
-    <!--================ HEADER ================-->
+        <div id="header"></div>
+        <div id="auth"></div>
 
-<header class="header">
+<main>
 
-    <div class="logo-site">
-        <a href="index.html">
-            <img src="https://static.wixstatic.com/media/535ced_9c08c204a61a4b30ba824595c3c8eab3~mv2.png" alt="Fundação Comics">
-            <span>Fundação Comics</span>
-        </a>
-    </div>
-
-    <button class="menu-toggle" aria-label="Abrir menu">
-        ☰
-    </button>
-
-    <nav>
-
-        <ul>
-            <li><a href="index.html" class="active">Início</a></li>
-            <li><a href="editoras.html">Editoras</a></li>
-            <li><a href="../colecoes/colecao.html">Coleções</a></li>
-            <li><a href="#">Item</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-
-    </nav>
-
-    <!--================ CAMPO DE BUSCA ================-->
-        <div class="busca">
-            <input id="search-input" type="text" placeholder="Pesquisar revistas...">
-
-            <div id="search-results"></div>
-        </div>
-
-</header>
-
-    <!--================ HERO ================-->
+ <!-- ==========================
+     HERO
+========================== -->
 
 <section class="hero">
 
-    <img src="https://static.wixstatic.com/media/535ced_5ba64c78e54a4c9bb529d27bc68b1ea9~mv2.jpg" class="hero-banner">
+    <div class="hero-slider" id="heroSlider">
 
-    <div class="hero-overlay"></div>
+        <div class="hero-slider-auto"></div>
 
-<div class="hero-content">
+    </div>
 
-    <div class="hero-left">
+    <!-- INDICADORES -->
 
-        <img src="https://static.wixstatic.com/media/535ced_8a0837040c2b45fc9f62ed865f2487bd~mv2.png" class="hero-logo">
+<div class="hero-dots">
 
-        <div class="hero-info">
+    <button class="active"></button>
 
-            <div class="avaliacao">
+</div>
 
-                <span class="verde">2024</span>
+            <div class="hero-navigation">
 
-                <span class="classificacao-indicativa">12</span>
+    <button class="hero-prev">
 
-                <span>Volume VI</span>
+        ❮
 
-            </div>
+    </button>
 
-            <!-- <h1>Nome da Revista</h1> -->
+    <button class="hero-next">
 
-            <h3>Edição 001</h3>
+        ❯
 
-            <p>
-
-                ESTREIA DA NOVA SÉRIE! NOVO PONTO DE SALTO! As Tartarugas Ninjas deixaram Nova York para perseguir seus próprios interesses, mas há forças se reunindo que as unirão novamente — quer os bandidos gostem ou não. Primeiro: Raphael! Mas por que o brigão favorito de todos está na prisão?!
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="posts/as-tartarugas-ninjas-01-vol-vi-2024.html" class="btn btn-post">Acessar</a>
-
-                <a href="volumes/as-tartarugas-ninjas-vol-6-2024/as-tartarugas-ninjas-vol-6-2024" class="btn-volume" title="Mais Informações">
-    <img src="https://i.ibb.co/KzfNsWkH/i-de-info.png" alt="Ícone de Informação" class="icon-info">
-</a>
-
-                <!-- <a href="#"
-                   class="btn btn-volume">
-                    i
-                </a> -->
-
-            </div>
-
-     </div> 
+    </button>
 
 </div>
 
 </section>
 
+    <!-- FIM HERO -->
 
+<!-- ===================================== -->
+<!-- ÚLTIMAS ADIÇÕES -->
+<!-- ===================================== -->
 
-<!--================ CATEGORIAS =================-->
+<section class="content-section latest-section">
 
-             <!--   <section class="categorias">
+    <div class="container">
 
-                    <a href="#" class="categoria ativo">Todas</a>
+        <div class="section-header">
 
-                    <a href="#" class="categoria">Marvel</a>
+            <h2>Últimas Adições</h2>
 
-                    <a href="#" class="categoria">DC</a>
+        </div>
 
-                    <a href="#" class="categoria">Disney</a>
+        <div class="carousel-wrapper">
 
-                    <a href="#" class="categoria">Turma da Mônica</a>
 
-                    <a href="#" class="categoria">Mangás</a>
+            <div class="carousel-container">
 
-                    <a href="#" class="categoria">Revistas</a>
 
-                    <a href="#" class="categoria">Artbooks</a>
+                <button class="carousel-btn prev">
+                    ❮
+                </button>
 
-                </section>  -->
 
+                <div id="listaUltimasAdicoes" class="carousel-track"></div>
 
-<!--================ ÚLTIMAS ADIÇÕES ================-->
 
-<section class="section">
+                <button class="carousel-btn next">
+                    ❯
+                </button>
 
-    <div class="section-header">
 
-        <h2>Últimas Adições</h2>
+            </div>
 
-        <!-- <a href="#">Ver todas →</a> -->
 
-    </div>
-
-    <div class="grid-revistas">
-
-                <!-- Card -->
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-12-vol-vi-2025.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_6a8505c775ba4e8592d665b4e61478e4~mv2.jpg">
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 012</p>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card -->
-
-
-
-
-                <!-- Card -->
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-11-vol-vi-2025.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_5f49bc0aabaa4fd8856e61e926b473d4~mv2.jpg">
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 011</p>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card -->
-
-
-
-                <!-- Card -->
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-10-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_8aec6fda278f48e69c9d50f5736ada1f~mv2.jpg">
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 010</p>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card -->
-
-
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-09-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_ce05a8c3a137474da75c5d20f9ddde92~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 009</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-                <!-- Card -->
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-08-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_1dcf4542d60f472c830fa4e6a637e802~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 008</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-                <!-- Card -->
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-07-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_5c6b9926869d43b38b97a328d38b0154~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 007</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-                <!-- Card -->
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-06-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_8d85607fcd9d4341bbceb44123b5f6d9~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 006</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-                <!-- Card -->
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-05-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_61477cb00c5648b881b150f0cb4e57dc~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 005</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-04-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://i.ibb.co/RpQyXF3D/as-tartarugas-ninjas-004-2024-capa-a.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 004</p>
-
-                        </div>
-                    </a>
-                </article>
-
-                <!-- Card -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-03-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_8e2b3ca73f164b8a9850b760a58d65c6~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 003</p>
-
-                        </div>
-                    </a>
-                </article>
-
-                <!-- Card 1 -->
-
-                <article class="card">
-                    <a href="posts/as-tartarugas-ninjas-02-vol-vi-2024.html">
-                        <div class="card-image">
-                            <img src="https://static.wixstatic.com/media/535ced_be555e0d47474b74adee954aa0f6a904~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-
-                        <div class="card-info">
-                            <!-- <h3>Thor</h3> -->
-                            <p>Edição 002</p>
-
-                        </div>
-                    </a>
-                </article>
-
-        <!-- Card 2 -->
-
-                <article class="card">
-
-                    <a href="posts/as-tartarugas-ninjas-01-vol-vi-2024.html">
-                        <div class="card-image">
-
-                            <img src="https://static.wixstatic.com/media/535ced_4116fd651e454d8ab37c69cfb5ee5370~mv2.jpg">
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                            <span class="tag-volume">
-                                Vol. 06
-                            </span>
-
-                        </div>
-                        <div class="card-info">
-                             <!-- <h3>Thor</h3> -->
-                            <p>Edição 001</p>
-                        </div>
-                    </a>
-                </article>
-
-
-
-
-        <!-- Depois é só copiar e colar os cards -->
+        </div>
 
     </div>
 
 </section>
 
+<!-- ===================================== -->
+<!-- MAIS ACESSADOS -->
+<!-- ===================================== -->
 
-<!--================ DESTAQUES =================-->
+<section class="content-section top10-section">
 
-                <section class="section">
+    <div class="container">
 
-                    <div class="section-header">
 
-                        <h2>Destaques</h2>
+        <div class="section-header">
 
-                        <!-- <a href="#">Ver todas →</a> -->
+            <h2>Top 10</h2>
 
-                    </div>
+        </div>
 
-                    <div class="slider-container">
 
-                        <button class="slider-btn prev">&#10094;</button>
 
-                        <div class="slider">
+        <div class="carousel-container">
 
-                           <article class="mini-card"> 
-                                <a href="volumes/as-tartarugas-ninjas-vol-6-2024/as-tartarugas-ninjas-vol-6-2024" style="text-decoration: none; color: inherit;">
-                                <img src="https://static.wixstatic.com/media/535ced_4116fd651e454d8ab37c69cfb5ee5370~mv2.jpg" alt="As Tartarugas Ninjas">
-                                <h4>As Tartarugas Ninjas</h4>
-                                </a> 
-                            </article>
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/wQSyXIVgQtfNANbEU3L8IMzrFwe.jpg">
-                                <h4>O Último Mestre do Ar</h4>
-                            </article>
+            <button class="carousel-btn prev">
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/gDiHb8Zzetaq1E7gkYDVnyKZ9mA.jpg">
-                                <h4>A Casa do Dragão</h4>
-                            </article>
+                ❮
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/hTowtXrkCY7FJyoj4p91JckrJSE.jpg">
-                                <h4>Minions & Monstros</h4>
-                            </article>
+            </button>
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/A7Vsg7ViVQeFPZ3NXJ70KnGR6QW.jpg">
-                                <h4>O Justiceiro: Uma Última Morte</h4>
-                            </article>
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/gDiHb8Zzetaq1E7gkYDVnyKZ9mA.jpg">
-                                <h4>A Casa do Dragão</h4>
-                            </article>
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/hTowtXrkCY7FJyoj4p91JckrJSE.jpg">
-                                <h4>Minions & Monstros</h4>
-                            </article>
+            <div id="listaMaisAcessados" class="carousel-track"></div>
 
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/A7Vsg7ViVQeFPZ3NXJ70KnGR6QW.jpg">
-                                <h4>O Justiceiro: Uma Última Morte</h4>
-                            </article>
 
-                        </div>
 
-                        <button class="slider-btn next">&#10095;</button>
+            <button class="carousel-btn next">
 
-                    </div>
+                ❯
 
-                </section>
+            </button>
 
 
-<!--================ COLEÇÕES =================-->
+        </div>
 
-                <section class="section">
-                    <div class="section-header">
-                        <h2>Coleções</h2>
 
-                         <a href="../colecoes/colecao">Ver todas →</a> 
+    </div>
 
-                    </div>
+</section>
 
-                    <div class="slider-container">
+</main>
 
-                        <button class="slider-btn prev">&#10094;</button>
+<div id="footer"></div>
 
-                        <div class="slider">
-
-                           <article class="mini-card"> 
-                                <a href="volumes/as-tartarugas-ninjas-vol-6-2024/as-tartarugas-ninjas-vol-6-2024" style="text-decoration: none; color: inherit;">
-                                <img src="https://static.wixstatic.com/media/535ced_4116fd651e454d8ab37c69cfb5ee5370~mv2.jpg" alt="As Tartarugas Ninjas">
-                                <h4>As Tartarugas Ninjas v6</h4>
-                                </a> 
-                            </article>
-
-                           <article class="mini-card"> 
-                                <a href="volumes/as-tartarugas-ninja-universe/as-tartarugas-ninjas-universe" style="text-decoration: none; color: inherit;">
-                                <img src="https://i.ibb.co/rGs18v4w/As-Tartarugas-Ninja-Universe-01-capa.jpg" alt="As Tartarugas Ninja: Universe">
-                                <h4>As Tartarugas Ninja: Universe</h4>
-                                </a> 
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg">
-                                <h4>Supergirl</h4>
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/gDiHb8Zzetaq1E7gkYDVnyKZ9mA.jpg">
-                                <h4>A Casa do Dragão</h4>
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/hTowtXrkCY7FJyoj4p91JckrJSE.jpg">
-                                <h4>Minions & Monstros</h4>
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg">
-                                <h4>Supergirl</h4>
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg">
-                                <h4>Supergirl</h4>
-                            </article>
-
-                            <article class="mini-card">
-                                <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg">
-                                <h4>Supergirl</h4>
-                            </article>
-
-                        </div>
-
-                        <button class="slider-btn next">&#10095;</button>
-
-                    </div>
-
-                </section>
-
-
-               <!-- <section class="section">
-
-                    <div class="section-header">
-
-                        <h2>Coleções</h2>
-
-                        <a href="pgs-collection/colecao.html">Ver todas →</a>
-
-                    </div>
-
-                    <div class="grid-revistas"> -->
-
-                        <!-- Copie seus cards aqui -->
-
-                 <!-- Card 1 -->
-
-              <!--  <article class="card">
-                    <a href="paginas/thor-ragnarok.html">
-                        <div class="card-image">
-                            <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg"> -->
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                           <!-- <span class="tag-volume">
-                                Vol. 01
-                            </span>
-
-                        </div>
-
-                        <div class="card-info"> -->
-                            <!-- <h3>Thor</h3> -->
-                          <!--  <p>Supergirl</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-
-
-                    </div>
-
-                </section> -->
-
-
-
-
-<!--================ MAIS BAIXADAS =================-->
-
-               <!-- <section class="section">
-
-                    <div class="section-header">
-
-                        <h2>Mais Baixadas</h2>
-
-                        <a href="#">Ver todas →</a>
-
-                    </div>
-
-                    <div class="grid-revistas"> -->
-
-                        <!-- Copie seus cards aqui -->
-
-                                        <!-- Card 1 -->
-
-
-                    <!-- </div>
-
-                </section> -->
-
-
-
-<!--================ RECÉM ATUALIZADAS =================-->
-
-                <!-- <section class="section">
-
-                    <div class="section-header">
-
-                        <h2>Recém Atualizadas</h2>
-
-                        <a href="#">Ver todas →</a>
-
-                    </div>
-
-                    <div class="grid-revistas"> -->
-
-                        <!-- Copie seus cards aqui -->
-
-                                        <!-- Card 1 -->
-
-                <!-- <article class="card">
-                    <a href="paginas/thor-ragnarok.html">
-                        <div class="card-image">
-                            <img src="https://image.tmdb.org/t/p/original/eKYuM2lxpj6HvY55aJhBxgSJ8FI.jpg"> -->
-
-                            <!-- <div class="card-overlay">
-                                <span>Ver Revista</span>
-                            </div> -->
-
-                           <!-- <span class="tag-volume">
-                                Vol. 01
-                            </span>
-
-                        </div>
-
-                        <div class="card-info"> -->
-                            <!-- <h3>Thor</h3> -->
-                          <!--  <p>Supergirl</p>
-
-                        </div>
-                    </a>
-                </article>
-
-
-
-
-
-                    </div>
-
-                </section> -->
-
-<!--================ BOTÃO VOLTAR AO TOPO ================-->
-
-                <a href="#topo" class="btn-topo" aria-label="Voltar ao topo" onclick="voltarTopo(event)">
-                    ↑
-                </a>
-
-
- <!--================ FOOTER ================-->
-
-                <footer class="footer">
-
-                  <div class="footer-container">
-
-                    <div class="footer-brand">
-                      <a href="index.html" class="footer-logo">
-                          <img src="https://static.wixstatic.com/media/535ced_2ef9527dd0c84475a2e3dba28de0d78c~mv2.png" alt="Fundação Comics">
-                      </a>
-                      <p>Seu acervo digital de revistas, quadrinhos e edições especiais.</p>
-                    </div>
-
-                    <div class="footer-links">
-                      <h4>Navegação</h4>
-                      <a href="index.html">Início</a>
-                      <a href="#">Destaques</a>
-                      <a href="#">Mais Lidas</a>
-                      <a href="#">Últimas Adições</a>
-                    </div>
-
-                    <div class="footer-links">
-                      <h4>Conteúdo</h4>
-                      <a href="#">Revistas</a>
-                      <a href="#">Quadrinhos</a>
-                      <a href="#">Mangás</a>
-                      <a href="#">Clássicos</a>
-                    </div>
-
-                    <div class="footer-links">
-                      <h4>Contato</h4>
-                      <a href="#">Instagram</a>
-                      <a href="#">GitHub</a>
-                      <a href="#">Email</a>
-                    </div>
-
-                  </div>
-
-                  <div class="footer-bottom">
-                    <p>© 2026 Fundação Comics — Todos os direitos reservados.</p>
-                  </div>
-
-                </footer>
-
-
-
-    <script src="js/script.js"></script>
-    <script src="js/menu-mobile.js"></script>
-    <script type="module" src="/js/search.js"></script>
-
-
-
-<script>
-const btnTopo = document.querySelector('.btn-topo');
-
-window.addEventListener('scroll', () => {
-
-    if (window.scrollY > 300) {
-        btnTopo.classList.add('ativo');
-    } else {
-        btnTopo.classList.remove('ativo');
-    }
-
-});
-</script>
-
-<script>
-function voltarTopo(event){
-    event.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-</script>
+            <script defer src="js/auth.js"></script>
+            <script defer src="js/favoritos.js"></script>
+            <script defer src="js/auth-ui.js"></script>
+            <script defer src="js/carregar-catalogo.js"></script>
+            <script defer src="js/home.js"></script>
+            <script defer src="js/carousel.js"></script>
+            <script defer src="js/mais-acessados.js"></script>
+            
+            <script defer src="js/hero.js"></script>
+            <script defer src="js/components.js"></script>
+            <script defer src="js/busca.js"></script>
+            <script defer src="js/mobile-menu.js"></script>
 
 </body>
 

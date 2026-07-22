@@ -1,0 +1,669 @@
+/* ==========================
+   GRID
+========================== */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.comic-card{
+
+    position:relative;
+
+    background:#181818;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+.comic-card:hover{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+   LINK
+========================== */
+
+.comic-link{
+
+    display:block;
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* ==========================
+   CAPA
+========================== */
+
+.comic-cover{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:2 / 3;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+.comic-cover > img:first-child{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .45s ease;
+
+}
+
+.comic-card:hover .comic-cover > img:first-child{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================
+   DEGRADÊ DA CAPA
+========================== */
+
+.latest-section .comic-cover::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:45%;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,0)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================
+   LOGO SOBRE A CAPA
+========================== */
+
+.comic-cover .comic-logo{
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:56px;
+
+    width:45%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transform:none !important;
+
+    transition:none !important;
+
+    z-index:5;
+
+}
+
+/* ==========================
+   SELO DA HQ
+========================== */
+
+.comic-cover .comic-badge{
+
+    position:absolute;
+
+    top:30px;
+    right:0;
+
+    display:inline-block;
+
+    background:#ff3030c7;
+
+    color:#fff;
+
+    padding:8px 20px;
+
+    border-radius:8px 0 0 8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    z-index:10;
+
+    pointer-events:none;
+
+}
+
+/* ==========================
+   INFORMAÇÕES
+========================== */
+
+.comic-info{
+
+    position:absolute;
+
+    left:18px;
+    right:18px;
+    bottom:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    z-index:2;
+
+}
+
+.comic-info h3{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+    line-height:1.4;
+
+}
+
+.comic-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:14px;
+
+    color:#8b8b8b;
+
+}
+
+.comic-title{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:1.35;
+
+    margin:15px 10px 14px;
+
+    text-align:center;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+/* ==========================
+   SEÇÕES
+========================== */
+
+.content-section{
+
+    padding:20px 0;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+.section-header h2{
+
+    font-size:22px;
+
+    font-weight:normal;
+
+    margin:0;
+
+}
+
+.see-all{
+
+    color:var(--cor-principal);
+
+    font-weight:normal;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.see-all:hover{
+
+    color:#ffffff;
+
+}
+
+/* ==========================
+   GRID FAVORITOS
+========================== */
+
+.hq-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+
+    gap:25px;
+
+    width:100%;
+
+}
+/* ==========================
+   BIBLIOTECA
+========================== */
+
+.biblioteca-page{
+
+    padding:120px 0 60px;
+
+}
+
+.biblioteca-page h1{
+
+    margin-bottom:40px;
+
+}
+
+#bibliotecaGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.biblioteca-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.biblioteca-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.biblioteca-card img{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:2 / 3;
+
+    object-fit:cover;
+
+}
+
+.biblioteca-card h3{
+
+    font-size:15px;
+
+    margin:12px 0 0;
+
+    padding:0;
+
+}
+
+.biblioteca-card a,
+.biblioteca-link{
+
+    display:block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+.remover-biblioteca{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    width:30px;
+
+    height:30px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff5050;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:5;
+
+}
+
+.remover-biblioteca:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================
+   CARROSSEL
+========================== */
+
+.carousel-wrapper{
+
+    position:relative;
+
+}
+
+.carousel-container{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:visible;
+
+}
+
+.carousel-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:100%;
+
+    overflow:hidden;
+
+
+}
+
+.carousel-track .comic-card{
+
+    width:200px;
+
+    min-width:200px;
+
+}
+
+.carousel-track .comic-cover{
+
+    aspect-ratio:2 / 3;
+
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.carousel-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:36px;
+
+    height:60px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:34px;
+
+    font-weight:300;
+
+    opacity:.45;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:999;
+
+}
+
+.carousel-btn:hover{
+
+    transform:translateY(-50%);
+
+    opacity:1;
+
+}
+
+.carousel-btn.prev{
+
+    left:-35px;
+
+}
+
+.carousel-btn.next{
+
+    right:-35px;
+
+}
+
+.carousel-header-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+/* ==========================
+   TOP 10
+========================== */
+
+.top10-info{
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    padding:0;
+
+    z-index:20;
+
+}
+
+.top10-number{
+
+    font-size:72px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:#fff;
+
+    text-shadow:
+        3px 3px 10px rgba(0,0,0,.8);
+
+}
+
+
+/* =====================================
+   ÚLTIMAS ADIÇÕES
+===================================== */
+
+.latest-section .carousel-wrapper{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.latest-section .carousel-container{
+
+    overflow:visible;
+
+}
+
+.latest-section .carousel-track{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.latest-section .comic-card{
+
+    flex:0 0 calc((100% - 40px) / 3);
+
+    width:calc((100% - 40px) / 3);
+
+    min-width:0;
+
+}
+
+
+/* =====================================
+   BOTÕES - ÚLTIMAS ADIÇÕES
+===================================== */
+
+.latest-section .carousel-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:absolute;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    z-index:999;
+
+}
+
+.latest-section .carousel-btn.prev{
+
+    left:-35px;
+
+}
+
+.latest-section .carousel-btn.next{
+
+    right:-35px;
+
+}
+/* esconder barra dos carrosseis */
+
+.carousel-track{
+
+    scrollbar-width:none;
+
+}
+
+
+.carousel-track::-webkit-scrollbar{
+
+    display:none;
+
+}

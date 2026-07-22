@@ -1,0 +1,100 @@
+[
+    {
+        "id": "supergirl-serie-principal",
+        "slug": "supergirl",
+        "nome": "Supergirl",
+        "editoraId": "dc",
+        "imagem": "https://image.tmdb.org/t/p/original/mU5rnVQYIuM92dO5cAMVvMp1Sfc.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/jCM0yro6S73MgUVjvA0YMJiCLxQ.jpg",
+        "descricao": "Coleção principal da Supergil.",
+        "status": "finalizado"
+    },
+    
+    {
+        "id": "as-guerreiras-kyoshi-01",
+        "slug": "as-guerreiras-kyoshi",
+        "nome": "As Guerreiras Kyoshi",
+        "editoraId": "dark-horse",
+        "imagem": "https://image.tmdb.org/t/p/original/mU5rnVQYIuM92dO5cAMVvMp1Sfc.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/jCM0yro6S73MgUVjvA0YMJiCLxQ.jpg",
+        "descricao": "Coleção As Guerreiras Kyoshi.",
+        "status": "finalizado"
+    },
+
+    {
+        "id": "vingadores",
+        "slug": "vingadores",
+        "nome": "Vingadores",
+        "editoraId": "disney",
+        "imagem": "https://image.tmdb.org/t/p/original/gXyeDg4vLlhcFBxtoAaC03FRGbD.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/94ubpd0Ro0vDf31wkSojP20VZJ7.jpg",
+        "descricao": "Coleção dos filmes dos Vingadores.",
+        "status": "em-andamento"
+    },
+
+    {
+        "id": "dan-da-dan",
+        "slug": "dan-da-dan",
+        "nome": "Dan Da Dan",
+        "editoraId": "hbo",
+        "imagem": "https://image.tmdb.org/t/p/original/huCtmTgfa4spYVRyDxFgX667GbA.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/p0JVne3DKQi6kmpP1qQD2RIPyCc.jpg",
+        "descricao": "Coleção principal de Dan Da Dan.",
+        "status": "cancelado"
+    },
+
+    {
+        "id": "rick-e-morty",
+        "slug": "rick-e-morty",
+        "nome": "Rick e Morty",
+        "editoraId": "hbo",
+        "imagem": "https://image.tmdb.org/t/p/original/5PAXGFfsv1QK6eWd0riDQ7maDZD.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/i4PpW1XyRlBuSNSIBRIIwSjEpjl.jpg",
+        "descricao": "Coleção principal de Rick e Morty.",
+        "status": "finalizado"
+    },
+
+    {
+        "id": "homem-aranha-e-wolverine-crossover-2003",
+        "slug": "homem-aranha-e-wolverine-2003",
+        "nome": "Homem-Aranha & Wolverine (2003)",
+        "editoraId": "marvel",
+        "imagem": "https://static.wixstatic.com/media/535ced_e6fdc8b3ab9846278d17e3be6c92070a~mv2.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/IYUD7rAIXzBM91TT3Z5fILUS7n.jpg",
+        "descricao": "Coleção Homem-Aranha e Wolverine (2003).",
+        "status": "completa"
+    },
+
+    {
+        "id": "as-tartarugas-ninjas-v6",
+        "slug": "as-tartarugas-ninjas-v6",
+        "nome": "As Tartarugas Ninjas v6 (2024-)",
+        "editoraId": "idw",
+        "imagem": "https://static.wixstatic.com/media/535ced_7bfd845e2f674e598e4d9add6cd5ceb8~mv2.jpg",
+        "banner": "https://i.ibb.co/TMVyT2p1/tartarugas-v6-ed12-cover-c-banner.png",
+        "descricao": "Coleção das Tartarugas Ninja publicada pela IDW.",
+        "status": "em-andamento"
+    },
+
+    {
+        "id": "star-wars-historias-do-hiperespaco-the-bad-batch",
+        "slug": "star-wars-historias-do-hiperespaco",
+        "nome": "Star Wars: Histórias do Hiperespaço (2025-)",
+        "editoraId": "dark horse",
+        "imagem": "https://static.wixstatic.com/media/535ced_6a25f18f5b2b4fc4b7fb192e0b4026c9~mv2.jpg",
+        "banner": "https://i.ibb.co/TMVyT2p1/tartarugas-v6-ed12-cover-c-banner.png",
+        "descricao": "Coleção Star Wars: Histórias do Hiperespaço.",
+        "status": "pausada"
+    },
+
+    {
+        "id": "as-tartarugas-ninjas-naruto",
+        "slug": "as-tartarugas-ninjas-naruto",
+        "nome": "As Tartarugas Ninjas e Naruto",
+        "editoraId": "idw",
+        "imagem": "https://static.wixstatic.com/media/535ced_ce2161d07d8e4378b11204bf3cfc3074~mv2.jpg",
+        "banner": "https://static.wixstatic.com/media/535ced_72009c3f9013490dbc37d50e79c409f2~mv2.jpg",
+        "descricao": "Série completa do crossover.",
+        "status": "completa"
+    }
+]

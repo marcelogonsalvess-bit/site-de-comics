@@ -1,86 +1,385 @@
-.pagina-editora{
-    padding-top: 120px;
-    padding-left: 20px;
-    padding-right: 20px;
+/* ============================
+   PÁGINA EDITORAS
+============================ */
+
+.editoras-page {
+
+    padding-top: 100px;
+
+}
+
+
+.editoras-container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+
+}
+
+
+/* ============================
+   CABEÇALHO
+============================ */
+
+.editoras-header {
+
     text-align: center;
+
+    margin-bottom: 40px;
+
 }
 
-.descricao{
-    opacity: .7;
-    margin-bottom: 30px;
+
+.editoras-header h1 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
 }
 
-.grid-revistas{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
+
+.editoras-header p {
+
+    max-width: 700px;
+
     margin: 0 auto;
+
+    line-height: 1.6;
+
+    opacity: .85;
+
 }
 
-.card-revista{
-    text-decoration: none;
-    color: white;
-    display: block;
+
+/* ============================
+   GRID DE EDITORAS
+============================ */
+
+.lista-editoras {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ============================
+   CARD EDITORA
+============================ */
+
+.editora-card {
+
+    background: var(--card-bg, #1c1c1c);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
     transition: .3s;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
 }
 
-.card-revista img{
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
 
-.card-revista:hover{
+.editora-card:hover {
+
     transform: translateY(-5px);
-}
-.pagina-editora{
-    padding-top:120px;
-    padding-left:20px;
-    padding-right:20px;
-    text-align:center;
+
 }
 
-.descricao{
-    opacity:.7;
-    margin-bottom:35px;
+
+/* ============================
+   LOGO
+============================ */
+
+.editora-logo {
+
+    width: 220px;   /* ← ALTERA A LARGURA DO ESPAÇO DA LOGO */
+    height: 130px;  /* ← ALTERA A ALTURA DO ESPAÇO DA LOGO */
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.grid-colecoes{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-    gap:25px;
-    max-width:1100px;
-    margin:0 auto;
+
+.editora-logo img {
+
+    max-width: 100%;   /* ← LIMITA A LOGO À LARGURA DO ESPAÇO */
+    max-height: 100%;  /* ← LIMITA A LOGO À ALTURA DO ESPAÇO */
+
+    object-fit: contain; /* ← MANTÉM A PROPORÇÃO SEM CORTAR */
+
 }
 
-.card-colecao{
-    display:block;
-    text-decoration:none;
-    color:#fff;
-    background:#1f1f1f;
-    border-radius:12px;
-    overflow:hidden;
-    transition:.3s;
+
+/* ============================
+   INFORMAÇÕES
+============================ */
+
+.editora-info h2 {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+
 }
 
-.card-colecao img{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    display:block;
+
+.editora-info p {
+
+    line-height: 1.5;
+
+    opacity: .85;
+
+    min-height: 45px;
+
 }
 
-.card-colecao h2{
-    margin:18px 15px 8px;
+
+.editora-info span {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: .95rem;
+
+    opacity: .8;
+
 }
 
-.card-colecao p{
-    margin:0 15px 20px;
-    opacity:.75;
+
+/* ============================
+   RESPONSIVO
+============================ */
+
+@media(max-width: 900px){
+
+
+    .lista-editoras {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
 }
 
-.card-colecao:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+
+@media(max-width: 600px){
+
+
+    .lista-editoras {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+/* ============================
+   BOTÃO EDITORA
+============================ */
+
+.btn-editora {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: normal;
+
+    background: rgba(255,255,255,0.1);
+
+    color: inherit;
+
+    transition: .3s;
+
+}
+
+
+.btn-editora:hover {
+
+    transform: scale(1.05);
+
+}
+
+.editora-card {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    background: var(--card-bg, #1c1c1c);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: .3s;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+
+}
+/* ============================
+   PÁGINA INDIVIDUAL EDITORA
+============================ */
+
+
+.editora-page {
+
+    padding-top: 100px;
+
+}
+
+
+.editora-container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+#logoEditora {
+
+    width: 160px;
+
+    height: 100px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+#logoEditora img {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+}
+/* ============================
+   LISTA DE HQS DA EDITORA
+============================ */
+
+.lista-hqs-editora {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+
+.hq-card-editora {
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    display: block;
+
+}
+
+.hq-card-editora:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.hq-card-editora img {
+
+    width: 100%;
+
+    max-width: 180px;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+.hq-card-editora h3 {
+
+    margin-top: 10px;
+
+}
+
+/* ==========================
+   EDITORA MOBILE
+========================== */
+
+@media(max-width:600px){
+
+    .lista-hqs-editora{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+    }
+
+
+    .hq-card-editora{
+
+        width:100%;
+
+        max-width:180px;
+
+    }
+
 }

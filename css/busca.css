@@ -1,0 +1,123 @@
+/* ==========================
+   PÁGINA DE BUSCA
+========================== */
+
+
+.busca-page{
+
+    padding-top:120px;
+
+    padding-left:40px;
+
+    padding-right:40px;
+
+    text-align:center;
+
+}
+
+
+
+.busca-page h1{
+
+    margin-bottom:15px;
+
+}
+
+
+
+#textoBusca{
+
+    margin-bottom:30px;
+
+}
+
+
+
+#resultadoBusca{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+
+
+#resultadoBusca .comic-card{
+
+    width:200px;
+
+}
+
+
+
+#resultadoBusca img{
+
+    width:200px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+/* ============================
+   PAGINAÇÃO DA BUSCA
+============================ */
+
+#paginacaoBusca{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:40px 0;
+
+}
+
+
+#paginacaoBusca button{
+
+    height:40px;
+
+    min-width:40px;
+
+    padding:0 15px;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+#paginacaoBusca button.active{
+
+    font-weight:bold;
+
+    transform:scale(1.1);
+
+}
+
+/* Informações secundárias do card de busca */
+
+#resultadoBusca .comic-info p{
+
+    font-size:14px;
+
+    color:#999;
+
+    margin:3px 0;
+
+    font-weight:300;
+
+}

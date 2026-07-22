@@ -1,0 +1,56 @@
+/* ===============================
+   PÁGINA DA HQ - HERO
+================================ */
+
+.revista-hero {
+
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+
+}
+
+
+.revista-banner {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    z-index: 0;
+
+}
+
+
+.revista-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 1;
+
+}
+
+
+.revista-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 80px 40px;
+
+}

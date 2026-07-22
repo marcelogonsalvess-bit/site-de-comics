@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundação Comics</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/hq-page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- COMPONENTES -->
+
+    <div id="header"></div>
+
+    <div id="auth"></div>
+
+
+    <!-- ==========================
+         HERO DA HQ
+    =========================== -->
+
+    <main class="hq-page">
+
+        <section class="hq-hero">
+
+            <!-- Banner -->
+
+            <div class="hq-banner"></div>
+
+            <!-- Escurecimento -->
+
+            <div class="hq-overlay"></div>
+
+            <!-- Conteúdo -->
+
+            <div class="container">
+
+                <div class="hq-content">
+
+<!-- ==========================
+     COLUNA ESQUERDA
+========================== -->
+
+<div class="hq-left">
+
+    <!-- Logo -->
+
+    <img
+        id="logoHQ"
+        class="hq-logo"
+        src=""
+        alt="">
+
+
+    <!-- Informações -->
+
+    <div class="hq-meta">
+
+        <span id="anoHQ"></span>
+
+        <span>
+            Volume
+            <strong id="volumeHQ"></strong>
+        </span>
+
+        <span>
+            Edição
+            <strong id="edicaoHQ"></strong>
+        </span>
+
+    </div>
+
+
+
+
+    <div class="hq-bottom"> </div>
+
+    <!-- Sinopse -->
+
+    <div class="hq-sinopse">
+
+        <p id="sinopseHQ"></p>
+
+    </div>
+
+
+    <!-- Botões -->
+
+    <div class="hq-buttons">
+
+        <button
+            id="btnDownload"
+            class="btn-primary">
+
+            ⬇️ Download HQ
+
+        </button>
+
+        <a
+            id="linkColecaoHQ"
+            class="btn-secondary">
+
+            📚 Série Completa
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+     COLUNA DIREITA
+========================== -->
+
+<div class="hq-right">
+
+    <div class="hq-cover">
+
+        <img
+            id="capaHQ"
+            src=""
+            alt="">
+
+    </div>
+
+    <div class="hq-cover-actions">
+
+        <button
+            id="btnFavorito"
+            class="hq-icon-button"
+            title="Adicionar aos favoritos">
+
+            ♡
+
+        </button>
+
+
+        <button
+            id="btnBiblioteca"
+            class="hq-icon-button"
+            title="Adicionar à biblioteca">
+
+            +
+
+        </button>
+
+    </div>
+
+</div>
+
+</div> <!-- hq-content -->
+
+</div> <!-- container -->
+
+</section> <!-- hq-hero -->
+
+
+<!-- ==========================
+     CARD DE INFORMAÇÕES
+========================== -->
+
+<section class="hq-info-card">
+
+    <h2>INFORMAÇÕES</h2>
+
+
+    <div class="hq-info-grid">
+
+
+        <div id="hqInfoLeft"></div>
+
+
+        <div id="hqInfoRight"></div>
+
+
+    </div>
+
+
+</section>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================
+     REVISTAS RELACIONADAS
+========================== -->
+
+<section class="hq-related">
+
+    <div class="container">
+
+                <h2>
+                    📚 Revistas Relacionadas
+                </h2>
+
+
+                <div class="carousel-container">
+
+
+            <button class="carousel-btn prev">
+
+                ❮
+
+            </button>
+
+
+
+            <div 
+                id="revistasRelacionadas" 
+                class="carousel-track">
+
+            </div>
+
+
+
+            <button class="carousel-btn next">
+
+                ❯
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <div id="footer"></div>
+
+
+    <!-- ==========================
+         SCRIPTS
+    =========================== -->
+
+    
+    <script>
+
+        // ==========================
+        // ID DA HQ
+        // ==========================
+
+        const hqId = "tartarugas-ninjas-001";
+
+    </script>
+
+
+
+    <script defer src="../../js/auth.js"></script>
+
+    <script defer src="../../js/favoritos.js"></script>
+
+    <script defer src="../../js/favorito-button.js"></script>
+
+    <script defer src="../../js/auth-ui.js"></script>
+
+    <script defer src="../../js/hq-page.js"></script>
+
+    <script defer src="../../js/components.js"></script>
+
+    <script defer src="../../js/busca.js"></script>
+    
+    <script defer src="../../js/mobile-menu.js"></script>
+
+
+</body>
+
+</html>

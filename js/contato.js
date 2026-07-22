@@ -1,43 +1,114 @@
+console.log("contato.js carregado");
+// ============================
+// CONTATO
+// ============================
+
 document.addEventListener("DOMContentLoaded", () => {
 
+
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
     const form = document.getElementById("formContato");
-    const statusMsg = document.getElementById("statusMsg");
 
-    if (!form) return;
 
-    form.addEventListener("submit", async (e) => {
+    // ============================
+    // PREENCHER USUÁRIO LOGADO
+    // ============================
 
-        e.preventDefault();
+    if (typeof Auth !== "undefined" && Auth.isLogged()) {
 
-        const data = new FormData(form);
 
-        try {
+        const usuario = Auth.getUser();
 
-            const res = await fetch("https://formsubmit.co/ajax/marcelo@marcelogonsalves.com.br", {
-                method: "POST",
-                body: data
-            });
 
-            if (res.ok) {
+        if(usuario){
 
-                statusMsg.textContent = "Mensagem enviada com sucesso!";
-                statusMsg.style.color = "lime";
-                form.reset();
-
-            } else {
-
-                statusMsg.textContent = "Erro ao enviar.";
-                statusMsg.style.color = "red";
-
-            }
-
-        } catch {
-
-            statusMsg.textContent = "Erro de conexão.";
-            statusMsg.style.color = "red";
+            nome.value = usuario.nome || "";
+            email.value = usuario.email || "";
 
         }
 
+    }
+
+
+
+    // ============================
+    // ENVIO DO FORMULÁRIO
+    // ============================
+
+    form.addEventListener("submit", (e) => {
+
+
+        e.preventDefault();
+
+        const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+        mensagemSucesso.style.display = "none";
+
+
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+
+        if(!nome.value.trim()){
+
+            alert("Digite seu nome.");
+            return;
+
+        }
+
+
+        if(!email.value.trim()){
+
+            alert("Digite seu e-mail.");
+            return;
+
+        }
+
+
+        if(!mensagem){
+
+            alert("Digite uma mensagem.");
+            return;
+
+        }
+
+
+        mensagemSucesso.innerHTML = `
+            ✓ Mensagem enviada com sucesso!<br>
+            Obrigado pelo contato.
+        `;
+
+        // ============================
+        // REGISTRAR ATIVIDADE
+        // ============================
+
+        if (typeof Auth !== "undefined" && Auth.isLogged()) {
+
+            Auth.addActivity("📨 Enviou uma mensagem pelo contato");
+
+        }
+
+
+        mensagemSucesso.style.display = "block";
+
+
+        form.reset();
+
+
+
+        // mantém dados do usuário logado
+
+        if (typeof Auth !== "undefined" && Auth.isLogged()) {
+
+            const usuario = Auth.getUser();
+
+            nome.value = usuario.nome || "";
+            email.value = usuario.email || "";
+
+        }
+
+
     });
+
 
 });
