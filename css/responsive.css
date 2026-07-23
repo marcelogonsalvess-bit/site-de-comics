@@ -15,6 +15,28 @@
 
 @media(max-width:768px){
 
+    /* HERO MOBILE */
+
+.hero-content{
+
+    left:20px;
+    right:20px;
+    bottom:80px;
+    max-width:none;
+    text-align:center;
+
+}
+/* HERO MOBILE - esconder navegação */
+
+.hero .hero-navigation{
+    display:none;
+}
+.content-section .container{
+        box-sizing:content-box;
+    }
+
+
+
 
     .header .container{
 
@@ -289,6 +311,8 @@
 
 }
 
+
+
 /* ==========================
    LOGIN MOBILE NO MENU
 ========================== */
@@ -417,24 +441,6 @@
 
 }
 
-/* ==========================
-   TOP 10 MOBILE
-========================== */
-
-#listaMaisAcessados{
-
-    display:flex;
-
-    gap:15px;
-
-}
-
-
-#listaMaisAcessados .comic-card{
-
-    flex:0 0 180px;
-
-}
 
 /* ============================
    PÁGINA HQ - MOBILE
