@@ -3,7 +3,7 @@
 // ============================
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("catalogoCarregado", () => {
 
 
     const parametros = new URLSearchParams(
@@ -111,7 +111,7 @@ textoBusca.innerHTML +=
 // ============================
 
 
-const resultadosPorPagina = 1;
+const resultadosPorPagina = 12;
 
 
 let paginaAtual = 1;

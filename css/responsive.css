@@ -34,7 +34,9 @@
 .content-section .container{
         box-sizing:content-box;
     }
-
+#resultadoBusca{
+    justify-content:center;
+}
 
 
 
