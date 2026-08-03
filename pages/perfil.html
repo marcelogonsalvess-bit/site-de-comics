@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil | Fundação Comics</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Modal de Login -->
+    <div id="auth"></div>
+
+    <!-- Conteúdo da página -->
+    <main class="perfil-page">
+
+        <div class="container">
+
+            <h1 class="page-title">Meu Perfil</h1>
+
+            <div class="perfil-card">
+
+                <div class="perfil-avatar">
+
+                    <button
+                        id="btnTrocarAvatar"
+                        class="avatar-button"
+                        type="button"
+                        aria-label="Trocar avatar">
+
+                        <img
+                            id="perfilAvatar"
+                            src="../img/avatar.jpg"
+                            alt="Avatar">
+
+                    </button>
+
+                </div>
+
+                <div class="perfil-info">
+
+                    <h2 id="perfilNome">Carregando...</h2>
+
+                    <p id="perfilEmail"></p>
+
+                    <p id="perfilData"></p>
+
+                    <div class="perfil-actions">
+
+                        <button id="btnEditarPerfil">
+                            <i class="fa-solid fa-user-pen"></i>
+                            Editar Perfil
+                        </button>
+
+                        <button id="btnTrocarAvatarTexto">
+                            <i class="fa-solid fa-camera"></i>
+                            Trocar Avatar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <section class="perfil-stats">
+
+                <div class="stat-card">
+
+                    <a href="favoritos.html" class="stat-link">
+
+                        <span class="stat-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </span>
+
+                        <h3 id="totalFavoritos">0</h3>
+
+                        <p>Favoritos</p>
+
+                    </a>
+
+                </div>
+
+                <a href="biblioteca.html" class="stat-card">
+
+                    <span class="stat-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </span>
+
+                    <h3 id="totalBiblioteca">0</h3>
+
+                    <p>Minha Biblioteca</p>
+
+                </a>
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        <i class="fa-solid fa-download"></i>
+                    </span>
+
+                    <h3 id="totalBaixadas">0</h3>
+
+                    <p>HQs Baixadas</p>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="perfil-history">
+
+                <h2>Atividade Recente</h2>
+
+                <div class="history-card">
+
+                    <div id="listaAtividades">
+
+                        <p>Nenhuma atividade registrada ainda.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- ===========================
+         MODAL TROCAR AVATAR
+    ============================ -->
+
+    <!-- ===========================
+MODAL TROCAR AVATAR
+=========================== -->
+
+        <div id="avatarModal" class="modal-overlay">
+
+            <div class="modal">
+
+                <h2>Trocar Avatar</h2>
+
+        <p>Escolha um avatar para seu perfil.</p>
+
+        <div id="listaAvatares" class="avatar-grid">
+
+        </div>
+
+        <div class="modal-botoes">
+
+    <button id="salvarAvatar">
+        Salvar Avatar
+    </button>
+
+    <button id="fecharAvatarModal">
+        Fechar
+    </button>
+
+</div>
+
+            </div>
+
+        </div>
+
+    <!-- ===========================
+         MODAL EDITAR PERFIL
+    ============================ -->
+
+    <div id="editarPerfilModal" class="modal-overlay">
+
+        <div class="modal">
+
+            <h2>Editar Perfil</h2>
+
+            <label>Nome</label>
+
+            <input
+                type="text"
+                id="editarNome"
+                maxlength="15"
+                required>
+
+            <div class="modal-botoes">
+
+                <button id="salvarPerfil">
+                    Salvar
+                </button>
+
+                <button id="cancelarPerfil">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script defer src="../js/supabase.js"></script>
+
+<script defer src="../js/auth.js"></script>
+<script defer src="../js/auth-ui.js"></script>
+
+<script defer src="../js/carregar-catalogo.js"></script>
+<script defer src="../js/colecoes-page.js"></script>
+
+<script defer src="../js/components.js"></script>
+<script defer src="../js/doacao.js"></script>
+
+<script defer src="../js/busca.js"></script>
+<script defer src="../js/mobile-menu.js"></script>
+
+<script defer src="../js/perfil.js"></script>
+
+</body>
+
+</html>

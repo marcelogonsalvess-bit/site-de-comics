@@ -1,0 +1,1699 @@
+/* ==================================================
+   ADMIN PAGE - BASE
+================================================== */
+
+.admin-page * {
+
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+
+}
+
+
+body.admin-page {
+
+    background:#0b111e;
+    color:#ffffff;
+    padding:24px;
+    min-height:100vh;
+
+}
+
+
+.dashboard-container {
+
+    max-width:1300px;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+
+.admin-page header {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding-bottom:10px;
+
+}
+
+
+.admin-page header h1 {
+
+    font-size:1.4rem;
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:#f1f5f9;
+
+}
+
+
+
+/* ==================================================
+   TOP METRICS CARDS
+================================================== */
+
+
+.top-cards-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:16px;
+
+}
+
+
+
+.metric-card {
+
+    border-radius:16px;
+
+    padding:18px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    height:120px;
+
+    box-shadow:
+    0 10px 25px -5px rgba(0,0,0,.3);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.card-teal {
+
+    background:
+    linear-gradient(
+    135deg,
+    #0d3b4c 0%,
+    #086375 50%,
+    #0d2836 100%
+    );
+
+    border:1px solid rgba(20,184,166,.2);
+
+}
+
+
+
+.card-blue {
+
+    background:
+    linear-gradient(
+    135deg,
+    #0f2b48 0%,
+    #0284c7 50%,
+    #0c1e36 100%
+    );
+
+    border:1px solid rgba(56,189,248,.2);
+
+}
+
+
+
+.card-purple {
+
+    background:
+    linear-gradient(
+    135deg,
+    #281e4b 0%,
+    #6366f1 50%,
+    #1a1638 100%
+    );
+
+    border:1px solid rgba(129,140,248,.2);
+
+}
+
+
+
+.card-magenta {
+
+    background:
+    linear-gradient(
+    135deg,
+    #3d1b4a 0%,
+    #a855f7 50%,
+    #20112c 100%
+    );
+
+    border:1px solid rgba(192,132,252,.2);
+
+}
+
+
+
+.card-dark {
+
+    background:#121929;
+
+    border:1px solid #1e293b;
+
+}
+
+
+
+.card-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#94a3b8;
+
+    font-size:.85rem;
+
+    font-weight:500;
+
+}
+
+
+
+.card-title-dark {
+
+    color:#f8fafc;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+
+
+.card-value {
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    line-height:1.1;
+
+}
+
+
+
+.card-badge {
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+    color:#4ade80;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2px;
+
+}
+
+
+
+/* ==================================================
+   GRID PRINCIPAL
+================================================== */
+
+
+.main-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    2.2fr 1.3fr 1.3fr;
+
+    gap:16px;
+
+}
+
+
+
+.dashboard-panel {
+
+    background:#121929;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    border:1px solid #1e293b;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.panel-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.panel-title {
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:#f1f5f9;
+
+}
+
+
+
+.panel-select {
+
+    background:transparent;
+
+    border:1px solid #334155;
+
+    color:#94a3b8;
+
+    border-radius:8px;
+
+    padding:4px 8px;
+
+    font-size:.75rem;
+
+}
+
+
+/* ==================================================
+   GRÁFICOS
+================================================== */
+
+
+.charts-col {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+
+
+.big-stat {
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.chart-container {
+
+    width:100%;
+
+    height:140px;
+
+    position:relative;
+
+}
+
+
+
+.chart-labels-x {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#64748b;
+
+    font-size:.72rem;
+
+    margin-top:6px;
+
+}
+
+
+
+.chart-labels-y {
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    color:#64748b;
+
+    font-size:.7rem;
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    bottom:20px;
+
+}
+
+/* ==================================================
+   COLUNA REVISTAS
+================================================== */
+
+
+.comics-col {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+
+
+.comic-card-content {
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:center;
+
+    margin-top:6px;
+
+}
+
+
+
+.admin-page .comic-cover {
+
+    width:150px;
+
+    border-radius:8px;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.4);
+
+}
+
+
+
+.comic-details {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.comic-info-block span {
+
+    display:block;
+
+    color:#94a3b8;
+
+    font-size:.75rem;
+
+}
+
+
+
+.comic-info-block strong {
+
+    color:#f8fafc;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+
+
+.comic-metric-number {
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+
+
+/* ==================================================
+   ATIVIDADES
+================================================== */
+
+
+.side-col {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+
+
+.activity-list {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:10px;
+
+}
+
+
+
+.admin-atividade-item {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:10px 0;
+
+}
+
+
+
+.atividade-icone {
+
+    width:46px;
+
+    height:46px;
+
+    min-width:46px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+
+
+.activity-item {
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+}
+
+
+
+.activity-icon {
+
+    width:32px;
+
+    height:32px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.icon-blue {
+
+    background:rgba(2,132,199,.2);
+
+    color:#38bdf8;
+
+}
+
+
+
+.icon-orange {
+
+    background:rgba(234,88,12,.2);
+
+    color:#f97316;
+
+}
+
+
+
+.icon-teal {
+
+    background:rgba(20,184,166,.2);
+
+    color:#2dd4bf;
+
+}
+
+
+
+.activity-text {
+
+    font-size:.78rem;
+
+    color:#cbd5e1;
+
+    line-height:1.35;
+
+}
+
+
+
+.activity-text strong {
+
+    color:#fff;
+
+}
+
+
+
+/* ==================================================
+   USUÁRIO RECENTE
+================================================== */
+
+
+.user-card-highlight {
+
+    background:
+    linear-gradient(
+    135deg,
+    #0284c7 0%,
+    #06b6d4 40%,
+    #a855f7 100%
+    );
+
+    border:none;
+
+}
+
+
+
+#painelUltimoUsuario {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:15px;
+
+}
+
+
+
+.user-card-avatar {
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:
+    2px solid rgba(255,255,255,.6);
+
+}
+
+
+
+.user-card-details h4 {
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    margin:2px 0;
+
+}
+
+
+
+.user-card-details span {
+
+    display:block;
+
+    font-size:.75rem;
+
+}
+
+
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+
+@media(max-width:1024px){
+
+
+    .top-cards-grid {
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+
+    .main-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:640px){
+
+
+    .top-cards-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+/* ==================================================
+   GERENCIAR HQs
+================================================== */
+
+
+#painelGerenciarHQs {
+
+    margin-top:30px;
+
+    padding:24px;
+
+}
+
+
+
+#painelGerenciarHQs .panel-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#listaHQsAdmin {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(150px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.admin-placeholder {
+
+    color:#94a3b8;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+
+.admin-hq-item {
+
+    background:#111827;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    text-align:center;
+
+    position:relative;
+
+    transition:.25s;
+
+}
+
+
+
+.admin-hq-item:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.admin-hq-capa-area {
+
+    position:relative;
+
+}
+
+
+
+.admin-hq-capa {
+
+    width:100%;
+
+    aspect-ratio:2/3;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.admin-hq-overlay {
+
+    position:absolute;
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:8px;
+
+    opacity:0;
+
+    transition:.25s;
+
+}
+
+
+
+.admin-hq-capa-area:hover .admin-hq-overlay {
+
+    opacity:1;
+
+}
+
+
+
+.btnEditarHQ,
+.btnExcluirHQ {
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+.btnEditarHQ {
+
+    background:#2563eb;
+
+}
+
+
+
+.btnExcluirHQ {
+
+    background:#dc2626;
+
+}
+
+
+
+.admin-hq-item h3 {
+
+    color:#fff;
+
+    font-size:14px;
+
+    margin:12px 0 4px;
+
+}
+
+/* ==================================================
+   MODAL NOVA HQ
+================================================== */
+
+
+.admin-modal {
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:9999;
+
+}
+
+.admin-modal.ativo {
+
+    display:flex !important;
+
+}
+
+
+
+.admin-modal-box {
+
+    width:min(1400px,95vw);
+
+    height:90vh;
+
+    background:#111827;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.admin-modal-box h2 {
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.fechar-modal {
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#dc2626;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ==================================================
+   FORM + PREVIEW
+================================================== */
+
+
+.modal-conteudo-hq {
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:
+    minmax(0,1fr) minmax(420px,650px);
+
+    gap:30px;
+
+    overflow:hidden;
+
+}
+.modal-preview {
+    position:relative;
+    flex-shrink:0;
+}
+
+
+.modal-form {
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+
+
+
+.modal-preview {
+
+    overflow:hidden;
+
+    background:#0b111e;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:0;
+
+}
+
+#previewLogoHQ{
+
+    max-width:240px;
+
+    max-height:120px;
+
+    object-fit:contain;
+
+}
+
+.preview-live-banner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:430px;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+}
+
+
+.preview-live-banner-img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.preview-live-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(11,17,30,.95),
+        rgba(11,17,30,.35)
+    );
+
+}
+
+
+.preview-live-content{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 260px;
+
+    gap:30px;
+
+    height:100%;
+
+    padding:40px;
+
+    align-items:start;
+
+}
+
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+
+.admin-modal-box label {
+
+    display:block;
+
+    color:#94a3b8;
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.admin-modal-box input,
+.admin-modal-box textarea {
+
+    width:100%;
+
+    background:#0f172a;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:8px;
+
+}
+
+
+
+.admin-modal-box textarea {
+
+    min-height:120px;
+
+    resize:none;
+
+}
+
+
+
+.hq-form-section-title {
+
+    margin:25px 0 15px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #334155;
+
+    color:#38bdf8;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.checkbox-admin {
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:10px;
+
+}
+
+
+
+.checkbox-admin label {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#cbd5e1;
+
+}
+
+
+
+.admin-btn {
+
+    background:#3b82f6;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px 18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    font-weight:600;
+
+}
+
+
+
+.admin-btn:hover {
+
+    background:#2563eb;
+
+}
+
+
+
+#salvarHQ {
+
+    width:150px;
+
+    margin-top:20px;
+
+    align-self:center;
+
+}
+
+
+
+/* ==================================================
+   LIVE PREVIEW PÁGINA HQ
+================================================== */
+
+.preview-live-capa {
+
+    position:absolute;
+
+    right:25px;
+
+    top:40%;
+
+    transform:translateY(-50%);
+
+    width:190px;
+
+    height:auto;
+
+    z-index:3;
+
+    border-radius:10px;
+
+}
+
+.preview-card {
+
+    background:#111827;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    position:relative;
+
+}
+
+
+
+.preview-page-hq {
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    background:#0b111e;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+}
+
+
+
+.preview-page-hq::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.35)
+    );
+
+}
+
+
+
+.preview-capa {
+
+    width:220px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    display:block;
+
+    margin:20px auto;
+
+}
+
+
+
+.preview-logo-hq {
+
+    position:absolute;
+
+    left:50px;
+
+    top:100px;
+
+    width:260px;
+
+    max-height:120px;
+
+    object-fit:contain;
+
+    z-index:3;
+
+}
+
+
+
+#previewTituloHQ {
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:24px;
+
+    color:white;
+
+    margin-top:20px;
+
+    margin-bottom:18px;
+
+} 
+
+
+
+
+
+#previewSinopseHQ{
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    color:#e2e8f0;
+
+    max-width:420px;
+
+}
+
+#previewInfoHQ,
+#previewEdicaoHQ {
+
+    position:static;
+
+    margin:0;
+
+    display:inline;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+}
+
+#previewSinopseHQ {
+
+    position:static;
+
+    margin:0;
+
+}
+
+/* esconder previews antigos */
+
+
+#previewCardHQ,
+#previewHeroHQ,
+#previewPostLogoArea,
+.preview-extra {
+
+    display:none;
+
+}
+
+
+
+/* ==================================================
+   MOBILE MODAL
+================================================== */
+
+
+@media(max-width:900px){
+
+
+    .modal-conteudo-hq {
+
+        display:block;
+
+    }
+
+
+    .modal-preview {
+
+        display:none;
+
+    }
+
+
+}
+
+/* Corrige alinhamento dos ícones das atividades */
+
+div.admin-atividade-item i.atividade-icone{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.preview-live-logo{
+
+    width:240px;
+
+    max-height:120px;
+
+    object-fit:contain;
+
+    position:absolute;
+
+    left:20px;
+
+    top:60px;
+
+    z-index:3;
+
+}
+
+
+.preview-live-info {
+
+    position:absolute;
+
+    left:25px;
+
+    top:180px;
+
+    z-index:3;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    width:340px;
+
+}
+
+#previewSinopseHQ {
+
+    line-height:1.5;
+
+    max-width:420px;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:4;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+    line-height:1.5;
+
+}
+
+.preview-page-live{
+
+    position:relative;
+
+    width:100%;
+
+    height:430px;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:#1e190b;
+
+}
+
+.preview-live-info p{
+
+    margin:8px 0;
+
+}
+
+/* ==========================
+   PREVIEW LIVE HQ - BANNER
+========================== */
+
+
+.preview-live-banner{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+
+.preview-live-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(15,23,42,.95),
+        rgba(15,23,42,.55),
+        rgba(15,23,42,.15)
+    );
+
+    z-index:1;
+
+}
+
+/* ==========================
+   SCROLLBAR FORMULÁRIO HQ
+========================== */
+
+.modal-form::-webkit-scrollbar {
+
+    width:8px;
+
+}
+
+
+.modal-form::-webkit-scrollbar-track {
+
+    background:transparent;
+
+}
+
+
+.modal-form::-webkit-scrollbar-thumb {
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:10px;
+
+}
+
+
+.modal-form::-webkit-scrollbar-thumb:hover {
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.fechar-apois-publicar{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+}
+
+
+.fechar-apois-publicar label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}

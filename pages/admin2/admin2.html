@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin V2 | Fundação Comics</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin2.css"
+    >
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <img
+                src="../admin2/img/logo.png"
+                alt="Fundação Comics"
+                class="sidebar-logo"
+            >
+
+            <div class="sidebar-brand">
+
+                <h2>Fundação Comics</h2>
+
+                <p>Administração V2</p>
+
+            </div> 
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <div class="menu-group">
+
+                <p class="menu-title">
+                    Geral
+                </p>
+
+                <button 
+                    class="menu-item active"
+                    data-page="dashboardPage"
+                >
+
+                    <i data-lucide="layout-dashboard"></i>
+
+                    <span>Dashboard</span>
+
+                </button>
+
+            </div>
+
+            <div class="menu-group">
+
+                <p class="menu-title">
+                    Gerenciamento
+                </p>
+
+                <button 
+                    class="menu-item"
+                    data-page="usuariosPage"
+                >
+
+                    <i data-lucide="users"></i>
+
+                    <span>Usuários</span>
+
+                </button>
+
+                <button 
+                    class="menu-item"
+                    data-page="hqsPage"
+                >
+
+                    <i data-lucide="book-open"></i>
+
+                    <span>HQs</span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+        </div>
+
+    </aside>
+
+    <div class="app">
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <h1 class="page-title">
+                    Dashboard
+                </h1>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="topbar-button">
+
+                    <i data-lucide="search"></i>
+
+                </button>
+
+                <button class="topbar-button">
+
+                    <i data-lucide="bell"></i>
+
+                </button>
+
+                <button class="topbar-button">
+
+                    <i data-lucide="refresh-cw"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <main class="content">
+
+            <section
+                id="dashboardPage"
+                class="page active"
+            >
+
+                <div class="page-header">
+
+                    <h2>
+                        Dashboard
+                    </h2>
+
+                    <p>
+                        Visão geral da Fundação Comics.
+                    </p>
+
+                </div>
+
+                <div class="page-body admin-page-body">
+
+                    <div class="stats-grid">
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="users"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    Usuários
+                                </span>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="book-open"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    HQs
+                                </span>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="download"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    Downloads
+                                </span>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="heart"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    Favoritos
+                                </span>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="library"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    Biblioteca
+                                </span>
+
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+
+                                <i data-lucide="eye"></i>
+
+                            </div>
+
+
+                            <div class="stat-info">
+
+                                <span>
+                                    Visitas
+                                </span>
+
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="dashboard-grid">
+
+
+                        <div class="panel chart-panel">
+
+
+                            <div class="panel-header">
+
+                                <h3>
+                                    Downloads
+                                </h3>
+
+
+                                <span>
+                                    Últimos 30 dias
+                                </span>
+
+                            </div>
+
+
+                            <div class="chart-placeholder">
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="panel chart-panel">
+
+
+                            <div class="panel-header">
+
+                                <h3>
+                                    Usuários
+                                </h3>
+
+
+                                <span>
+                                    Crescimento
+                                </span>
+
+                            </div>
+
+
+                            <div class="chart-placeholder">
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="panel activity-panel">
+
+
+                        <div class="panel-header">
+
+                            <h3>
+                                Atividades Recentes
+                            </h3>
+
+
+                            <span>
+                                Últimas ações
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-empty">
+
+
+                                <i data-lucide="clipboard-list"></i>
+
+
+                                <p>
+                                    Nenhuma atividade ainda
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section
+                id="usuariosPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        Usuários
+                    </h2>
+
+
+                    <p>
+                        Gerenciamento dos usuários da Fundação Comics.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                Lista de Usuários
+                            </h3>
+
+
+                            <span>
+                                Gerenciamento
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <section
+                id="hqsPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        HQs
+                    </h2>
+
+
+                    <p>
+                        Gerenciamento do catálogo da Fundação Comics.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                Lista de HQs
+                            </h3>
+
+
+                            <span>
+                                Catálogo
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <section
+                id="downloadsPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        Downloads
+                    </h2>
+
+
+                    <p>
+                        Acompanhamento dos downloads das HQs.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                Histórico de Downloads
+                            </h3>
+
+
+                            <span>
+                                Estatísticas
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <section
+                id="favoritosPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        Favoritos
+                    </h2>
+
+
+                    <p>
+                        Visualização dos favoritos dos usuários.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                HQs Favoritadas
+                            </h3>
+
+
+                            <span>
+                                Ranking
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <section
+                id="bibliotecaPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        Biblioteca
+                    </h2>
+
+
+                    <p>
+                        Acompanhamento da biblioteca dos usuários.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                HQs Salvas na Biblioteca
+                            </h3>
+
+
+                            <span>
+                                Coleção dos usuários
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <section
+                id="visitasPage"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <h2>
+                        Visitas
+                    </h2>
+
+
+                    <p>
+                        Monitoramento de acessos da Fundação Comics.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="page-body admin-page-body">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+
+                            <h3>
+                                Histórico de Visitas
+                            </h3>
+
+
+                            <span>
+                                Acessos
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-placeholder">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/admin2.js"></script>
+    <script>lucide.createIcons();</script>
+
+</body>
+
+</html>

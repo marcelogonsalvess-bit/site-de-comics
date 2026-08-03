@@ -1,0 +1,73 @@
+.topbar{
+
+    height: 72px;
+
+    background: #111827;
+
+    border-bottom: 1px solid #1f2937;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+}
+
+.page-title{
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+}
+
+.topbar-right{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.topbar-button{
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 1px solid #374151;
+
+    border-radius: 10px;
+
+    color: #d1d5db;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.topbar-button:hover{
+
+    background: #1f2937;
+
+    color: #ffffff;
+
+}
+
+.topbar-button svg{
+
+    width: 20px;
+    height: 20px;
+
+}

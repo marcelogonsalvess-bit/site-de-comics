@@ -1,0 +1,447 @@
+/* ==========================
+   PÁGINA INDIVIDUAL COLEÇÃO
+========================== */
+
+
+.colecao-page{
+
+    padding-top:44px;
+
+}
+
+
+
+/* INFORMAÇÕES DA COLEÇÃO */
+
+
+
+
+#dadosColecao h1{
+
+    margin:10px 0;
+
+}
+
+
+#dadosColecao p{
+
+    margin:0;
+
+}
+
+
+
+/* TÍTULO HQS */
+
+.colecao-page h2{
+
+    margin-top:30px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+
+
+/* LISTA DE HQS */
+
+#listaHQsColecao{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-left: 25px;
+
+}
+
+
+
+#listaHQsColecao .comic-card{
+
+    width:260px;
+
+}
+
+#listaHQsColecao img{
+
+    width:260px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+#listaHQsColecao .comic-card h3{
+
+    margin-top:10px;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+}
+
+/* ============================
+   BANNER DA COLEÇÃO
+============================ */
+
+
+.colecao-banner{
+
+    position:relative;
+
+    width:100%;
+
+    height:380px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left: 60px;
+
+    gap: 40px;
+
+}
+
+
+.colecao-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:20px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.534),
+        rgba(0,0,0,0)
+    );
+
+}
+
+.colecao-overlay h3{
+
+    margin:0;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    color:white;
+
+    text-align:left;
+
+    text-shadow:none;
+
+    letter-spacing:0.5px;
+
+}
+
+.colecao-overlay p{
+
+    margin:5px 0 0;
+
+    font-size:13px;
+
+    font-weight:400;
+
+    color:rgba(207, 207, 207, 0.85);
+
+    text-align:left;
+
+}
+
+
+.colecao-info{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:left;
+
+    max-width:500px;
+
+    color:white;
+
+}
+
+
+.colecao-info h1{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+    text-transform: uppercase;
+
+}
+
+
+.colecao-info p{
+
+    font-size:12px;
+
+}
+/* ============================
+   CAPA DA COLEÇÃO
+============================ */
+
+
+.colecao-capa{
+
+    position:relative;
+
+
+    height:94%;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+/* ============================
+   META DA COLEÇÃO
+============================ */
+
+.colecao-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin:15px 0;
+
+}
+
+/* ==========================
+   PÁGINA INDIVIDUAL EDITORA
+========================== */
+
+
+.editora-page{
+
+    padding-top:30px;
+
+}
+
+
+
+/* INFORMAÇÕES DA EDITORA */
+
+
+#dadosEditora{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+#dadosEditora h1{
+
+    margin:15px 0 30px;
+
+}
+
+
+
+#dadosEditora img{
+
+    max-width:220px;
+
+    max-height:100px;
+
+    object-fit:contain;
+
+}
+
+
+
+/* TÍTULO HQS */
+
+
+.editora-page h2{
+
+    margin-top:30px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+
+
+/* LISTA DE HQS */
+
+
+#listaHQsEditora{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-left:25px;
+
+}
+
+
+
+/* MESMO PADRÃO DAS COLEÇÕES */
+
+
+#listaHQsEditora .comic-card{
+
+    width:260px;
+
+}
+
+
+
+#listaHQsEditora img{
+
+    width:260px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+
+
+#listaHQsEditora .comic-card h3{
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+    text-align:center;
+
+}
+.comic-cover{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+}
+
+
+
+.comic-cover img{
+
+    display:block;
+
+    transition:transform .4s ease;
+
+}
+
+
+
+.comic-cover:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* degradê inferior */
+
+.comic-gradient{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:45%;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+
+}
+
+
+
+/* título sobre a capa */
+
+.comic-cover h3{
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:10px;
+
+    right:10px;
+
+    margin:0;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+/* ==========================
+   PÁGINA DE FAVORITOS
+========================== */
+
+.favoritos-page{
+
+    padding-top:100px;
+    text-align: center;
+
+}

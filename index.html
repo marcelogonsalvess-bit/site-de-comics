@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Fundação Comics</title>
+
+
+    <meta name="description" content="Fundação Comics - Biblioteca digital de quadrinhos.">
+
+    <meta name="theme-color" content="#111111">
+
+
+    <link 
+        rel="icon" 
+        href="/img/favicon.ico" 
+        type="image/x-icon">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+</head>
+
+<body>
+
+        <div id="header"></div>
+        <div id="auth"></div>
+
+<main>
+
+ <!-- ==========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-slider" id="heroSlider">
+
+        <div class="hero-slider-auto"></div>
+
+    </div>
+
+    <!-- INDICADORES -->
+
+<div class="hero-dots">
+
+    <button class="active"></button>
+
+</div>
+
+            <div class="hero-navigation">
+
+    <button class="hero-prev">
+
+        ❮
+
+    </button>
+
+    <button class="hero-next">
+
+        ❯
+
+    </button>
+
+</div>
+
+</section>
+
+    <!-- FIM HERO -->
+
+<!-- ===================================== -->
+<!-- ÚLTIMAS ADIÇÕES -->
+<!-- ===================================== -->
+
+<section class="content-section latest-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Últimas Adições</h2>
+
+        </div>
+
+        <div class="carousel-wrapper">
+
+
+            <div class="carousel-container">
+
+
+                <button class="carousel-btn prev">
+                    ❮
+                </button>
+
+
+                <div id="listaUltimasAdicoes" class="carousel-track"></div>
+
+
+                <button class="carousel-btn next">
+                    ❯
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- MAIS ACESSADOS -->
+<!-- ===================================== -->
+
+<section class="content-section top10-section">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <h2>Top 10</h2>
+
+        </div>
+
+
+
+        <div class="carousel-container">
+
+
+            <button class="carousel-btn prev">
+
+                ❮
+
+            </button>
+
+
+
+            <div id="listaMaisAcessados" class="carousel-track"></div>
+
+
+
+            <button class="carousel-btn next">
+
+                ❯
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main>
+
+<div id="footer"></div>
+
+            <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+            <script defer src="js/supabase.js"></script>
+            <script defer src="js/contador-visitas.js"></script>
+
+            <script defer src="js/auth.js"></script>
+            <script defer src="js/favoritos.js"></script>
+            <script defer src="js/auth-ui.js"></script>
+            <script defer src="js/carregar-catalogo.js"></script>
+            <script defer src="js/home.js"></script>
+            <script defer src="js/carousel.js"></script>
+            <script defer src="js/mais-acessados.js"></script>
+            <script defer src="js/hero.js"></script>
+            <script defer src="js/components.js"></script>
+            <script defer src="js/doacao.js"></script>
+            <script defer src="js/busca.js"></script>
+            <script defer src="js/mobile-menu.js"></script>
+
+</body>
+
+</html>

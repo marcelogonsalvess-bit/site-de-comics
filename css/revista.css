@@ -1,0 +1,737 @@
+/* ===============================
+   PÁGINA DA HQ - HERO
+================================ */
+
+.revista-hero {
+
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+
+}
+
+
+.revista-banner {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    z-index: 0;
+
+}
+
+
+.revista-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 1;
+
+}
+
+
+.revista-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 80px 40px;
+
+}
+
+/* ==========================
+   SEÇÃO DE COMENTÁRIOS
+========================== */
+
+.comentarios-section{
+
+    padding-left:25px;
+
+    padding-right:25px;
+
+}
+
+/* ==========================
+   AVATAR DOS COMENTÁRIOS
+========================== */
+
+.comentario-avatar{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+/* ==========================
+   COMENTÁRIOS DA HQ
+========================== */
+
+.comentario{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+    padding:0 25px;
+
+}
+
+
+.comentario-conteudo{
+
+    flex:1;
+
+}
+
+
+.comentario-conteudo strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+
+.comentario-conteudo p{
+
+    margin:5px 0;
+
+}
+
+
+.comentario-conteudo small{
+
+    color:#999;
+
+    font-size:12px;
+
+}
+
+/* ==========================
+   NOVO COMENTÁRIO
+========================== */
+
+#novoComentario{
+
+    margin-top:30px;
+
+    padding:0 25px;
+
+}
+
+
+#campoComentario{
+
+    width:100%;
+
+    min-height:120px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #333;
+
+    background:#111;
+
+    color:#fff;
+
+    resize:vertical;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+
+
+#campoComentario::placeholder{
+
+    color:#aaa;
+
+}
+
+
+#btnEnviarComentario{
+
+    margin-top:15px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#e50914;
+
+    color:#fff;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+#btnEnviarComentario:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ============================
+   COMENTÁRIOS
+============================ */
+
+#listaComentarios {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+
+.comentario {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+.comentario-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+.comentario-conteudo {
+    flex: 1;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+
+.comentario-conteudo strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.comentario-conteudo p {
+    margin: 5px 0;
+}
+
+
+.comentario-conteudo small {
+    opacity: 0.7;
+}
+
+/* ============================
+   AÇÕES DO COMENTÁRIO
+============================ */
+
+.btn-editar-comentario,
+.btn-excluir-comentario,
+.btn-salvar-edicao {
+
+    border: none;
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+    margin-right: 6px;
+
+    transition: 0.2s ease;
+
+}
+
+
+
+.btn-editar-comentario {
+
+    background: #2979ff;
+    color: white;
+
+}
+
+
+
+.btn-excluir-comentario {
+
+    background: #e53935;
+    color: white;
+
+}
+
+
+
+.btn-salvar-edicao {
+
+    background: #43a047;
+    color: white;
+
+}
+
+
+
+.btn-editar-comentario:hover,
+.btn-excluir-comentario:hover,
+.btn-salvar-edicao:hover {
+
+    opacity: 0.85;
+
+}
+
+.btn-curtir-comentario {
+
+    background: transparent;
+
+    border: none;
+
+    padding: 0;
+
+    margin-right: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    color: #888;
+
+    transition: color .2s ease, transform .2s ease;
+
+}
+
+.btn-curtir-comentario:hover {
+
+    color: #ff3030;
+
+    transform: scale(1.1);
+
+}
+
+.btn-curtir-comentario i{
+
+    font-size:18px;
+
+}
+
+@media (max-width: 768px) {
+
+
+    .comentario-conteudo {
+        width: 100%;
+    }
+
+
+    .btn-editar-comentario,
+    .btn-excluir-comentario {
+
+        display: inline-block;
+        margin-top: 12px;
+
+    }
+
+    .comentario-conteudo p {
+
+        max-height: 180px;
+
+        overflow-y: auto;
+
+        padding-right: 5px;
+
+    
+
+}
+
+
+}
+/* ============================
+   BALÃO DE COMENTÁRIO
+============================ */
+
+
+.comentario {
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+
+.comentario-conteudo {
+
+    background: rgba(0,0,0,0.15);
+    padding: 12px 15px;
+    border-radius: 12px;
+
+}
+
+
+
+.comentario-conteudo strong {
+
+    font-size: 15px;
+
+}
+
+
+
+.comentario-conteudo p {
+
+    line-height: 1.5;
+    margin: 8px 0;
+
+}
+
+
+
+.comentario-conteudo small {
+
+    font-size: 12px;
+
+}
+/* ============================
+   NOVO COMENTÁRIO
+============================ */
+
+#novoComentario {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+#campoComentario {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+}
+
+
+#campoComentario:focus {
+
+    outline: none;
+
+    border-color: #ff3030;
+
+}
+
+
+
+#btnEnviarComentario {
+
+    margin-top: 12px;
+
+    padding: 8px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+
+}
+
+
+
+#btnEnviarComentario:hover {
+
+    transform: translateY(-2px);
+
+}
+/* ============================
+   EDIÇÃO DE COMENTÁRIO
+============================ */
+
+#campoComentario,
+.campo-edicao-comentario {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+}
+
+#campoComentario:focus,
+.campo-edicao-comentario:focus {
+
+    outline: none;
+
+    border-color: #ff3030;
+
+}
+
+/* ============================
+   COMENTÁRIO DO USUÁRIO LOGADO
+============================ */
+
+.meu-comentario {
+
+    border-left: 3px solid #2979ff;
+
+    background: rgba(41,121,255,0.08);
+
+}
+
+/* ============================
+   TÍTULO DOS COMENTÁRIOS
+============================ */
+
+#comentarios h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+
+#contadorComentarios {
+
+    font-size: 24px;
+
+    opacity: 0.7;
+
+    font-weight: normal;
+
+}
+/* ============================
+   ANIMAÇÃO COMENTÁRIOS
+============================ */
+
+.comentario {
+
+    animation: aparecerComentario 0.3s ease;
+
+}
+
+
+@keyframes aparecerComentario {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ============================
+   LOGIN PARA COMENTAR
+============================ */
+
+.aviso-login-comentario {
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+
+.icone-login-comentario {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.aviso-login-comentario h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+}
+
+
+
+.aviso-login-comentario p {
+
+    margin-bottom: 18px;
+
+    opacity: 0.8;
+
+}
+
+
+
+#btnLoginComentario {
+
+    padding: 9px 24px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+
+
+#btnLoginComentario:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/* ============================
+  CONTADOR DE CARACTERES
+============================ */
+
+.contador-caracteres {
+
+    font-size: 12px;
+
+    opacity: 0.6;
+
+    text-align: right;
+
+    margin-top: 5px;
+
+}
+
+
+/* ============================
+  EXPANDIR COMENTÁRIO - LER MAIS
+============================ */
+
+
+.texto-comentario {
+
+    max-height: 150px;
+
+    overflow: hidden;
+
+}
+
+
+.texto-comentario.expandido {
+
+    max-height: none;
+
+}
+
+.btn-ler-mais-comentario {
+
+    background: none;
+
+    border: none;
+
+    padding: 5px 0;
+
+    margin-top: 8px;
+
+    color: #ff3030;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.btn-ler-mais-comentario:hover {
+
+    text-decoration: underline;
+
+}
