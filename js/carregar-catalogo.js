@@ -141,3 +141,23 @@ function carregarEditoras(){
 }
 
 }
+
+
+function gerarUrlHQ(hq) {
+
+    // Se a HQ tiver uma página definida,
+    // usa exatamente o caminho informado no cadastro.
+    if (hq.pagina) {
+
+        return "/" + hq.pagina.replace(/^\/+/, "");
+
+    }
+
+    // Caso não tenha página definida,
+    // mantém o comportamento automático atual.
+    const pasta =
+        hq.slug.replace(/-\d+$/, "");
+
+    return `/hqs/${hq.editora}/${pasta}/${hq.slug}.html`;
+
+}

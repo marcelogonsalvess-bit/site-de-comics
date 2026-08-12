@@ -28,7 +28,7 @@ document.addEventListener(
             return new Date(b.criado_em) - new Date(a.criado_em)
 
         })
-        .slice(0, 10);
+        .slice(0, 20);
 
 
 
@@ -42,7 +42,7 @@ document.addEventListener(
 
         card.innerHTML = `
 
-            <a href="pages/hq.html?id=${hq.id}" class="comic-link">
+            <a href="${gerarUrlHQ(hq)}" class="comic-link">
 
 
                 <div class="comic-cover">

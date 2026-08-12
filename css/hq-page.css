@@ -115,23 +115,17 @@
 
 .hq-right{
 
-    width:380px;
+    width:320px;
 
     display:flex;
 
-    justify-content:flex-end;
+    flex-direction:column;
 
+    align-items:center;
+
+    justify-content:center;
 }
 
-.hq-cover img{
-
-    width:100%;
-
-    border-radius:14px;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.55);
-
-}
 /* ==================================================
    LOGO
 ================================================== */
@@ -170,12 +164,11 @@
 
     flex-wrap:wrap;
 
-    margin-bottom:18px;
+    margin-bottom:25px;
 
     font-size:14px;
 
     font-weight:normal;
-
 }
 
 .hq-meta span{
@@ -210,33 +203,8 @@
 
     line-height:1.8;
 
-    margin-bottom:30px;
-
+    margin-bottom:25px;
 }
-/* ==========================================
-   CAPA
-========================================== */
-
-.hq-cover{
-
-    width:380px;
-
-}
-
-.hq-cover img{
-
-    display:block;
-
-    width:100%;
-
-    height:auto;
-
-    border-radius:12px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
-
-}
-
 
 /* ==========================================
    AÇÕES DA CAPA
@@ -248,52 +216,16 @@
 
     justify-content:center;
 
-    gap:14px;
+    gap:18px;
 
     margin-top:18px;
 
     transform:translateY(-45px);
-
-}
-/* ==========================================
-   AJUSTE DA CAPA NO HERO
-========================================== */
-
-.hq-right{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-
-.hq-cover{
-
-    width:380px;
-
 }
 
 /* ==========================================
    CAPA DA HQ
 ========================================== */
-
-.hq-right{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
 
 .hq-cover{
 
@@ -330,19 +262,6 @@
 /* ==========================================
    BOTÕES DA CAPA
 ========================================== */
-
-.hq-cover-actions{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:18px;
-
-    margin-top:18px;
-
-}
-
 
 .hq-icon-button{
 
@@ -402,16 +321,7 @@
     font-size:18px;
 
 }
-.hq-buttons button,
-.hq-buttons a{
 
-    font-family: inherit;
-
-    font-size:16px;
-
-    font-weight:100;
-
-}
 
 /* ==========================================
    ORGANIZAÇÃO COLUNA ESQUERDA
@@ -432,27 +342,6 @@
 }
 
 
-.hq-meta{
-
-    margin-bottom:25px;
-
-}
-
-
-.hq-extra{
-
-    margin-bottom:25px;
-
-}
-
-
-.hq-personagens{
-
-    margin-bottom:25px;
-
-}
-
-
 .hq-sinopse{
 
     margin-bottom:35px;
@@ -467,11 +356,18 @@
    BOTÕES PRINCIPAIS DA HQ
 ========================================== */
 
-.hq-buttons button{
+.hq-buttons button,
+.hq-buttons a{
 
-    padding:12px 24px;
+    height:48px;
+
+    padding:0 24px;
+
+    box-sizing:border-box;
 
     border-radius:25px;
+
+    font-family:inherit;
 
     font-size:16px;
 
@@ -479,11 +375,15 @@
 
     cursor:pointer;
 
-    border:none;
-
     transition:0.3s;
 
     min-width:180px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 

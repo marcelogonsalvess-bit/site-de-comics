@@ -150,7 +150,7 @@ function mostrarResultados(){
             <article class="comic-card">
 
 
-                <a href="../pages/hq.html?id=${hq.id}">
+                <a href="${gerarUrlHQ(hq)}">
 
 
                     <div class="comic-cover">

@@ -1,5 +1,4 @@
-.topbar{
-
+.topbar {
     height: 72px;
 
     background: #111827;
@@ -10,32 +9,27 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 24px;
-
+    padding: 20px 28px;
 }
 
-.page-title{
-
+.page-title {
     font-size: 24px;
 
     font-weight: 700;
 
     color: #ffffff;
 
+    margin: 0;
 }
 
-.topbar-right{
-
+.topbar-right {
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
-
+    gap: 10px;
 }
-
-.topbar-button{
-
+.topbar-button {
     width: 42px;
     height: 42px;
 
@@ -43,31 +37,50 @@
     align-items: center;
     justify-content: center;
 
-    background: transparent;
+    background: #111827;
 
-    border: 1px solid #374151;
+    border: 1px solid #2d3748;
 
     border-radius: 10px;
 
-    color: #d1d5db;
+    color: #9ca3af;
 
     cursor: pointer;
 
-    transition: .2s;
-
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.topbar-button:hover{
-
+.topbar-button:hover {
     background: #1f2937;
 
     color: #ffffff;
 
+    border-color: #4b5563;
+
+    transform: translateY(-1px);
 }
 
-.topbar-button svg{
+.topbar-button svg {
+    width: 19px;
+    height: 19px;
+}
 
-    width: 20px;
-    height: 20px;
+.topbar-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.page-subtitle {
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    color: #9ca3af;
 }

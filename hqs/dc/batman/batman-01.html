@@ -19,6 +19,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
 </head>
 
 <body>
@@ -107,7 +115,7 @@
             id="btnDownload"
             class="btn-primary">
 
-            Download
+            Download HQ
 
         </button>
 
@@ -115,7 +123,7 @@
             id="linkColecaoHQ"
             class="btn-secondary">
 
-            Série Completa
+            <i class="fa-solid fa-book"></i> Série Completa
 
         </a>
 
@@ -145,7 +153,7 @@
             class="hq-icon-button"
             title="Adicionar aos favoritos">
 
-            ♡
+            <i class="fa-regular fa-heart"></i>
 
         </button>
 
@@ -155,7 +163,7 @@
             class="hq-icon-button"
             title="Adicionar à biblioteca">
 
-            +
+            <i class="fa-solid fa-plus"></i>
 
         </button>
 
@@ -206,9 +214,10 @@
 
     <div class="container">
 
-                <h3>
+                <h2>
+                    <i class="fa-solid fa-book"></i>
                     Revistas Relacionadas
-                </h3>
+                </h2>
 
 
                 <div class="carousel-container">
@@ -246,6 +255,23 @@
     </main>
 
 
+    <section id="comentarios" class="comentarios-section">
+
+        <h2>
+            💬 Comentários (<span id="contadorComentarios">0</span>)
+        </h2>
+
+        <div id="listaComentarios">
+
+        </div>
+
+        <div id="novoComentario">
+
+        </div>
+
+    </section>
+
+
     <!-- FOOTER -->
 
     <div id="footer"></div>
@@ -262,11 +288,9 @@
         // ID DA HQ
         // ==========================
 
-        const hqId = "as-guerreiras-kyoshi-01";
+        const hqId = "batman-01";
 
     </script>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -284,6 +308,7 @@
 
 
 <script defer src="../../../js/components.js"></script>
+<script defer src="../../../js/doacao.js"></script>
 
 <script defer src="../../../js/favoritos.js"></script>
 <script defer src="../../../js/favorito-button.js"></script>
@@ -291,6 +316,7 @@
 <script defer src="../../../js/busca.js"></script>
 <script defer src="../../../js/mobile-menu.js"></script>
 
+<script defer src="../../../js/comentarios.js"></script>
 
 </body>
 

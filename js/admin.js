@@ -2692,6 +2692,8 @@ function gerarSlug(texto){
 
 novaHQ.slug = gerarSlug(novaHQ.titulo);
 
+novaHQ.pagina = document.getElementById("paginaHQ").value;
+
 let resultado;
 
 

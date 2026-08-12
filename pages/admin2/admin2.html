@@ -108,30 +108,32 @@
 
             <div class="topbar-left">
 
-                <h1 class="page-title">
-                    Dashboard
-                </h1>
+                <div class="topbar-title">
+
+                    <h1 class="page-title">
+                        Dashboard
+                    </h1>
+
+                    <p class="page-subtitle">
+                        Visão geral da Fundação Comics
+                    </p>
+
+                </div>
 
             </div>
 
             <div class="topbar-right">
 
-                <button class="topbar-button">
-
+                <button class="topbar-button" title="Pesquisar">
                     <i data-lucide="search"></i>
-
                 </button>
 
-                <button class="topbar-button">
-
+                <button class="topbar-button" title="Notificações">
                     <i data-lucide="bell"></i>
-
                 </button>
 
-                <button class="topbar-button">
-
+                <button class="topbar-button" title="Atualizar">
                     <i data-lucide="refresh-cw"></i>
-
                 </button>
 
             </div>
@@ -145,17 +147,6 @@
                 class="page active"
             >
 
-                <div class="page-header">
-
-                    <h2>
-                        Dashboard
-                    </h2>
-
-                    <p>
-                        Visão geral da Fundação Comics.
-                    </p>
-
-                </div>
 
                 <div class="page-body admin-page-body">
 
@@ -447,23 +438,194 @@
                     <div class="panel">
 
 
-                        <div class="panel-header">
+                        <div class="panel-header table-panel-header">
 
+                            <div>
 
-                            <h3>
-                                Lista de Usuários
-                            </h3>
+                                <h3>
+                                    Lista de Usuários
+                                </h3>
 
+                                <span>
+                                    Gerenciamento
+                                </span>
 
-                            <span>
-                                Gerenciamento
-                            </span>
+                            </div>
 
+                            <div class="table-toolbar">
+
+                                <div class="table-search">
+
+                                    <i data-lucide="search"></i>
+
+                                    <input
+                                        type="text"
+                                        placeholder="Buscar usuário..."
+                                    >
+
+                                </div>
+
+                                <button
+                                    class="table-primary-button"
+                                    type="button"
+                                >
+
+                                    <i data-lucide="user-plus"></i>
+
+                                    Novo usuário
+
+                                </button>
+
+                            </div>
 
                         </div>
 
 
-                        <div class="table-placeholder">
+                        <div class="admin-table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Usuário</th>
+
+                                        <th>Status</th>
+
+                                        <th>Cadastro</th>
+
+                                        <th>Ações</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="admin-table-user">
+
+                                                <div class="admin-table-avatar"></div>
+
+                                                <div class="admin-table-user-info">
+
+                                                    <span class="admin-table-user-name">
+                                                        Marcelo Gonçalves
+                                                    </span>
+
+                                                    <span class="admin-table-user-email">
+                                                        marcelo@email.com
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="admin-table-status active">
+                                                Ativo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+                                            11/08/2026
+                                        </td>
+
+                                        <td>
+
+                                            <div class="admin-table-actions">
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Visualizar"
+                                                >
+                                                    <i data-lucide="eye"></i>
+                                                </button>
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Editar"
+                                                >
+                                                    <i data-lucide="pencil"></i>
+                                                </button>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="admin-table-user">
+
+                                                <div class="admin-table-avatar"></div>
+
+                                                <div class="admin-table-user-info">
+
+                                                    <span class="admin-table-user-name">
+                                                        Usuário de exemplo
+                                                    </span>
+
+                                                    <span class="admin-table-user-email">
+                                                        usuario@email.com
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="admin-table-status inactive">
+                                                Inativo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+                                            10/08/2026
+                                        </td>
+
+                                        <td>
+
+                                            <div class="admin-table-actions">
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Visualizar"
+                                                >
+                                                    <i data-lucide="eye"></i>
+                                                </button>
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Editar"
+                                                >
+                                                    <i data-lucide="pencil"></i>
+                                                </button>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
 
                         </div>
 
@@ -505,23 +667,212 @@
                     <div class="panel">
 
 
-                        <div class="panel-header">
+                        <div class="panel-header table-panel-header">
 
+                            <div>
 
-                            <h3>
-                                Lista de HQs
-                            </h3>
+                                <h3>
+                                    Lista de HQs
+                                </h3>
 
+                                <span>
+                                    Catálogo
+                                </span>
 
-                            <span>
-                                Catálogo
-                            </span>
+                            </div>
 
+                            <div class="table-toolbar">
+
+                                <div class="table-search">
+
+                                    <i data-lucide="search"></i>
+
+                                    <input
+                                        type="text"
+                                        placeholder="Buscar HQ..."
+                                    >
+
+                                </div>
+
+                                <button
+                                    class="table-primary-button"
+                                    type="button"
+                                >
+
+                                    <i data-lucide="plus"></i>
+
+                                    Nova HQ
+
+                                </button>
+
+                            </div>
 
                         </div>
 
 
-                        <div class="table-placeholder">
+                        <div class="admin-table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>HQ</th>
+
+                                        <th>Editora</th>
+
+                                        <th>Ano</th>
+
+                                        <th>Status</th>
+
+                                        <th>Ações</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="admin-table-user">
+
+                                                <img
+                                                    src="../admin2/img/supergirl-001.jpg"
+                                                    alt="Supergirl 001"
+                                                    class="admin-table-cover"
+                                                >
+
+                                                <div class="admin-table-user-info">
+
+                                                    <span class="admin-table-user-name">
+                                                        Supergirl 001
+                                                    </span>
+
+                                                    <span class="admin-table-user-email">
+                                                        Supergirl — Mulher do Amanhã
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            DC Comics
+                                        </td>
+
+                                        <td>
+                                            2026
+                                        </td>
+
+                                        <td>
+
+                                            <span class="admin-table-status active">
+                                                Publicada
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="admin-table-actions">
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Visualizar"
+                                                >
+                                                    <i data-lucide="eye"></i>
+                                                </button>
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Editar"
+                                                >
+                                                    <i data-lucide="pencil"></i>
+                                                </button>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="admin-table-user">
+
+                                                <img
+                                                    src="../admin2/img/batman-001.jpg"
+                                                    alt="Batman 001"
+                                                    class="admin-table-cover"
+                                                >
+
+                                                <div class="admin-table-user-info">
+
+                                                    <span class="admin-table-user-name">
+                                                        Batman 001
+                                                    </span>
+
+                                                    <span class="admin-table-user-email">
+                                                        Batman — Ano Um
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            DC Comics
+                                        </td>
+
+                                        <td>
+                                            2026
+                                        </td>
+
+                                        <td>
+
+                                            <span class="admin-table-status inactive">
+                                                Rascunho
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="admin-table-actions">
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Visualizar"
+                                                >
+                                                    <i data-lucide="eye"></i>
+                                                </button>
+
+                                                <button
+                                                    class="admin-table-action"
+                                                    title="Editar"
+                                                >
+                                                    <i data-lucide="pencil"></i>
+                                                </button>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
 
                         </div>
 

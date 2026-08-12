@@ -180,7 +180,7 @@ document.addEventListener(
 
 
                         <a
-                            href="pages/hq.html?id=${hq.id}"
+                            href="${gerarUrlHQ(hq)}"
                             class="btn-primary">
                             Ler mais
                         </a>

@@ -84,7 +84,7 @@ document.addEventListener(
 
 
         <a 
-            href="../pages/hq.html?id=${hq.id}"
+            href="${gerarUrlHQ(hq)}"
             class="comic-card"
         >
 

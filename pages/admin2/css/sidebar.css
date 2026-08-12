@@ -1,6 +1,5 @@
-.sidebar{
-
-    width: 280px;
+.sidebar {
+    width: 260px;
     height: 100vh;
 
     background: #111827;
@@ -12,141 +11,127 @@
 
     flex-shrink: 0;
 
+    overflow-y: auto;
 }
 
-.sidebar-header{
-
+.sidebar-header {
     display: flex;
     align-items: center;
     gap: 14px;
 
-    padding: 24px;
+    padding: 20px;
 
     border-bottom: 1px solid #1f2937;
-
 }
 
-.sidebar-logo{
-
-    width: 52px;
-    height: 52px;
+.sidebar-logo {
+    width: 48px;
+    height: 48px;
 
     object-fit: contain;
-
 }
 
-.sidebar-brand{
-
+.sidebar-brand {
     display: flex;
     flex-direction: column;
-
 }
 
-.sidebar-brand h2{
+.sidebar-brand h2 {
+    margin: 0;
 
     font-size: 18px;
     font-weight: 700;
 
     color: #ffffff;
-
 }
 
-.sidebar-brand p{
-
-    margin-top: 4px;
+.sidebar-brand p {
+    margin: 4px 0 0;
 
     font-size: 13px;
 
     color: #9ca3af;
-
 }
 
-.sidebar-menu{
-
+.sidebar-menu {
     display: flex;
     flex-direction: column;
 
-    gap: 8px;
+    gap: 6px;
 
-    padding: 20px 16px;
-
+    padding: 18px 14px;
 }
 
-.menu-item{
-
+.menu-item {
     display: flex;
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
     width: 100%;
 
-    padding: 14px 16px;
+    padding: 12px 14px;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
 
     background: transparent;
 
-    color: #d1d5db;
+    color: #9ca3af;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
 
     cursor: pointer;
 
-    transition: .25s;
-
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.menu-item:hover{
-
+.menu-item:hover {
     background: #1f2937;
 
     color: #ffffff;
-
 }
 
-.menu-item.active{
-
+.menu-item.active {
     background: #2563eb;
 
     color: #ffffff;
 
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.menu-item i{
-
-    width: 20px;
-    height: 20px;
+.menu-item i {
+    width: 19px;
+    height: 19px;
 
     stroke-width: 2;
 
     flex-shrink: 0;
-
 }
 
-.menu-group{
-
+.menu-group {
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 24px;
+    gap: 4px;
 
+    margin-bottom: 20px;
 }
 
-.menu-title{
+.menu-title {
+    padding: 4px 14px 8px;
 
-    padding: 0 16px 10px;
+    font-size: 10px;
 
-    font-size: 11px;
-
-    font-weight: 700;
+    font-weight: 600;
 
     text-transform: uppercase;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 
     color: #6b7280;
-
 }

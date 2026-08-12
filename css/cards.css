@@ -651,9 +651,9 @@
 
 .latest-section .comic-card{
 
-    flex:0 0 calc((100% - 40px) / 3);
+    flex:0 0 calc((100% - 60px) / 4);
 
-    width:calc((100% - 40px) / 3);
+    width:calc((100% - 60px) / 4);
 
     min-width:0;
 
@@ -699,6 +699,8 @@
     right:-35px;
 
 }
+
+
 /* esconder barra dos carrosseis */
 
 .carousel-track{
@@ -712,4 +714,16 @@
 
     display:none;
 
+}
+
+/* =====================================
+REVISTAS RELACIONADAS
+===================================== */
+
+.hq-related .carousel-btn.prev{
+    left:-35px;
+}
+
+.hq-related .carousel-btn.next{
+    right:-35px;
 }

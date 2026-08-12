@@ -82,7 +82,7 @@ document.addEventListener(
 
         card.innerHTML = `
 
-            <a href="pages/hq.html?id=${hq.id}" class="comic-link">
+            <a href="${gerarUrlHQ(hq)}" class="comic-link">
 
 
                 <div class="comic-cover">

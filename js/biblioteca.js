@@ -91,7 +91,7 @@ biblioteca.forEach(item => {
 
 card.innerHTML = `
 
-<a href="../pages/hq.html?id=${hq.id}">
+<a href="${gerarUrlHQ(hq)}">
 
     <div class="comic-cover">
 

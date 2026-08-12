@@ -11,29 +11,64 @@
             console.log("CATÁLOGO DENTRO DA HQ:", catalogoHQs);
 
 
-            // ============================
-            // CARREGAR DADOS DA HQ
-            // ============================
+// ============================
+// CARREGAR DADOS DA HQ
+// ============================
 
             let dadosHQ = null;
 
             window.dadosTesteHQ = dadosHQ;
 
 
-            // Novo formato (catálogo)
+// Novo formato (catálogo)
 
             let idAtual = null;
 
 
-            // pega o nome do arquivo atual
+// pega o nome do arquivo atual
 
             const params = new URLSearchParams(
                 window.location.search
             );
 
-            const slugAtual = params.get("slug");
+            let slugAtual = params.get("slug");
 
-            idAtual = params.get("id");
+idAtual = params.get("id");
+
+
+// URL amigável
+if (!slugAtual && !idAtual) {
+
+    const arquivo = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(".html", "");
+
+    slugAtual = arquivo;
+
+}
+
+            // URL amigável: pega o nome do arquivo atual
+if (!slugAtual && !idAtual) {
+
+    const caminho = window.location.pathname;
+
+    const arquivo = caminho
+        .split("/")
+        .pop();
+
+    idAtual = arquivo
+        .replace(".html", "");
+
+}
+
+            // Se não veio pela URL, usa a variável do template da HQ
+            if (!slugAtual && typeof hqId !== "undefined") {
+
+                slugAtual = hqId;
+
+            }
+
 
 
             window.idHQAtual = idAtual;
@@ -41,8 +76,8 @@
 
 
             if (
-    typeof catalogoHQs !== "undefined"
-) {
+                typeof catalogoHQs !== "undefined"
+            ) {
 
 
     dadosHQ = catalogoHQs.find(hq => {
@@ -505,7 +540,8 @@ console.log(
 
 
     }
-        // ============================
+    
+    // ============================
     // PAINEL DE INFORMAÇÕES
     // ============================
 
@@ -1010,7 +1046,7 @@ function montarRevistasRelacionadas(dadosHQ){
 
 
 
-    if (!dadosHQ.colecaoId)
+    if (!dadosHQ.colecao_id)
         return;
 
 
@@ -1020,9 +1056,7 @@ function montarRevistasRelacionadas(dadosHQ){
         catalogoHQs.filter(
 
 
-            hq =>
-
-            hq.colecaoId === dadosHQ.colecaoId &&
+            hq => hq.colecao_id === dadosHQ.colecao_id &&
 
             hq.id !== dadosHQ.id
 
@@ -1041,7 +1075,7 @@ function montarRevistasRelacionadas(dadosHQ){
         container.innerHTML += `
 
             <a 
-                href="../hq.html?slug=${hq.slug}"
+                href="${gerarUrlHQ(hq)}"
                 class="related-card"
             >
 

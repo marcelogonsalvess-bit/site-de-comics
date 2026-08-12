@@ -33,6 +33,18 @@
     },
 
     {
+        "id": "batman-v3",
+        "slug": "batman-v3",
+        "nome": "Batman",
+        "editoraId": "dc",
+        "imagem": "https://image.tmdb.org/t/p/original/fxUJV9LwTyYiP1pqC9ADeYH5Hat.jpg",
+        "banner": "https://image.tmdb.org/t/p/original/nu1fARVd5xx8PKSdUeQTz0wtjyo.jpg",
+        "descricao": "Coleção Batman Vol. 3.",
+        "status": "em-andamento"
+    },
+
+
+    {
         "id": "homem-aranha-e-wolverine-crossover-2003",
         "slug": "homem-aranha-e-wolverine-2003",
         "nome": "Homem-Aranha & Wolverine (2003)",

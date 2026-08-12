@@ -123,8 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             "editoras.html": "link-editoras",
 
-            "contato.html": "link-contato"
-
         };
 
 

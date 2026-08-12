@@ -169,7 +169,7 @@ document.addEventListener(
 
 
 
-                <a href="../pages/hq.html?id=${hq.id}">
+                <a href="${gerarUrlHQ(hq)}">
 
 
                     <div class="colecao-hq-capa">
