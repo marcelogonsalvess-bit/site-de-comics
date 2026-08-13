@@ -40,7 +40,7 @@
         "imagem": "https://image.tmdb.org/t/p/original/fxUJV9LwTyYiP1pqC9ADeYH5Hat.jpg",
         "banner": "https://image.tmdb.org/t/p/original/nu1fARVd5xx8PKSdUeQTz0wtjyo.jpg",
         "descricao": "Coleção Batman Vol. 3.",
-        "status": "em-andamento"
+        "status": "cancelada"
     },
 
 
@@ -52,7 +52,7 @@
         "imagem": "https://static.wixstatic.com/media/535ced_e6fdc8b3ab9846278d17e3be6c92070a~mv2.jpg",
         "banner": "https://i.ibb.co/RJpL7NJ/spider-man-wolverine-2003.jpg",
         "descricao": "Coleção Homem-Aranha e Wolverine (2003).",
-        "status": "completa"
+        "status": "pausada"
     },
 
     {
@@ -62,7 +62,7 @@
         "editoraId": "idw",
         "imagem": "https://static.wixstatic.com/media/535ced_7bfd845e2f674e598e4d9add6cd5ceb8~mv2.jpg",
         "banner": "https://i.ibb.co/TMVyT2p1/tartarugas-v6-ed12-cover-c-banner.png",
-        "descricao": "Coleção das Tartarugas Ninja publicada pela IDW.",
+        "descricao": "Volume 6 das Tartarugas Ninjas (2024-).",
         "status": "em-andamento"
     },
 
