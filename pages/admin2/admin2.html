@@ -546,6 +546,7 @@
                                                 <button
                                                     class="admin-table-action"
                                                     title="Visualizar"
+                                                    data-action="visualizar-usuario"
                                                 >
                                                     <i data-lucide="eye"></i>
                                                 </button>
@@ -606,6 +607,7 @@
                                                 <button
                                                     class="admin-table-action"
                                                     title="Visualizar"
+                                                    data-action="visualizar-usuario"
                                                 >
                                                     <i data-lucide="eye"></i>
                                                 </button>
@@ -1121,8 +1123,101 @@
 
     </div>
 
-    <script src="js/admin2.js"></script>
-    <script>lucide.createIcons();</script>
+    <!-- ===================================== -->
+    <!-- MODAL — VISUALIZAR USUÁRIO -->
+    <!-- ===================================== -->
+
+    <div
+        id="modalVisualizarUsuario"
+        class="admin-modal"
+    >
+
+        <div class="admin-modal-content">
+
+            <div class="admin-modal-header">
+
+                <h3>
+                    Visualizar usuário
+                </h3>
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="fecharModalVisualizarUsuario"
+                    title="Fechar"
+                >
+                    <i data-lucide="x"></i>
+                </button>
+
+            </div>
+
+            <div class="admin-modal-body">
+
+                <div class="usuario-modal-avatar">
+
+                    <i data-lucide="user"></i>
+
+                </div>
+
+                <div class="usuario-detalhes">
+
+                    <div class="usuario-detalhe">
+
+                        <span class="usuario-detalhe-label">
+                            Nome
+                        </span>
+
+                        <strong id="modalUsuarioNome">
+                        </strong>
+
+                    </div>
+
+                    <div class="usuario-detalhe">
+
+                        <span class="usuario-detalhe-label">
+                            E-mail
+                        </span>
+
+                        <strong id="modalUsuarioEmail">
+                        </strong>
+
+                    </div>
+
+                    <div class="usuario-detalhe">
+
+                        <span class="usuario-detalhe-label">
+                            Status
+                        </span>
+
+                        <strong
+                            id="modalUsuarioStatus"
+                            class="usuario-status"
+                        >
+                        </strong>
+
+                    </div>
+
+                    <div class="usuario-detalhe">
+
+                        <span class="usuario-detalhe-label">
+                            Cadastro
+                        </span>
+
+                        <strong id="modalUsuarioCadastro">
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <script src="js/admin2.js"></script>
+         <script>lucide.createIcons();</script>
 
 </body>
 

@@ -1,0 +1,315 @@
+/* ===================================== */
+/* MODAL — VISUALIZAR USUÁRIO */
+/* ===================================== */
+
+.admin-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.admin-modal.active {
+
+    display: flex;
+
+}
+
+.admin-modal-content {
+
+    width: min(500px, 90%);
+
+    background: #0f1728;
+
+    color: #f8fafc;
+
+    border: 1px solid #202a3d;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+}
+
+.admin-modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    background: #111a2d;
+
+    border-bottom: 1px solid #202a3d;
+
+}
+
+.admin-modal-body {
+
+    padding: 20px;
+
+}
+
+.admin-modal-close {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+/* ===================================== */
+/* CABEÇALHO DO MODAL */
+/* ===================================== */
+
+.admin-modal-header {
+
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.admin-modal-header h3 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #f8fafc;
+
+}
+
+
+/* ===================================== */
+/* CORPO DO MODAL */
+/* ===================================== */
+
+.admin-modal-body {
+
+    padding: 22px;
+
+    background: #0f1728;
+
+}
+
+
+/* ===================================== */
+/* DADOS DO USUÁRIO */
+/* ===================================== */
+
+.usuario-detalhe {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    background: #111a2d;
+
+    border: 1px solid #202a3d;
+
+}
+
+/* ===================================== */
+/* DADOS DO USUÁRIO */
+/* ===================================== */
+
+.usuario-detalhes {
+
+    display: grid;
+
+    gap: 16px;
+
+}
+
+.usuario-detalhe {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    background: #f5f5f5;
+
+}
+
+.usuario-detalhe-label {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #7f8ba3;
+
+}
+
+.usuario-detalhe strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #f8fafc;
+
+}
+
+/* ===================================== */
+/* STATUS DO USUÁRIO */
+/* ===================================== */
+
+.usuario-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.usuario-status.ativo {
+
+    color: #18794e;
+
+    background: #e8f7ef;
+
+}
+
+.usuario-status.inativo {
+
+    color: #777;
+
+    background: #eeeeee;
+
+}
+
+/* ===================================== */
+/* AVATAR — MODAL DO USUÁRIO */
+/* ===================================== */
+
+.usuario-modal-avatar {
+
+    width: 72px;
+
+    height: 72px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.usuario-modal-avatar svg {
+
+    width: 32px;
+
+    height: 32px;
+
+    color: #777;
+
+}
+
+/* ===================================== */
+/* AJUSTE FINAL — VISUAL ADMIN V2 */
+/* ===================================== */
+
+.admin-modal-content {
+    background: #0f1728 !important;
+    color: #f8fafc !important;
+    border: 1px solid #202a3d !important;
+}
+
+.admin-modal-header {
+    background: #111a2d !important;
+    border-bottom: 1px solid #202a3d !important;
+}
+
+.admin-modal-header h3 {
+    color: #f8fafc !important;
+}
+
+.admin-modal-body {
+    background: #0f1728 !important;
+}
+
+.usuario-detalhes {
+    background: transparent !important;
+}
+
+.usuario-detalhe {
+    background: #111a2d !important;
+    border: 1px solid #202a3d !important;
+}
+
+.usuario-detalhe-label {
+    color: #7f8ba3 !important;
+}
+
+.usuario-detalhe strong {
+    color: #f8fafc !important;
+}
+
+.usuario-modal-avatar {
+    background: #18243a !important;
+}
+
+.usuario-modal-avatar svg {
+    color: #8da2c4 !important;
+}
+
+.admin-modal-close {
+    color: #8da2c4 !important;
+}
+
+.admin-modal-close:hover {
+    color: #f8fafc !important;
+}
