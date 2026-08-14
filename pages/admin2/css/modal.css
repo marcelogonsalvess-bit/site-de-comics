@@ -210,17 +210,17 @@
 
 .usuario-status.ativo {
 
-    color: #18794e;
+    color: #8ee6b8;
 
-    background: #e8f7ef;
+    background: #183b32;
 
 }
 
 .usuario-status.inativo {
 
-    color: #777;
+    color: #b8c0cc;
 
-    background: #eeeeee;
+    background: #303846;
 
 }
 
