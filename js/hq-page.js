@@ -1032,81 +1032,387 @@ function montarPainelInformacoes(dadosHQ, editoraInfo, colecaoInfo){
 // REVISTAS RELACIONADAS
 // ============================
 
-
 function montarRevistasRelacionadas(dadosHQ){
-
 
     const container =
         document.getElementById("revistasRelacionadas");
-
-
 
     if (!container)
         return;
 
 
+    // ============================
+    // DADOS DA HQ ATUAL
+    // ============================
+
+    const colecaoAtual =
+        dadosHQ.colecao_id || dadosHQ.colecao || "";
+
+    const editoraAtual =
+        dadosHQ.editora || "";
+
+    const autorAtual =
+        dadosHQ.creditos?.autor || "";
+
+    const desenhistaAtual =
+        dadosHQ.creditos?.desenhista || "";
+
+    const generoAtual =
+        dadosHQ.informacoes?.genero || "";
+
+    const personagemAtual =
+        dadosHQ.personagem ||
+        dadosHQ.personagens ||
+        "";
 
 
+    // ============================
+    // NORMALIZAR TEXTO
+    // ============================
 
-    const relacionadas =
+    function normalizar(valor){
 
-        catalogoHQs.filter(
+        if (Array.isArray(valor))
+            return valor
+                .map(item => String(item).toLowerCase().trim());
+
+        if (!valor)
+            return "";
+
+        return String(valor)
+            .toLowerCase()
+            .trim();
+
+    }
 
 
-            hq => hq.colecao_id === dadosHQ.colecao_id &&
+    const colecaoNormalizada =
+        normalizar(colecaoAtual);
 
-            hq.id !== dadosHQ.id
+    const editoraNormalizada =
+        normalizar(editoraAtual);
+
+    const autorNormalizado =
+        normalizar(autorAtual);
+
+    const desenhistaNormalizado =
+        normalizar(desenhistaAtual);
+
+    const generoNormalizado =
+        normalizar(generoAtual);
+
+    const personagemNormalizado =
+        normalizar(personagemAtual);
 
 
-        );
+    // ============================
+    // CALCULAR RELEVÂNCIA
+    // ============================
+
+    const candidatos = catalogoHQs
+
+        .filter(hq => hq.id !== dadosHQ.id)
+
+        .map(hq => {
+
+            let pontuacao = 0;
+
+            let mesmaColecao = false;
 
 
+            const colecaoHQ =
+                normalizar(
+                    hq.colecao_id || hq.colecao || ""
+                );
+
+            const editoraHQ =
+                normalizar(
+                    hq.editora || ""
+                );
+
+            const autorHQ =
+                normalizar(
+                    hq.creditos?.autor || ""
+                );
+
+            const desenhistaHQ =
+                normalizar(
+                    hq.creditos?.desenhista || ""
+                );
+
+            const generoHQ =
+                normalizar(
+                    hq.informacoes?.genero || ""
+                );
+
+            const personagemHQ =
+                normalizar(
+                    hq.personagem ||
+                    hq.personagens ||
+                    ""
+                );
+
+
+            // ============================
+            // MESMA COLEÇÃO
+            // ============================
+
+            if (
+                colecaoNormalizada &&
+                colecaoHQ &&
+                colecaoNormalizada === colecaoHQ
+            ){
+
+                pontuacao += 100;
+
+                mesmaColecao = true;
+
+            }
+
+
+            // ============================
+            // MESMO PERSONAGEM
+            // ============================
+
+            if (
+                personagemNormalizado &&
+                personagemHQ
+            ){
+
+                const personagensAtuais =
+                    Array.isArray(personagemNormalizado)
+                    ? personagemNormalizado
+                    : [personagemNormalizado];
+
+                const personagensHQ =
+                    Array.isArray(personagemHQ)
+                    ? personagemHQ
+                    : [personagemHQ];
+
+                const possuiPersonagem =
+                    personagensAtuais.some(
+                        personagem =>
+                            personagensHQ.includes(personagem)
+                    );
+
+                if (possuiPersonagem)
+                    pontuacao += 50;
+
+            }
+
+
+            // ============================
+            // MESMO AUTOR
+            // ============================
+
+            if (
+                autorNormalizado &&
+                autorHQ &&
+                autorNormalizado === autorHQ
+            ){
+
+                pontuacao += 30;
+
+            }
+
+
+            // ============================
+            // MESMO DESENHISTA
+            // ============================
+
+            if (
+                desenhistaNormalizado &&
+                desenhistaHQ &&
+                desenhistaNormalizado === desenhistaHQ
+            ){
+
+                pontuacao += 20;
+
+            }
+
+
+            // ============================
+            // MESMA EDITORA
+            // ============================
+
+            if (
+                editoraNormalizada &&
+                editoraHQ &&
+                editoraNormalizada === editoraHQ
+            ){
+
+                pontuacao += 10;
+
+            }
+
+
+            // ============================
+            // MESMO GÊNERO / TEMA
+            // ============================
+
+            if (
+                generoNormalizado &&
+                generoHQ
+            ){
+
+                const generosAtuais =
+                    Array.isArray(generoNormalizado)
+                    ? generoNormalizado
+                    : [generoNormalizado];
+
+                const generosHQ =
+                    Array.isArray(generoHQ)
+                    ? generoHQ
+                    : [generoHQ];
+
+                const possuiGenero =
+                    generosAtuais.some(
+                        genero =>
+                            generosHQ.includes(genero)
+                    );
+
+                if (possuiGenero)
+                    pontuacao += 5;
+
+            }
+
+
+            return {
+
+                hq,
+
+                pontuacao,
+
+                mesmaColecao
+
+            };
+
+        });
+
+
+    // ============================
+    // ORDENAR POR RELEVÂNCIA
+    // ============================
+
+    candidatos.sort(
+        (a, b) =>
+            b.pontuacao - a.pontuacao
+    );
+
+
+    // ============================
+    // SELECIONAR ATÉ 6
+    // MÁXIMO 3 DA MESMA COLEÇÃO
+    // ============================
+
+    const selecionadas = [];
+
+    let quantidadeMesmaColecao = 0;
+
+
+    // Primeiro: melhores recomendações
+    // respeitando o limite de 3 da coleção
+
+    for (const candidato of candidatos){
+
+        if (
+            selecionadas.length >= 6
+        )
+            break;
+
+
+        if (
+            candidato.mesmaColecao &&
+            quantidadeMesmaColecao >= 3
+        )
+            continue;
+
+
+        selecionadas.push(candidato);
+
+        if (candidato.mesmaColecao)
+            quantidadeMesmaColecao++;
+
+    }
+
+
+    // ============================
+    // SE AINDA HOUVER ESPAÇO,
+    // PREENCHE SEM REPETIR
+    // ============================
+
+    if (selecionadas.length < 6){
+
+        for (const candidato of candidatos){
+
+            if (
+                selecionadas.length >= 6
+            )
+                break;
+
+
+            if (
+                selecionadas.includes(candidato)
+            )
+                continue;
+
+
+            selecionadas.push(candidato);
+
+        }
+
+    }
+
+
+    // ============================
+    // LIMPAR CONTAINER
+    // ============================
 
     container.innerHTML = "";
 
 
-    console.log("COLEÇÃO DA HQ ATUAL:", dadosHQ.colecao_id);
-    console.log("HQs RELACIONADAS ENCONTRADAS:", relacionadas);
+    // ============================
+    // CRIAR CARDS
+    // ============================
 
-    relacionadas.forEach(hq => {
+    selecionadas.forEach(
+        candidato => {
 
-        console.log("HQ RELACIONADA:", hq);
-        console.log("URL GERADA:", gerarUrlHQ(hq));
+            const hq =
+                candidato.hq;
 
+            container.innerHTML += `
 
-        container.innerHTML += `
-
-            <a 
-                href="${gerarUrlHQ(hq)}"
-                class="related-card"
-            >
-
-                <img
-
-                    src="${hq.capa}"
-
-                    alt="${hq.titulo}"
-
+                <a 
+                    href="${gerarUrlHQ(hq)}"
+                    class="related-card"
                 >
 
+                    <img
+                        src="${hq.capa}"
+                        alt="${hq.titulo}"
+                    >
 
-                <div class="related-overlay">
+                    <div class="related-overlay">
 
-                    <h3>
-                        ${hq.titulo}
-                    </h3>
+                        <h3>
+                            ${hq.titulo}
+                        </h3>
 
-                </div>
+                    </div>
+
+                </a>
+
+            `;
+
+        }
+    );
 
 
-            </a>
+    // ============================
+    // INICIAR CARROSSEL
+    // ============================
 
-        `;
-
-
-    });
-
-        iniciarCarrosseis();
-
+    iniciarCarrosseis();
 
 }
