@@ -720,10 +720,15 @@
 REVISTAS RELACIONADAS
 ===================================== */
 
+.hq-related .carousel-container{
+    position:relative;
+    overflow:visible;
+}
+
 .hq-related .carousel-btn.prev{
-    left:-35px;
+    left:-25px !important;
 }
 
 .hq-related .carousel-btn.next{
-    right:-35px;
+    right:-43px !important;
 }

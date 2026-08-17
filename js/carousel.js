@@ -9,7 +9,7 @@ function iniciarCarrosseis(){
 
 
     const carrosseis =
-        document.querySelectorAll(".latest-section .carousel-container, .top10-section .carousel-container");
+    document.querySelectorAll(".latest-section .carousel-container, .top10-section .carousel-container, .hq-related .carousel-container");
 
 
     carrosseis.forEach(carrossel => {
@@ -20,7 +20,7 @@ function iniciarCarrosseis(){
 
 
         const cards =
-            track.querySelectorAll(".comic-card");
+            track.querySelectorAll(".comic-card, .related-card");
 
 
         const btnPrev =
@@ -29,7 +29,6 @@ function iniciarCarrosseis(){
 
         const btnNext =
             carrossel.querySelector(".carousel-btn.next");
-
 
 
         if(!track || cards.length === 0)

@@ -1046,9 +1046,6 @@ function montarRevistasRelacionadas(dadosHQ){
 
 
 
-    if (!dadosHQ.colecao_id)
-        return;
-
 
 
     const relacionadas =
@@ -1068,8 +1065,13 @@ function montarRevistasRelacionadas(dadosHQ){
     container.innerHTML = "";
 
 
+    console.log("COLEÇÃO DA HQ ATUAL:", dadosHQ.colecao_id);
+    console.log("HQs RELACIONADAS ENCONTRADAS:", relacionadas);
 
     relacionadas.forEach(hq => {
+
+        console.log("HQ RELACIONADA:", hq);
+        console.log("URL GERADA:", gerarUrlHQ(hq));
 
 
         container.innerHTML += `
@@ -1103,6 +1105,8 @@ function montarRevistasRelacionadas(dadosHQ){
 
 
     });
+
+        iniciarCarrosseis();
 
 
 }
