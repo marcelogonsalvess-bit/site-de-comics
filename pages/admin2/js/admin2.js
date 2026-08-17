@@ -135,3 +135,33 @@ modalVisualizarUsuario.addEventListener("click", function (event) {
     }
 
 });
+
+
+// =====================================
+// TESTE — CARREGAR USUÁRIOS
+// =====================================
+
+async function testarUsuarios() {
+
+    const { data, error } = await supabaseClient
+        .from("perfis")
+        .select("*");
+
+    if (error) {
+
+        console.error(
+            "Erro ao carregar usuários:",
+            error
+        );
+
+        return;
+    }
+
+    console.log(
+        "USUÁRIOS ENCONTRADOS:",
+        data
+    );
+
+}
+
+testarUsuarios();
