@@ -36,7 +36,16 @@
 idAtual = params.get("id");
 
 
-// URL amigável
+// Se a página possui um hqId definido,
+// usa ele como prioridade
+if (typeof hqId !== "undefined" && hqId) {
+
+    slugAtual = hqId;
+
+}
+
+
+// Caso não tenha hqId, usa o nome do arquivo da URL
 if (!slugAtual && !idAtual) {
 
     const arquivo = window.location.pathname
@@ -45,20 +54,6 @@ if (!slugAtual && !idAtual) {
         .replace(".html", "");
 
     slugAtual = arquivo;
-
-}
-
-            // URL amigável: pega o nome do arquivo atual
-if (!slugAtual && !idAtual) {
-
-    const caminho = window.location.pathname;
-
-    const arquivo = caminho
-        .split("/")
-        .pop();
-
-    idAtual = arquivo
-        .replace(".html", "");
 
 }
 
