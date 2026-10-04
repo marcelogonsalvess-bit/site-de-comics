@@ -277,19 +277,29 @@ async function carregarPerfil(){
 
 
 
-    const { count: totalFavoritos } =
+const { data: favoritos, error: erroFavoritos } =
 await supabaseClient
 .from("favoritos")
-.select("*", {
-    count: "exact",
-    head: true
-})
+.select("id_hq")
 .eq("id_usuario", usuarioAuth.id);
 
-    document.getElementById(
-        "totalFavoritos"
-    ).textContent =
-    totalFavoritos || 0;
+let totalFavoritos = 0;
+
+if (!erroFavoritos && favoritos) {
+
+    totalFavoritos =
+    favoritos.filter(item =>
+        catalogoHQs.some(
+            hq => hq.id === item.id_hq
+        )
+    ).length;
+
+}
+
+document.getElementById(
+    "totalFavoritos"
+).textContent =
+totalFavoritos;
 
 
 
