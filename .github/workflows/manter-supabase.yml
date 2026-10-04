@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Acessar Supabase
+      - name: Consultar banco Supabase
         run: |
-          curl -f "https://gncfjvtpwvttgmzkmnxr.supabase.co/auth/v1/health" \
+          curl -f "https://gncfjvtpwvttgmzkmnxr.supabase.co/rest/v1/hqs?select=id&limit=1" \
             -H "apikey: ${{ secrets.SUPABASE_KEY }}"
