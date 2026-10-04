@@ -285,14 +285,46 @@ await supabaseClient
 
 let totalFavoritos = 0;
 
-if (!erroFavoritos && favoritos) {
+if(erroFavoritos){
 
-    totalFavoritos =
-    favoritos.filter(item =>
-        catalogoHQs.some(
-            hq => hq.id === item.id_hq
+    console.error(
+        "Erro ao carregar contador de favoritos:",
+        erroFavoritos
+    );
+
+}
+else if(favoritos && favoritos.length > 0){
+
+    const idsFavoritos = [
+        ...new Set(
+            favoritos
+            .map(item => item.id_hq)
+            .filter(Boolean)
         )
-    ).length;
+    ];
+
+    const { data: hqsValidas, error: erroHQs } =
+    await supabaseClient
+    .from("hqs")
+    .select("id")
+    .in("id", idsFavoritos);
+
+    if(erroHQs){
+
+        console.error(
+            "Erro ao validar favoritos:",
+            erroHQs
+        );
+
+    }
+    else{
+
+        totalFavoritos =
+        hqsValidas
+        ? hqsValidas.length
+        : 0;
+
+    }
 
 }
 
