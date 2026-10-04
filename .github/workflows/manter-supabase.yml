@@ -1,0 +1,16 @@
+name: Manter Supabase ativo
+
+on:
+  schedule:
+    - cron: "0 12 */2 * *"
+  workflow_dispatch:
+
+jobs:
+  ping-supabase:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Acessar Supabase
+        run: |
+          curl -f "https://gncfjvtpwvttgmzkmnxr.supabase.co/rest/v1/" \
+            -H "apikey: ${{ secrets.SUPABASE_KEY }}"
