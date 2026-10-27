@@ -515,6 +515,15 @@
 
 }
 
+/* TOP 10 - TAMANHO DOS CARDS */
+
+@media (min-width:769px){
+    .top10-section .carousel-track .comic-card{
+        width:180px;
+        min-width:180px;
+    }
+}
+
 .carousel-track .comic-cover{
 
     aspect-ratio:2 / 3;
