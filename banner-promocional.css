@@ -108,3 +108,21 @@
     font-size: 19px;
   }
 }
+
+/* =====================================
+   CORREÇÃO DO BANNER NO MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .banner-section .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
