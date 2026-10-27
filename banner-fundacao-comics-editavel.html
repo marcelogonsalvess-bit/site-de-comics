@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fundação Comics | Prévia do banner</title>
+    <link rel="stylesheet" href="banner-promocional.css">
+    <style>
+  /* Apenas a página de prévia */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+  }
+
+  .preview-shell {
+    max-width: 1240px;
+    margin: 64px auto;
+    padding: 0 28px;
+  }
+
+  .preview-caption {
+    color: #999;
+    font-size: 13px;
+    margin: 0 0 18px;
+  }
+
+  .notes {
+    margin: 24px 0 0;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .placeholder-panes {
+    display: none;
+  }
+
+  @media (max-width: 650px) {
+    .preview-shell {
+      padding: 0 16px;
+      margin: 32px auto;
+    }
+  }
+</style>
+  </head>
+  <body>
+    <main class="preview-shell">
+      <p class="preview-caption">
+        PRÉVIA INDEPENDENTE · Banner abaixo do Top 10 (ainda não publicado na
+        home)
+      </p>
+      <!-- ===============================================================
+     BANNER PROMOCIONAL — ÁREAS PARA EDIÇÃO FUTURA
+     Edite apenas os 5 itens indicados abaixo.
+     A versão publicada só será alterada quando este banner
+     for inserido no index.html do projeto.
+     =============================================================== -->
+
+      <!-- [1] IMAGEM DE FUNDO
+     Para usar sua imagem, mude class="fc-promo" para
+     class="fc-promo tem-imagem" e adicione ao elemento <section>:
+     style="--banner-image: url('img/seu-banner.jpg')"
+     Exemplo completo:
+     <section class="fc-promo tem-imagem" style="--banner-image: url('img/seu-banner.jpg')" ...>
+     Enquanto não alterar, o fundo ilustrativo será exibido. -->
+      <!-- [1] IMAGEM DE FUNDO — altere somente a URL abaixo -->
+<section
+  class="fc-promo tem-imagem"
+  style="--banner-image: url('https://image.tmdb.org/t/p/original/ztxiwR10U7ezD16XBLn8xYryYYq.jpg');"
+  aria-label="Banner promocional Fundação Comics"
+>
+        <!-- Decoração provisória; desaparece automaticamente quando a classe tem-imagem é adicionada -->
+        <div class="placeholder-panes" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="fc-promo__content">
+          <!-- [2] LOGO
+         Para inserir um logo, apague a <div> abaixo e use:
+         <img class="fc-promo__logo" src="img/seu-logo.png" alt="Nome do destaque">
+         Preferencialmente PNG ou WebP com transparência. -->
+          <img
+            class="fc-promo__logo"
+            src="https://image.tmdb.org/t/p/original/r5tJBEUIPvQTl8nwYcN4Tokx8UR.png"
+            alt="Logo do destaque"
+          />
+
+          <!-- [3] TEXTO PRINCIPAL: edite apenas o conteúdo do <h2> -->
+          <h2 class="fc-promo__heading">
+            Descubra novas histórias e explore universos incríveis.
+          </h2>
+
+          <!-- [4] BOTÃO: substitua # pela URL desejada.
+         A prévia usa # e, por isso, o clique não leva a outra página. -->
+          <a class="fc-promo__button" href="#">Acessar</a>
+
+          <!-- [5] TEXTO INFERIOR: edite apenas o conteúdo do <p> -->
+          <p class="fc-promo__small">Uma nova experiência está chegando.</p>
+        </div>
+      </section>
+      <p class="notes">
+        Prévia independente, ainda não publicada. Abra este arquivo em um editor
+        de código e procure por <code>[1]</code> até <code>[5]</code> para
+        modificar imagem, logo, textos e botão. Imagens locais devem usar
+        caminhos relativos a este arquivo.
+      </p>
+    </main>
+  </body>
+</html>
