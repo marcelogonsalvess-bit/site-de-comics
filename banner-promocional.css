@@ -91,6 +91,9 @@
   .fc-promo {
     min-height: 345px;
     align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .fc-promo::after {
